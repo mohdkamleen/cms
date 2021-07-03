@@ -22,7 +22,7 @@ day = ["Sunday", "Monday", "Tuesday", "Thursday", "Wednesday", "Friday", "Saturd
 month  = ["Jan","Fab","Mar","Apr","May","June","July","Aug","Sep","Oct","Nov","Dec"]
 
 let date = d + month[m] + "," + y +" AT " + day[dd] + " " + h + ":" + mm + x;
-document.getElementById("comment_datetime").value = date;   
+document.getElementById("date").value = date;   
 }
 
 setInterval(datetime,1000);
