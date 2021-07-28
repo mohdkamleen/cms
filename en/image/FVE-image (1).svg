@@ -1,0 +1,27 @@
+<svg width="1137" height="503" xmlns="http://www.w3.org/2000/svg">
+ <g>
+  <title>Layer 1</title>
+  <rect fill="#fff" x="312" y="113" width="41" height="283" id="svg_4" stroke="#000"/>
+  <rect fill="#fff" x="457" y="116.99999" width="45" height="278.00001" id="svg_5" stroke="#000"/>
+  <rect fill="#fff" x="354" y="239" width="102" height="42" id="svg_6" stroke="#000"/>
+  <rect fill="#fff" x="681" y="112" width="43" height="289" id="svg_8" stroke="#000"/>
+  <rect fill="#fff" x="725" y="112" width="107" height="41" id="svg_11" stroke="#000"/>
+  <rect fill="#fff" y="361" width="111" height="40" id="svg_12" x="724" stroke="#000"/>
+  <path fill="#fff" stroke="#000" opacity="NaN" d="m397,0" id="svg_14"/>
+  <rect fill="#fff" x="726" y="240" width="105" height="41" id="svg_13" stroke="#000"/>
+  <line fill="none" stroke="#000" x1="501" y1="112" x2="589" y2="216" id="svg_17"/>
+  <line fill="red" stroke="#000" x1="681" y1="113" x2="589" y2="218" id="svg_18"/>
+  <line fill="none" x1="499" y1="167" x2="588" y2="270" id="svg_19" stroke="#000"/>
+  <line fill="none" stroke="#000" x1="591" y1="271" x2="683" y2="174" id="svg_21"/>
+  <line fill="none" stroke="#000" x1="594" y1="327" x2="595" y2="328" id="svg_22"/>
+  <path fill="#fff" stroke="#000" opacity="NaN" d="m490,171.5" id="svg_33"/>
+  <path fill="#fff" stroke="#000" opacity="NaN" d="m0,47.5" id="svg_34"/>
+  <ellipse fill="#fff" stroke="#000" cx="479.5" cy="263.5" id="svg_35" rx="6.5" ry="122"/>
+  <ellipse fill="#fff" stroke="#000" cx="702" cy="264.5" id="svg_36" rx="4" ry="135"/>
+  <ellipse fill="#fff" stroke="#000" cx="778.5" cy="133" id="svg_37" rx="47.5" ry="2.5"/>
+  <ellipse fill="#fff" stroke="#000" cx="776.5" cy="259.5" id="svg_38" rx="51.5" ry="10"/>
+  <ellipse fill="#fff" stroke="#000" cx="772" cy="378.5" id="svg_39" rx="44" ry="5"/>
+  <ellipse fill="#fff" cx="334.5" cy="252.5" id="svg_40" rx="2.5" ry="124" stroke="#000"/>
+ </g>
+
+</svg>

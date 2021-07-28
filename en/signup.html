@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMS || SignUp </title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="text-center mt-3">Register Form Here</h2><br>
+        <form action="sign.php" method="post" class="form-group" enctype="multipart/form-data">
+            <div class="input-box form-control">
+                <label for="name" class="form-label">Name</label> <br>
+                <input class="form-control" required type="text" name="name" id="name"> <br>
+            </div><br>
+            <div class="input-box form-control">
+                <label for="email" class="form-label">Email</label> <br>
+                <input class="form-control" required type="email" name="email" id="email"><br>
+            </div><br>
+            <div class="input-box form-control">
+                <label for="password" class="form-label">Password</label> <br>
+                <input class="form-control" required type="password" name="password" id="password"><br>
+            </div> <br>
+
+            <input type="submit" value="SignUp" class="btn btn-block btn-outline-secondary">
+        </form>
+
+        <a href="login.html">Already have account?</a>
+    </div>
+</body>
+
+</html>
