@@ -259,6 +259,16 @@
     }
     }
 
+@keyframes toUpLeft{
+    0%{
+       transform: translateY(50px) translateX(50px);  
+    } 
+    100%{
+        transform: translateY(0px) translateX(0px); 
+        opacity: 1;
+    }
+    }
+
  .effects{ 
 
          #effect8{
@@ -279,6 +289,79 @@
  
 
  }
+
+ .setting{
+    background-color: transparent;
+    position: fixed;
+    bottom: 0;right: 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+
+    i{
+        z-index: 11; 
+        background : linear-gradient(15deg, rgba(155, 148, 63, 0.39),rgba(102, 186, 255, 0.959),rgb(124, 156, 97),rgba(142, 247, 255, 0.637));
+        color: transparent;
+        -webkit-background-clip: text;
+        border-radius: 3px;
+        font-size: 20px;
+        border: 2px solid rgba(246, 246, 246, 0.76); 
+        transition: all .2s linear;  
+        padding: 5px;
+        box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.685),0px 0px 20px rgba(255, 255, 255, 0.26),0px 0px 30px rgba(255, 255, 255, 0.26); 
+       }
+
+       :hover{ 
+        box-shadow: none;
+        border-color: rgb(212, 245, 255);
+    }
+
+    .items{ 
+        
+        :nth-child(1){
+            position: fixed; 
+            bottom: 20px;
+            opacity: 0;
+            right: 90px;
+            animation: toLeft .3s linear forwards;
+        }
+        :nth-child(2){
+            position: fixed; 
+            bottom: 70px;
+            animation: toUpLeft .3s .1s linear forwards;
+            right: 70px;
+        }
+        :nth-child(3){
+            position: fixed; 
+            opacity: 0;
+            animation: toUp .3s .2s linear forwards;
+            bottom: 90px;
+            right: 20px;
+        }
+    }
+
+}
+.setting::after{
+    content: "";
+    background-color: transparent;
+    border: 2px solid gray;
+    position: fixed;
+    bottom: -50px;
+    transform: scale(1.4);
+    right: -50px;
+    font-size: 25px;
+    color: gray;
+    width: 100px;
+    border-radius: 50%; 
+    height: 100px;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
 
  #demo{
      color: gray;

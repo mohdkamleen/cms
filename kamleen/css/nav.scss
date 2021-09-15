@@ -43,6 +43,9 @@
         font-size: 20px !important;
         border: 2px solid rgba(246, 246, 246, 0.76); 
         transition: all .2s linear;  
+        padding: 5px;
+        box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.685),0px 0px 20px rgba(255, 255, 255, 0.26),0px 0px 30px rgba(255, 255, 255, 0.26); 
+       
     }
 
     .hamburger:hover{ 
@@ -156,9 +159,6 @@
 
     .hamburger{
         display: block !important;
-        padding: 5px;
-        box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.685),0px 0px 20px rgba(255, 255, 255, 0.26),0px 0px 30px rgba(255, 255, 255, 0.26); 
-       
     }
 
     nav.active{
