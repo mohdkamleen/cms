@@ -41,11 +41,11 @@
 
 .second-div .content .accupation h1 {
   color: transparent;
-  font-size: 40px;
+  font-size: 35px;
   background: linear-gradient(15deg, rgba(153, 146, 54, 0.794), rgba(206, 89, 99, 0.959), #74966f, rgba(58, 242, 255, 0.849));
   -webkit-background-clip: text;
   padding: 10px;
-  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.603);
+  -webkit-text-stroke: 1px rgba(238, 148, 148, 0.603);
 }
 
 .second-div .content .accupation .we-are {
@@ -74,24 +74,57 @@
 
 .second-div .content .accupation .buttons button {
   width: 200px;
-  font-size: 17px;
+  font-size: 19px;
   background-color: transparent;
-  border: none;
   padding: 7px;
   cursor: pointer;
   border-radius: 3px;
-  font-weight: 600;
-  margin: 5px;
+  font-weight: bold;
+  margin: 10px 5px;
+  position: relative;
+  overflow: hidden;
   -webkit-box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.685), 0px 0px 20px rgba(255, 255, 255, 0.26), 0px 0px 30px rgba(255, 255, 255, 0.26);
           box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.685), 0px 0px 20px rgba(255, 255, 255, 0.26), 0px 0px 30px rgba(255, 255, 255, 0.26);
 }
 
+.second-div .content .accupation .buttons button a {
+  border: none !important;
+}
+
 .second-div .content .accupation .buttons :nth-child(1) {
   color: #77a5fc;
+  border: 2px solid #ee808e;
 }
 
 .second-div .content .accupation .buttons :nth-child(2) {
   color: #ee808e;
+  border: 2px solid #77a5fc;
+}
+
+.second-div .content .accupation .buttons ::after {
+  position: absolute;
+  content: attr(data-text);
+  top: 0;
+  right: 0;
+  width: 0%;
+  line-height: 35px;
+  text-transform: capitalize;
+  height: 100%;
+  background-color: transparent;
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+  opacity: 0;
+}
+
+.second-div .content .accupation .buttons :hover::after {
+  left: 0;
+  width: 100%;
+  opacity: 1;
+}
+
+.second-div .content .accupation .buttons :hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 .second-div .content .accupation .go-to-down {
@@ -167,23 +200,6 @@
 
 .second-div .content .accupation .go-to-down :nth-child(2) {
   background: transparent !important;
-}
-
-.second-div .content .accupation .go-to-down.active {
-  position: fixed !important;
-  right: 0;
-  bottom: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
 }
 
 .second-div .content .image {
@@ -296,6 +312,7 @@
   height: 20px;
   width: 20px;
   top: -50px;
+  z-index: -1;
   left: 900px;
   -webkit-transition: all linear 100ms;
   transition: all linear 100ms;

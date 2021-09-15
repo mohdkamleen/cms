@@ -30,11 +30,11 @@
 
         h1{
             color: transparent;
-            font-size: 40px;
+            font-size: 35px;
             background : linear-gradient(15deg, rgba(153, 146, 54, 0.794),rgba(206, 89, 99, 0.959),rgb(116, 150, 111),rgba(58, 242, 255, 0.849));
             -webkit-background-clip: text;
             padding: 10px; 
-            -webkit-text-stroke: 1px rgba(255, 255, 255, 0.603);
+            -webkit-text-stroke: 1px rgba(238, 148, 148, 0.603);
              
         }
 
@@ -60,26 +60,61 @@
 
             button{
                 width: 200px;
-                font-size: 17px; 
+                font-size: 19px; 
                 background-color: transparent;
-                border: none;
                 padding: 7px;
                 cursor: pointer;
                 border-radius: 3px;
-                font-weight: 600;
-                margin: 5px;
+                font-weight: bold;
+                margin: 10px 5px;
+                position: relative;
+                overflow: hidden;
                 box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.685),0px 0px 20px rgba(255, 255, 255, 0.26),0px 0px 30px rgba(255, 255, 255, 0.26); 
+                
+
+                a{
+                    border: none !important;
+                }
 
             }
+
             
             :nth-child(1){
-                color: rgb(119, 165, 252);;
+                color: rgb(119, 165, 252);
+                border: 2px solid rgb(238, 128, 142); 
             }
 
             :nth-child(2){
                 color: rgb(238, 128, 142);
+                border: 2px solid rgb(119, 165, 252);
             }
+
+            ::after{
+                position: absolute;
+                content: attr(data-text);
+                top: 0;
+                right: 0;
+                width: 0%;
+                line-height: 35px;
+                text-transform: capitalize;
+                height: 100%;
+                background-color: transparent;
+                transition: all .3s linear; 
+                opacity: 0;
+            }
+
+            :hover::after{
+               left: 0;
+               width: 100%;
+               opacity: 1;
+            }
+
+            :hover{box-shadow: none;}
+
         }
+        
+        
+        
         
         .go-to-down{
             width: 100%; 
@@ -135,20 +170,8 @@
         
         
         }
-
-
-        .go-to-down.active{
-            position: fixed !important; 
-            right: 0; 
-            bottom: 0;
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-            transform: rotate(180deg);
-        }
-
-
-
+ 
+ 
     }
 
     .image{ 
@@ -236,10 +259,11 @@
  .effects{ 
 
          #effect8{
-        position: absolute;
+         position: absolute;
          height: 20px;
          width: 20px; 
          top: -50px;
+         z-index: -1;
          left: 900px;
          transition: all linear 100ms;
          border-radius: 50% ;
