@@ -179,14 +179,6 @@
            }
         }
 
-        .image-back.active{
-            position: fixed; 
-            height: 1000px !important;
-            width: 1000px !important; 
-            z-index: 9; 
-            opacity: 1;
-        }
-
         img{
             width: 300px; 
             border-radius: 50%; 
@@ -282,6 +274,16 @@
             width: 230px !important;
             height: 230px !important;
         }
+
+        
+        .image-back.active{
+            position: fixed; 
+            height: 1000px !important;
+            width: 1000px !important; 
+            z-index: 9; 
+            opacity: 1;
+        }
+
      
         img{
             width: 230px !important;  

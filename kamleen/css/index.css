@@ -225,14 +225,6 @@
   }
 }
 
-.second-div .content .image .image-back.active {
-  position: fixed;
-  height: 1000px !important;
-  width: 1000px !important;
-  z-index: 9;
-  opacity: 1;
-}
-
 .second-div .content .image img {
   width: 300px;
   border-radius: 50%;
@@ -336,6 +328,13 @@
   .image .image-back {
     width: 230px !important;
     height: 230px !important;
+  }
+  .image .image-back.active {
+    position: fixed;
+    height: 1000px !important;
+    width: 1000px !important;
+    z-index: 9;
+    opacity: 1;
   }
   .image img {
     width: 230px !important;
