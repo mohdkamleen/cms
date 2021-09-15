@@ -181,8 +181,8 @@
 
         .image-back.active{
             position: fixed; 
-            height: 1000px;
-            width: 1000px; 
+            height: 1000px !important;
+            width: 1000px !important; 
             z-index: 9; 
             opacity: 1;
         }
