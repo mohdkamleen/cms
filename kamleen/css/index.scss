@@ -272,7 +272,22 @@
 @media (max-width:900px){
     .content{
         flex-direction: column-reverse;
+        margin-top: -20px;
     }
+
+    .image{  
+        width: 250px !important; 
+
+        .image-back{ 
+            width: 250px !important;
+            height: 250px !important;
+        }
+     
+        img{
+            width: 250px !important;  
+        } 
+    }
+
 }
 
 
