@@ -59,7 +59,7 @@
   transition: all .2s linear;
 }
 
-.navigation nav :hover {
+.navigation nav .hamburger:hover {
   border: 2px solid rgba(255, 199, 199, 0.342);
 }
 

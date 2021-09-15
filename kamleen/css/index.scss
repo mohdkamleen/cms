@@ -109,7 +109,9 @@
                opacity: 1;
             }
 
-            :hover{box-shadow: none;}
+            :hover{ 
+                box-shadow: none;
+            }
 
         }
         
@@ -221,11 +223,12 @@
 .copyright{
     position: relative;
     bottom: 0; 
-    width: 100%;
+    width: 100%; 
     padding: 10px;
     text-align: center;
     color: rgb(219, 148, 157);
     transition: all 3s ease .5s;
+    // background-color: red;
 
     p{
         font-size: 20px;
