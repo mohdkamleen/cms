@@ -15,10 +15,10 @@
     align-items: center;
     max-width: 1400px;
     min-height: 750px; 
-    height: 90vh;
+    height: 90vh; 
 
     .accupation{ 
-        padding: 5px;
+        padding: 5px; 
 
         .hey{
             font-size: 20px;
@@ -56,7 +56,7 @@
         .buttons{
             padding: 10px; 
             display: flex; 
-            align-items: flex-start; 
+            align-items: center;  
 
             button{
                 width: 200px;

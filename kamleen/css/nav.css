@@ -52,7 +52,15 @@
   background: linear-gradient(15deg, rgba(255, 248, 145, 0.39), rgba(255, 182, 188, 0.959), #c9c8ff, rgba(142, 247, 255, 0.637));
   color: transparent;
   -webkit-background-clip: text;
+  border-radius: 3px;
   font-size: 20px !important;
+  border: 2px solid rgba(246, 246, 246, 0.76);
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+.navigation nav :hover {
+  border: 2px solid rgba(255, 199, 199, 0.342);
 }
 
 .navigation nav .nav {
