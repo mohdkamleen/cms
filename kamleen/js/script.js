@@ -9,11 +9,8 @@ var li1 = document.getElementsByTagName("li")[0];
 var li2 = document.getElementsByTagName("li")[1];
 var li3 = document.getElementsByTagName("li")[2];
 var li4 = document.getElementsByTagName("li")[3];
-var myImage = document.getElementById("myImage");
-var effect1 = document.getElementById("effect1"); 
-var effect5 = document.getElementById("effect5"); 
-var effect8 = document.getElementById("effect8"); 
-var effect9 = document.getElementById("effect9"); 
+var myImage = document.getElementById("myImage"); 
+var effect8 = document.getElementById("effect8");  
 
 document.body.onresize = (e) => {
     if(e.target.innerWidth > 900){
@@ -80,11 +77,7 @@ var typed = new Typed('.type_text', {
 
  
 //------------------------ function mousesmove------------------------//
-
-logo.onmousemove  = (event) => { 
-    effect1.style.left = event.clientX + 'px';
-    effect1.style.top = event.clientY + 'px';   
-  } 
+ 
 li1.onmousemove  = (event) => { 
     effect8.style.left = event.clientX + 'px';
     effect8.style.top = event.clientY + 'px';   
@@ -105,14 +98,4 @@ li4.onmousemove  = (event) => {
     effect8.style.top = event.clientY + 'px';   
   }
 
-
-accupation.onmousemove  = (event) => { 
-    effect9.style.left = event.clientX + 'px';
-    effect9.style.top = event.clientY + 'px';   
-}
-
-hamburger.onmousemove  = (event) => { 
-    effect1.style.left = event.clientX + 'px';
-    effect1.style.top = event.clientY + 'px';   
-}
-
+ 
