@@ -17,7 +17,8 @@ var settingMainChild = document.getElementById("settingMainChild");
 
 
 //-------------------------- Onresize Function ---------------------------//
-window.onresize = (e) => {
+window.onresize = (e) => { 
+
     if(e.target.innerWidth > 900){
         nav.classList.remove("active"); 
         imageBack.classList.remove("active"); 
@@ -25,8 +26,7 @@ window.onresize = (e) => {
         hamburger.classList.replace("fa-times","fa-bars");
     }
 
-}
-
+} 
 
 
 //----------------------Load Function-------------------------//
@@ -48,11 +48,11 @@ window.onscroll = () => {
     effect8.style.left = .4 * windowPageYOffset + "px";
 
 
-    if(windowPageYOffset > 500){
-        goToBottom.classList.add("active");
-    }  else {
-        goToBottom.classList.remove("active");
-    }
+    // if(windowPageYOffset > 500){
+    //     goToBottom.classList.add("active");
+    // }  else {
+    //     goToBottom.classList.remove("active");
+    // }
        
 }
 
@@ -120,10 +120,10 @@ hamburger.addEventListener("click", () =>{
 settingMain.addEventListener("click", () =>{
     settingMainChild.classList.toggle("active");  
 
-    if(settingMain.className === "fa fa-cog"){
-        settingMain.classList.replace("fa-cog","fa-times"); 
+    if(settingMain.className === "fa fa-cogs"){
+        settingMain.classList.replace("fa-cogs","fa-times"); 
     } else {
-        settingMain.classList.replace("fa-times","fa-cog");
+        settingMain.classList.replace("fa-times","fa-cogs");
     }
 })
 
