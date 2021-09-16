@@ -1,3 +1,101 @@
+.loaderMode {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  z-index: 13;
+  opacity: 1;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  border-radius: 0px;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+  background-color: red;
+  background: linear-gradient(15deg, rgba(255, 248, 145, 0.76), #ffb6bc, #c9c8ff, rgba(142, 247, 255, 0.959));
+}
+
+.loaderMode .loader {
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  z-index: 22;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.loaderMode .loader h1 {
+  font-size: 30px;
+  font-weight: 700;
+  -webkit-text-stroke: 1px #859ec0;
+  background: linear-gradient(15deg, #fff, rgba(109, 221, 255, 0.733), rgba(255, 163, 135, 0.959), #c1fafc, #fff);
+  -webkit-background-clip: text;
+  color: transparent;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 170px;
+  text-transform: uppercase;
+  width: 170px;
+  position: relative;
+}
+
+.loaderMode .loader ::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 68% 32% 32% 68% / 39% 40% 70% 61%;
+  z-index: -1;
+  border: #ff8585 solid 2px;
+  background: linear-gradient(15deg, rgba(255, 248, 145, 0.39), rgba(255, 182, 188, 0.959), #c9c8ff, rgba(142, 247, 255, 0.637));
+  -webkit-animation: rotateClock 12s linear infinite alternate;
+          animation: rotateClock 12s linear infinite alternate;
+  -webkit-box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.685), 0px 0px 20px rgba(255, 255, 255, 0.26), 0px 0px 30px rgba(255, 255, 255, 0.26);
+          box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.685), 0px 0px 20px rgba(255, 255, 255, 0.26), 0px 0px 30px rgba(255, 255, 255, 0.26);
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  opacity: 0.3;
+}
+
+.loaderMode .loader ::after {
+  content: "Loading";
+  position: absolute;
+  text-transform: uppercase;
+  z-index: -1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+  top: 95px;
+  -webkit-text-stroke: 0px #859ec0;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(255, 255, 255, 0.246)));
+  background: linear-gradient(transparent, rgba(255, 255, 255, 0.246));
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
 .second-div {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -247,6 +345,20 @@
   }
 }
 
+@-webkit-keyframes rotateAntiClock {
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+@keyframes rotateAntiClock {
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
 .second-div .content .image img {
   width: 300px;
   border-radius: 50%;
@@ -346,7 +458,7 @@
       -ms-flex-align: center;
           align-items: center;
   margin: 20px;
-  z-index: 11;
+  z-index: 8;
 }
 
 .setting i {
@@ -357,6 +469,7 @@
   border-radius: 3px;
   font-size: 20px;
   border: 2px solid rgba(246, 246, 246, 0.76);
+  -webkit-text-stroke: 2px rgba(51, 49, 49, 0.616);
   -webkit-transition: all .2s linear;
   transition: all .2s linear;
   padding: 5px;
@@ -375,7 +488,7 @@
   bottom: 20px;
   opacity: 0;
   right: 90px;
-  background: linear-gradient(15deg, rgba(218, 217, 215, 0.39), rgba(52, 56, 59, 0.959), #1b3505, rgba(255, 255, 255, 0.637));
+  background: linear-gradient(15deg, #fff, #ffee00, #ff061a, #0804f5, #00eeff);
   color: transparent;
   -webkit-background-clip: text;
 }
@@ -384,9 +497,9 @@
   position: fixed;
   bottom: 70px;
   opacity: 0;
+  background: linear-gradient(15deg, rgba(255, 254, 251, 0.883), #000, rgba(173, 173, 173, 0.959), #3d3d3d, #f8f6f6);
   color: transparent;
   -webkit-background-clip: text;
-  background: linear-gradient(15deg, rgba(218, 217, 215, 0.39), rgba(52, 56, 59, 0.959), #1b3505, rgba(255, 255, 255, 0.637));
   right: 70px;
 }
 
@@ -395,6 +508,9 @@
   opacity: 0;
   bottom: 90px;
   right: 20px;
+  background: linear-gradient(15deg, #fff, rgba(0, 0, 0, 0.39), rgba(255, 255, 255, 0.959), #f6f6f6, #a1a1a1, rgba(95, 95, 95, 0.637));
+  color: transparent;
+  -webkit-background-clip: text;
 }
 
 .setting .items.active :nth-child(1) {
@@ -425,6 +541,8 @@
   z-index: -1;
   -webkit-transform: scale(1.6);
           transform: scale(1.6);
+  -webkit-box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.685), 0px 0px 20px rgba(255, 255, 255, 0.26), 0px 0px 30px rgba(255, 255, 255, 0.26);
+          box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.685), 0px 0px 20px rgba(255, 255, 255, 0.26), 0px 0px 30px rgba(255, 255, 255, 0.26);
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
   background: linear-gradient(15deg, rgba(255, 248, 145, 0.39), rgba(255, 182, 188, 0.959), #c9c8ff, rgba(142, 247, 255, 0.637));
@@ -486,6 +604,9 @@
     position: fixed !important;
     height: 1000px !important;
     width: 1000px !important;
+    overflow: hidden;
+    -webkit-transform-origin: center;
+            transform-origin: center;
     z-index: 9 !important;
     opacity: 1 !important;
   }

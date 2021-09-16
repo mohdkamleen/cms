@@ -18,20 +18,38 @@
     .logo{  
         text-transform: uppercase;
         font-size: 25px;
-        font-weight: 600;  
-        padding: 10px;    
-        letter-spacing: -42x;
-        text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.685),0px 0px 20px rgba(255, 255, 255, 0.445),0px 0px 30px rgba(255, 255, 255, 0.986); 
-   
+        font-weight: 600;     
+        position: relative;
+        display: flex;     
+
     :nth-child(1){
-        color: rgb(119, 165, 252);   
-    } 
+        color: transparent; 
+    }  
     :nth-child(2){
-        color: rgb(219, 148, 157); 
-    } 
- 
+        color: transparent; 
+    }  
+    ::before{
+        content: "kamleen";
+        position: absolute;
+        top: 0;left: 0; 
+        height: 100% ;
+        width: 0%;
+        overflow: hidden;
+        background : linear-gradient(15deg, rgba(109, 221, 255, 0.733),rgba(255, 163, 135, 0.959),rgb(159, 158, 255));
+        -webkit-background-clip: text;
+        color: transparent;
+        animation: logoAnimate forwards .5s linear;
+    }
+
+    @keyframes logoAnimate { 
+        100%{
+            width: 100%; 
+            -webkit-text-stroke: 1px rgb(133, 158, 192);
+        }
+    }
+
 } 
- 
+
 
     .hamburger{
         display: none;
@@ -41,6 +59,7 @@
         -webkit-background-clip: text;
         border-radius: 3px;
         font-size: 20px !important;
+        -webkit-text-stroke: 1px rgba(195, 48, 48, 0.616);
         border: 2px solid rgba(246, 246, 246, 0.76); 
         transition: all .2s linear;  
         padding: 5px;
