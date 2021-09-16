@@ -39,10 +39,10 @@ hamburger.addEventListener("click", () =>{
 settingMain.addEventListener("click", () =>{
     settingMainChild.classList.toggle("active");  
 
-    if(settingMain.className === "fa fa-cogs"){
-        settingMain.classList.replace("fa-cogs","fa-times"); 
+    if(settingMain.className === "fa fa-cog"){
+        settingMain.classList.replace("fa-cog","fa-times"); 
     } else {
-        settingMain.classList.replace("fa-times","fa-cogs");
+        settingMain.classList.replace("fa-times","fa-cog");
     }
 })
 
