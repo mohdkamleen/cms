@@ -138,26 +138,25 @@
 }
 
 .second-div .content .accupation h1 {
-  color: transparent;
-  font-size: 35px;
-  background: linear-gradient(15deg, rgba(153, 146, 54, 0.794), rgba(206, 89, 99, 0.959), #74966f, rgba(58, 242, 255, 0.849));
-  -webkit-background-clip: text;
+  color: #a39f63;
+  font-size: 30px;
   padding: 10px;
-  -webkit-text-stroke: 1px rgba(238, 148, 148, 0.603);
+  font-weight: 500;
+  -webkit-text-stroke: 1px #888448;
 }
 
 .second-div .content .accupation .we-are {
   padding: 0px 10px;
   font-size: 20px;
-  font-weight: 700;
+  font-weight: bold;
   color: #77a5fc;
 }
 
 .second-div .content .accupation .we-are .type_text {
   font-size: 25px;
-  color: transparent;
-  background: linear-gradient(15deg, rgba(54, 85, 153, 0.794), rgba(86, 155, 65, 0.959), #6c6eeb, rgba(255, 64, 58, 0.849));
-  -webkit-background-clip: text;
+  font-weight: 400;
+  color: #e07f7f;
+  -webkit-text-stroke: 1px #ce5f5f;
 }
 
 .second-div .content .accupation .buttons {
@@ -231,45 +230,6 @@
   color: #a39f63 !important;
 }
 
-.second-div .content .accupation .go-to-down {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 20px;
-  -webkit-transition: all .5s ease;
-  transition: all .5s ease;
-}
-
-.second-div .content .accupation .go-to-down .parent-go-to-down {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  width: 15px;
-  opacity: .4;
-  -webkit-animation: toDown 2s linear infinite alternate;
-          animation: toDown 2s linear infinite alternate;
-  -webkit-transform: scale(1.4);
-          transform: scale(1.4);
-  -webkit-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out;
-  cursor: pointer;
-}
-
 @-webkit-keyframes toDown {
   100% {
     -webkit-transform: translateY(30px) scale(1.4);
@@ -284,26 +244,6 @@
             transform: translateY(30px) scale(1.4);
     opacity: .4;
   }
-}
-
-.second-div .content .accupation .go-to-down .parent-go-to-down div {
-  width: 3px;
-  height: 3px;
-  background-color: #444444;
-  -webkit-box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.685), 0px 0px 20px rgba(255, 255, 255, 0.26), 0px 0px 30px rgba(255, 255, 255, 0.26);
-          box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.685), 0px 0px 20px rgba(255, 255, 255, 0.26), 0px 0px 30px rgba(255, 255, 255, 0.26);
-  margin: 1px;
-}
-
-.second-div .content .accupation .go-to-down .parent-go-to-down:hover {
-  -webkit-animation-play-state: paused;
-          animation-play-state: paused;
-  -webkit-transform: scale(1.6);
-          transform: scale(1.6);
-}
-
-.second-div .content .accupation .go-to-down :nth-child(2) {
-  background: transparent !important;
 }
 
 .second-div .content .image {
@@ -490,6 +430,7 @@
   right: 90px;
   background: linear-gradient(15deg, #fff, #ffee00, #ff061a, #0804f5, #00eeff);
   color: transparent;
+  border-color: rgba(255, 1, 1, 0.212);
   -webkit-background-clip: text;
 }
 
@@ -609,6 +550,8 @@
             transform-origin: center;
     z-index: 9 !important;
     opacity: 1 !important;
+    -webkit-animation-play-state: paused !important;
+            animation-play-state: paused !important;
   }
   .image img {
     width: 230px !important;

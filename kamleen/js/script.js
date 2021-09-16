@@ -1,22 +1,26 @@
+//--------------------- variable diclaration ---------------------//
+
 var hamburger = document.getElementsByClassName("hamburger")[0];
 var copyright = document.getElementsByClassName("copyright")[0];
 var imageBack = document.getElementsByClassName("image-back")[0]; 
 var goToBottom = document.getElementsByClassName("go-to-down")[0]; 
-var logo = document.getElementsByClassName("logo")[0]; 
 var loaderMode = document.getElementsByClassName("loaderMode")[0]; 
 var accupation = document.getElementsByClassName("accupation")[0];  
+var logo = document.getElementsByClassName("logo")[0]; 
+
 var nav = document.getElementsByTagName("nav")[0];
 var li1 = document.getElementsByTagName("li")[0];
 var li2 = document.getElementsByTagName("li")[1];
 var li3 = document.getElementsByTagName("li")[2];
 var li4 = document.getElementsByTagName("li")[3];
+
+var settingMainChild = document.getElementById("settingMainChild");  
+var settingMain = document.getElementById("settingMain");  
 var myImage = document.getElementById("myImage"); 
 var effect8 = document.getElementById("effect8");  
-var settingMain = document.getElementById("settingMain");  
-var settingMainChild = document.getElementById("settingMainChild");  
 
 
-//-------------------------- Onresize Function ---------------------------//
+//---------------------- window resize -------------------------//
 window.onresize = (e) => { 
 
     if(e.target.innerWidth > 900){
@@ -29,7 +33,7 @@ window.onresize = (e) => {
 } 
 
 
-//----------------------Load Function-------------------------//
+//---------------------- window load -------------------------//
 
 window.onload = () => {
     loaderMode.style.opacity = "0";
@@ -37,12 +41,17 @@ window.onload = () => {
 }
 
 
+//---------------------- window click -------------------------//
+
+window.onclick = () => { 
+    
+}
+
+
 //---------------------- window scroll --------------------------//
 
 window.onscroll = () => {
-    let windowPageYOffset = window.pageYOffset; 
-
-     
+    let windowPageYOffset = window.pageYOffset;  
     imageBack.style.filter = "blur("+windowPageYOffset/99 + "px)"; 
     effect9.style.left = .4 * windowPageYOffset + "px";
     effect8.style.left = .4 * windowPageYOffset + "px";
@@ -55,15 +64,6 @@ window.onscroll = () => {
     // }
        
 }
-
-
-
-//-------------------------- Go To Button Function ------------------------------//
-
-goToBottom.addEventListener("click", () => {
-    location = '#';
-})
- 
  
 
 
@@ -80,7 +80,7 @@ var typed = new Typed('.type_text', {
     }); 
 
  
-//------------------------ function mousesmove------------------------//
+//----------------- function mousesmove------------------------//
  
 li1.onmousemove  = (event) => { 
     effect8.style.left = event.clientX + 'px';
@@ -104,7 +104,8 @@ li4.onmousemove  = (event) => {
 
  
 
-  
+//---------------------- hamburger function ------------------//
+
 hamburger.addEventListener("click", () =>{
     nav.classList.toggle("active"); 
     imageBack.classList.toggle("active"); 
@@ -117,6 +118,8 @@ hamburger.addEventListener("click", () =>{
     }
 })
 
+
+//--------------------- setting for style function --------------------//
 settingMain.addEventListener("click", () =>{
     settingMainChild.classList.toggle("active");  
 

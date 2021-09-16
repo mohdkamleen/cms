@@ -103,26 +103,25 @@
         }
 
         h1{
-            color: transparent;
-            font-size: 35px;
-            background : linear-gradient(15deg, rgba(153, 146, 54, 0.794),rgba(206, 89, 99, 0.959),rgb(116, 150, 111),rgba(58, 242, 255, 0.849));
-            -webkit-background-clip: text;
+            color: #a39f63 ;
+            font-size: 30px; 
             padding: 10px; 
-            -webkit-text-stroke: 1px rgba(238, 148, 148, 0.603);
+            font-weight: 500;
+            -webkit-text-stroke: 1px #888448;
              
         }
 
         .we-are{
             padding: 0px 10px;
-            font-size: 20px;
-            font-weight: 700;
-            color:rgb(119, 165, 252);
+            font-size: 20px;  
+            font-weight: bold;
+            color: rgb(119, 165, 252);
 
             .type_text{
                 font-size: 25px;
-                color: transparent; 
-                background : linear-gradient(15deg, rgba(54, 85, 153, 0.794),rgba(86, 155, 65, 0.959),rgb(108, 110, 235),rgba(255, 64, 58, 0.849));
-                -webkit-background-clip: text;
+                font-weight: 400;
+                color:#e07f7f;
+                -webkit-text-stroke: 1px #ce5f5f;
             }
 
         }
@@ -130,7 +129,7 @@
         .buttons{
             padding: 10px; 
             display: flex; 
-            align-items: center;  
+            align-items: center;   
 
             button{
                 width: 200px;
@@ -191,69 +190,20 @@
             } 
     
 
-        }
-        
-        
-        
-        
-        .go-to-down{
-            width: 100%; 
-            display: flex;
-            justify-content: center;
-            align-items: center; 
-            padding: 20px;
-            transition: all .5s ease;
-            
-            .parent-go-to-down{
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                flex-wrap: wrap;
-                width: 15px; 
-                opacity: .4;
-                animation: toDown 2s linear infinite alternate;
-                transform: scale(1.4);
-                transition: all .3s ease-in-out;
-                cursor: pointer; 
-
-               
-
-                @keyframes toDown {
+        } 
+               @keyframes toDown {
                     100%{
                         transform: translateY(30px) scale(1.4);  
                         opacity: .4;
                     } 
-                }
-
-              
-
-                div{
-                width: 3px;
-                height: 3px; 
-                background-color: rgb(68, 68, 68);
-                box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.685),0px 0px 20px rgba(255, 255, 255, 0.26),0px 0px 30px rgba(255, 255, 255, 0.26); 
-                margin: 1px;
-            }
-
-        }
+                } 
+                
       
-
-        .parent-go-to-down:hover{
-            animation-play-state: paused;
-            transform: scale(1.6);
-        }
-
-        :nth-child(2){
-            background: transparent !important ;
-        }
-
-        
-        
-        }
  
  
-    }
-
+         
+  
+            }
     .image{ 
         border-radius: 50%;  
         width: 300px;
@@ -403,6 +353,7 @@
             right: 90px;
             background: linear-gradient(15deg,#fff, rgb(255, 238, 0),rgb(255, 6, 26),rgb(8, 4, 245),rgb(0, 238, 255));  
             color: transparent;
+            border-color: rgba(255, 1, 1, 0.212);
             -webkit-background-clip: text;
         }
         :nth-child(2){
@@ -513,6 +464,7 @@
             transform-origin: center;
             z-index: 9 !important; 
             opacity: 1 !important;
+            animation-play-state: paused !important;
         }
 
      
