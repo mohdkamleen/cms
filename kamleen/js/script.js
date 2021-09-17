@@ -19,6 +19,7 @@ var settingMainChild = document.getElementById("settingMainChild");
 var settingMain = document.getElementById("settingMain");  
 var myImage = document.getElementById("myImage"); 
 var effect8 = document.getElementById("effect8");  
+var customCss = document.getElementById("customCss");  
 
 
 //---------------------- window resize -------------------------//
@@ -39,6 +40,7 @@ window.onresize = (e) => {
 window.onload = (e) => {
     loaderMode.style.opacity = "0";
     loaderMode.style.visibility = "hidden";
+    customCss.setAttribute("href", localStorage.getItem("cssMode"));
 }
 
 
@@ -114,6 +116,13 @@ hamburger.addEventListener("click", () =>{
         hamburger.classList.replace("fa-times","fa-bars");
     }
 })
+
+//-------------------- change css file ----------------------//
+
+function changeCssFile(e){
+    localStorage.setItem("cssMode", e);
+    customCss.setAttribute("href",e);
+}
 
 
 //--------------------- setting for style function --------------------//

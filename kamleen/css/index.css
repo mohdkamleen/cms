@@ -259,6 +259,8 @@
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
   opacity: 0.3;
+  background: rgba(255, 255, 255, 0.781);
+  border: 2px solid rgba(179, 179, 179, 0.705);
 }
 
 .second-div .content .image img {
@@ -368,7 +370,6 @@
   right: 90px;
   background: linear-gradient(15deg, #fff, #ffee00, #ff061a, #0804f5, #00eeff);
   color: transparent;
-  border-color: rgba(255, 1, 1, 0.212);
   -webkit-background-clip: text;
 }
 

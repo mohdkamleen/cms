@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- <link rel="stylesheet" href="css/nav.css"> -->
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" id="customCss">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -71,9 +72,9 @@
             <div class="setting">
                 <i class="fa fa-cogs" id="settingMain"></i>
                 <div class="items" id="settingMainChild">
-                    <i class="fa fa-paint-brush"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-certificate"></i>
+                    <i class="fa fa-paint-brush" onclick="changeCssFile('css/style.css')"></i>
+                    <i class="fa fa-star" onclick="changeCssFile('css/dark.css')"></i>
+                    <i class="fa fa-certificate" onclick="changeCssFile('css/light.css')"></i>
                 </div>
             </div>
 
