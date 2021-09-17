@@ -278,11 +278,11 @@
   position: relative;
   bottom: 0;
   width: 100%;
-  padding: 10px;
+  padding: 20px;
   text-align: center;
   color: #db949d;
-  -webkit-transition: all 3s ease .5s;
-  transition: all 3s ease .5s;
+  -webkit-transition: all .3s ease .5s;
+  transition: all .3s ease .5s;
 }
 
 .copyright p {
@@ -296,11 +296,11 @@
 
 .copyright.active {
   z-index: 10;
-  position: fixed;
-  top: 85vh;
+  position: absolute;
+  bottom: 30px;
   opacity: 0;
-  -webkit-animation: toUp 1s forwards ease-in-out;
-          animation: toUp 1s forwards ease-in-out;
+  -webkit-animation: toUp .5s forwards linear;
+          animation: toUp .5s forwards linear;
 }
 
 .effects #effect8 {
@@ -348,8 +348,8 @@
   font-size: 20px;
   border: 2px solid rgba(246, 246, 246, 0.76);
   -webkit-text-stroke: 2px rgba(51, 49, 49, 0.616);
-  -webkit-transition: all .2s linear;
-  transition: all .2s linear;
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
   padding: 5px;
   -webkit-box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.685), 0px 0px 20px rgba(255, 255, 255, 0.26), 0px 0px 30px rgba(255, 255, 255, 0.26);
           box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.685), 0px 0px 20px rgba(255, 255, 255, 0.26), 0px 0px 30px rgba(255, 255, 255, 0.26);
@@ -435,6 +435,10 @@
 /*****************************************
 this is part of services of css
 *****************************************/
+.services {
+  z-index: -2 !important;
+}
+
 .services h2 {
   text-align: center;
   padding: 25px 0px;
@@ -603,7 +607,7 @@ this is part of services of css
     overflow: hidden;
     -webkit-transform-origin: center;
             transform-origin: center;
-    z-index: 9 !important;
+    z-index: 9;
     opacity: 1 !important;
     -webkit-animation-play-state: paused !important;
             animation-play-state: paused !important;

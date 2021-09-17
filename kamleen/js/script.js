@@ -56,7 +56,7 @@ window.onload = (e) => {
 window.onscroll = () => {
 
     var pageY = window.pageYOffset;
-    if(pageY > 200){
+    if(pageY > 200 ){
         cardDiv.classList.add("active");
     }  
     
@@ -152,6 +152,12 @@ services = [
     {
         "icon": "fa-mobile",
         "title": "Responsive Design",
+        "descrition": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, aliquam?"
+
+    },
+    {
+        "icon": "fa-wordpress",
+        "title": "Wordpress",
         "descrition": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, aliquam?"
 
     },
