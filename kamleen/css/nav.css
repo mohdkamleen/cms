@@ -179,7 +179,8 @@
         -ms-flex-direction: column;
             flex-direction: column;
     z-index: 10;
-    overflow: hidden !important;
+    -webkit-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
   }
   .nav li {
     margin: 10px 20px !important;
@@ -199,7 +200,6 @@
     display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important;
-    overflow: hidden;
   }
   nav.active .nav li:nth-child(1) {
     -webkit-animation: toLeft .5s .3s ease forwards !important;

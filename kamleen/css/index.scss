@@ -16,8 +16,7 @@
     .loader{
         position: absolute;
         height: 100vh;
-        width: 100%; 
-        overflow: hidden;
+        width: 100%;  
         display: flex;
         justify-content: center;
         align-items: center;
@@ -89,7 +88,8 @@
     align-items: center;
     max-width: 1400px;
     min-height: 750px; 
-    height: 90vh; 
+    height: 100vh;  
+    overflow: hidden;
 
     .accupation{ 
         padding: 5px; 
@@ -407,7 +407,7 @@ this is part of services of css
         text-transform: capitalize;
         -webkit-text-stroke: 1px rgb(75, 75, 75);
         transform: scale(0);
-        animation: popUp 1s .7s forwards;
+        animation: popUp 1s 1s forwards;
     }
     
     .card-div{ 
@@ -538,8 +538,9 @@ this is part of services of css
         .image-back.active{
             position: fixed !important; 
             height: 1000px !important;
-            width: 1000px !important; 
-            overflow: hidden !important;   
+            width: 1000px !important;  
+            top: -100px !important;
+            right: -300px !important;
             z-index: 9 !important; 
             opacity: 1 !important;
             animation-play-state: paused !important;

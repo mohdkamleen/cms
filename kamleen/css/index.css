@@ -18,7 +18,6 @@
   position: absolute;
   height: 100vh;
   width: 100%;
-  overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -122,7 +121,8 @@
           align-items: center;
   max-width: 1400px;
   min-height: 750px;
-  height: 90vh;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .second-div .content .accupation {
@@ -447,8 +447,8 @@ this is part of services of css
   -webkit-text-stroke: 1px #4b4b4b;
   -webkit-transform: scale(0);
           transform: scale(0);
-  -webkit-animation: popUp 1s .7s forwards;
-          animation: popUp 1s .7s forwards;
+  -webkit-animation: popUp 1s 1s forwards;
+          animation: popUp 1s 1s forwards;
 }
 
 .services .card-div {
@@ -604,7 +604,8 @@ this is part of services of css
     position: fixed !important;
     height: 1000px !important;
     width: 1000px !important;
-    overflow: hidden !important;
+    top: -100px !important;
+    right: -300px !important;
     z-index: 9 !important;
     opacity: 1 !important;
     -webkit-animation-play-state: paused !important;
