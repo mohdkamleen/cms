@@ -1,0 +1,105 @@
+
+
+//------------------ animations -----------------//
+
+
+@keyframes logoAnimate { 
+    100%{
+        width: 100%; 
+        -webkit-text-stroke: 1px rgb(133, 158, 192);
+    }
+} 
+
+
+@keyframes toLeft{
+    0%{
+       transform: translateX(100px);
+       opacity: 0;
+    } 
+    100%{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+    
+
+@keyframes toRight{
+0%{
+    transform: translateX(-100px);
+    opacity: 0;
+}
+100%{
+    transform: translateX(0px);
+    opacity: 1;
+}
+}
+
+
+@keyframes bouncUpDown {
+    50%{ 
+        transform: translateY(-10px);
+    }
+    100%{
+        z-index: 10;
+        transform: translateY(0px);
+    }
+}
+
+
+@keyframes toShow { 
+    100%{   
+        transform: scale(1);
+    }
+}
+
+
+@keyframes toDown {
+    100%{
+        transform: translateY(30px) scale(1.4);  
+        opacity: .4;
+    } 
+} 
+
+
+@keyframes rotateClock {
+    100%{
+        transform: rotate(360deg);
+    } 
+}
+
+
+@keyframes rotateAntiClock {
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+
+
+@keyframes popUp {
+    100%{
+        transform: scale(1);
+    }
+}
+
+
+@keyframes toUp{
+    0%{
+       transform: translateY(100px); 
+    } 
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+
+@keyframes toUpLeft{
+    0%{
+       transform: translateY(50px) translateX(50px); 
+       opacity: 0;  
+    } 
+    100%{
+        transform: translateY(0px) translateX(0px); 
+        opacity: 1;
+    }
+}

@@ -6,6 +6,7 @@ var imageBack = document.getElementsByClassName("image-back")[0];
 var goToBottom = document.getElementsByClassName("go-to-down")[0]; 
 var loaderMode = document.getElementsByClassName("loaderMode")[0]; 
 var accupation = document.getElementsByClassName("accupation")[0];  
+var cardDiv = document.getElementsByClassName("card-div")[0];  
 var logo = document.getElementsByClassName("logo")[0]; 
 
 var nav = document.getElementsByTagName("nav")[0];
@@ -51,16 +52,14 @@ window.onclick = () => {
 //---------------------- window scroll --------------------------//
 
 window.onscroll = () => {
-    let windowPageYOffset = window.pageYOffset;  
-    imageBack.style.filter = "blur("+windowPageYOffset/99 + "px)"; 
-    effect9.style.left = .4 * windowPageYOffset + "px";
-    effect8.style.left = .4 * windowPageYOffset + "px";
-
-
+    // let windowPageYOffset = window.pageYOffset;    
+    alert("sdfasd");
+    
     // if(windowPageYOffset > 500){
-    //     goToBottom.classList.add("active");
+    //     alert("sdf");  
+    //     cardDiv.classList.add("active");
     // }  else {
-    //     goToBottom.classList.remove("active");
+    //     cardDiv.classList.remove("active");
     // }
        
 }
@@ -131,3 +130,55 @@ settingMain.addEventListener("click", () =>{
 })
 
 
+//------------------------ api for services -----------------------//
+
+services = [
+    {
+        "icon": "fa-html5",
+        "title": "Web Developer",
+        "descrition": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, aliquam?"
+
+    },
+    {
+        "icon": "fa-code",
+        "title": "Web Design",
+        "descrition": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, aliquam?"
+
+    },
+    {
+        "icon": "fa-paint-brush",
+        "title": "Graphic Design",
+        "descrition": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, aliquam?"
+    },
+    {
+        "icon": "fa-mobile",
+        "title": "Responsive Design",
+        "descrition": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, aliquam?"
+
+    },
+    {
+        "icon": "fa-wordpress",
+        "title": "Wordpress",
+        "descrition": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, aliquam?"
+
+    },
+];
+
+
+services.forEach(e => {
+    
+    cardDiv.innerHTML += `
+        <div class="card">
+        <div class="card-icon">
+            <i class="fa ${e.icon}"></i>
+        </div>
+        <div class="card-header">
+            <h4>${e.title}</h4>
+        </div>
+        <div class="card-body">
+             ${e.descrition}
+        </div> 
+        </div>
+    `;
+
+});

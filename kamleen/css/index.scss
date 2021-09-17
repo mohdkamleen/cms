@@ -190,20 +190,10 @@
             } 
     
 
-        } 
-               @keyframes toDown {
-                    100%{
-                        transform: translateY(30px) scale(1.4);  
-                        opacity: .4;
-                    } 
-                } 
-                
-      
- 
- 
-         
+        }  
   
             }
+
     .image{ 
         border-radius: 50%;  
         width: 300px;
@@ -224,18 +214,7 @@
             transition: all .3s ease-in-out;
             opacity: 0.3;
 
-           @keyframes rotateClock {
-               100%{
-                   transform: rotate(360deg);
-               }
-               
-           }
-           @keyframes rotateAntiClock {
-               100%{
-                   transform: rotate(-360deg);
-               }
-               
-           }
+        
         }
  
 
@@ -282,16 +261,6 @@
     opacity: 0;
     animation: toUp 1s forwards ease-in-out;
 }
-
-@keyframes toUp{
-    0%{
-       transform: translateY(100px); 
-    } 
-    100%{
-        transform: translateY(0px);
-        opacity: 1;
-    }
-    }
 
 
  .effects{ 
@@ -413,33 +382,110 @@
 
 .items.active::after{ 
     transform: scale(3.3);
+}  
+ }
+
+
+
+/*****************************************
+this is part of services of css
+*****************************************/
+
+.services{ 
+    
+    h2{
+        text-align: center;
+        padding: 25px 0px;
+        color: rgb(102, 102, 102);
+        text-transform: capitalize;
+        -webkit-text-stroke: 1px rgb(75, 75, 75);
+    }
+    
+    .card-div{ 
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;   
+        margin: auto;
+        padding-bottom: 100px ;
+        flex-wrap: wrap; 
+        max-width: 1500px;
+        transition: all .3s ;
+
+        .card{  
+            border: 2px solid rgba(219, 165, 165, 0.644);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 30px 20px 50px 10px; 
+            transition: all .3s ;
+            border-radius: 3px; 
+            width: 350px;
+            margin: 20px;
+            // transform: scale(0);
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.685),0px 0px 20px rgba(255, 255, 255, 0.26),0px 0px 30px rgba(255, 255, 255, 0.26); 
+
+            .card-icon{ 
+                font-size: 30px; 
+                font-weight: bold;
+                background : linear-gradient(15deg, rgba(255, 248, 145, 0.39),rgba(255, 182, 188, 0.959),rgb(201, 200, 255),rgba(142, 247, 255, 0.637));
+                color: transparent;
+                -webkit-background-clip: text;
+                -webkit-text-stroke: 1px rgba(150, 51, 51, 0.616);
+            }
+
+            .card-header{ 
+                font-size: 20px;
+                padding: 5px;
+                color: rgb(163, 159, 99) ;
+                -webkit-text-stroke: 1px rgb(146, 142, 88) ;
+            }
+
+            .card-body{
+                text-align: center;  
+                color: rgb(61, 59, 59);
+                font-size: 18px;
+            }
+        }
+
+        :hover{
+            // box-shadow: none;
+        }
+
+      
+
+
+        :nth-child(1) .card-header{ 
+            color: rgb(163, 159, 99) ;
+            -webkit-text-stroke: 1px rgb(146, 142, 88) ;
+        }
+        :nth-child(2) .card-header{ 
+            color: rgb(129, 128, 165) ;
+            -webkit-text-stroke: 1px rgb(116, 115, 151);
+        }
+        :nth-child(3) .card-header{ 
+            color: rgb(209, 124, 129) ;
+            -webkit-text-stroke: 1px rgb(182, 121, 125) ; ;
+        }
+        :nth-child(4) .card-header{ 
+            color: rgb(68, 123, 126) ;
+            -webkit-text-stroke: 1px rgb(71, 123, 126) ;
+        }
+
+
+    }
+        .card-div.active .card{ 
+            animation: popUp 1s infinite ;
+        }
+
+
 }
 
 
 
-@keyframes toUpLeft{
-    0%{
-       transform: translateY(50px) translateX(50px); 
-       opacity: 0;  
-    } 
-    100%{
-        transform: translateY(0px) translateX(0px); 
-        opacity: 1;
-    }
-    }
 
-
- }
-
- 
-
- #demo{
-     color: gray;
-     padding: 10px 30px;
-     font-size: 20px;
- }
-
-
+  
 
 @media (max-width:900px){
     .content{
@@ -473,6 +519,20 @@
         } 
     }
 
+
+    
+    
+.services{
+    .card-div{  
+        flex-direction: column; 
+
+        .card{  
+            width: 80%;
+        }
+    }
+}
+
+
 }
 
 
@@ -485,5 +545,10 @@
             width: 100% !important;
         }
     }
+    .card{  
+        width: 90% !important;
+    }
+
+
 }
- 
+  

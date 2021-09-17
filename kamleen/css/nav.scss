@@ -39,15 +39,7 @@
         -webkit-background-clip: text;
         color: transparent;
         animation: logoAnimate forwards .5s linear;
-    }
-
-    @keyframes logoAnimate { 
-        100%{
-            width: 100%; 
-            -webkit-text-stroke: 1px rgb(133, 158, 192);
-        }
-    }
-
+    } 
 } 
 
 
@@ -208,61 +200,8 @@
 
 
 
+ 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-//------------------ animations -----------------//
-
-
-@keyframes toLeft{
-    0%{
-       transform: translateX(100px);
-       opacity: 0;
-    } 
-    100%{
-        transform: translateX(0px);
-        opacity: 1;
-    }
-    }
-    
-    @keyframes toRight{
-    0%{
-       transform: translateX(-100px);
-       opacity: 0;
-    }
-    100%{
-        transform: translateX(0px);
-        opacity: 1;
-    }
-    }
-    
-
-    @keyframes bouncUpDown {
-        50%{ 
-            transform: translateY(-10px);
-        }
-        100%{
-            z-index: 10;
-            transform: translateY(0px);
-        }
-    }
-    
-
-    @keyframes toShow { 
-        100%{   
-            transform: scale(1);
-        }
-    }
-    

@@ -62,20 +62,6 @@
           animation: logoAnimate forwards .5s linear;
 }
 
-@-webkit-keyframes logoAnimate {
-  100% {
-    width: 100%;
-    -webkit-text-stroke: 1px #859ec0;
-  }
-}
-
-@keyframes logoAnimate {
-  100% {
-    width: 100%;
-    -webkit-text-stroke: 1px #859ec0;
-  }
-}
-
 .navigation nav .hamburger {
   display: none;
   z-index: 11;
@@ -228,96 +214,6 @@
   nav.active .nav li:nth-child(4) {
     -webkit-animation: toRight .5s .9s ease forwards !important;
             animation: toRight .5s .9s ease forwards !important;
-  }
-}
-
-@-webkit-keyframes toLeft {
-  0% {
-    -webkit-transform: translateX(100px);
-            transform: translateX(100px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
-    opacity: 1;
-  }
-}
-
-@keyframes toLeft {
-  0% {
-    -webkit-transform: translateX(100px);
-            transform: translateX(100px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes toRight {
-  0% {
-    -webkit-transform: translateX(-100px);
-            transform: translateX(-100px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
-    opacity: 1;
-  }
-}
-
-@keyframes toRight {
-  0% {
-    -webkit-transform: translateX(-100px);
-            transform: translateX(-100px);
-    opacity: 0;
-  }
-  100% {
-    -webkit-transform: translateX(0px);
-            transform: translateX(0px);
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes bouncUpDown {
-  50% {
-    -webkit-transform: translateY(-10px);
-            transform: translateY(-10px);
-  }
-  100% {
-    z-index: 10;
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-  }
-}
-
-@keyframes bouncUpDown {
-  50% {
-    -webkit-transform: translateY(-10px);
-            transform: translateY(-10px);
-  }
-  100% {
-    z-index: 10;
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-  }
-}
-
-@-webkit-keyframes toShow {
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-
-@keyframes toShow {
-  100% {
-    -webkit-transform: scale(1);
-            transform: scale(1);
   }
 }
 /*# sourceMappingURL=nav.css.map */
