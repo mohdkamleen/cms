@@ -42,8 +42,7 @@ window.onload = (e) => {
     var css = localStorage.getItem("cssMode");
     loaderMode.style.opacity = "0";
     loaderMode.style.visibility = "hidden";
-    customCss.setAttribute("href", css);
-    // customCssAll.setAttribute("href", "../"+css);
+    customCss.href = css; 
 }
 
 
@@ -68,18 +67,6 @@ window.onscroll = () => {
 }
  
 
-
-//------------------ typing js --------------------//
-
-var typed = new Typed('.type_text', {
-    strings: ["", " Web Developer", " Web Designer", "Programmer", "Student","Freelancer" ],
-    loop: true,
-    backSpeed: 30,
-    typeDelay: 1000,
-    cursorChar: '_',
-    typeSpeed: 100
-
-    }); 
 
  
 //----------------- function mousesmove------------------------//
@@ -125,8 +112,7 @@ hamburger.addEventListener("click", () =>{
 
 function changeCssFile(e){
     localStorage.setItem("cssMode", e);
-    customCss.setAttribute("href",e);
-    // customCssAll.setAttribute("href", "../"+e); 
+    customCss.href = e; 
 }
 
 

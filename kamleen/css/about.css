@@ -1,0 +1,229 @@
+.second-div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.second-div .content {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 1400px;
+  min-height: 700px;
+}
+
+.second-div .content .accupation {
+  opacity: 0;
+  -webkit-animation: toRight 1s .5s forwards;
+          animation: toRight 1s .5s forwards;
+  padding: 20px;
+  max-width: 500px;
+}
+
+.second-div .content .accupation h1 {
+  color: #a39f63;
+  font-size: 22px;
+  padding: 10px;
+  font-weight: 400;
+  -webkit-text-stroke: 1px #888448;
+}
+
+.second-div .content .image {
+  border-radius: 50%;
+  width: 300px;
+  border-bottom: 25px solid rgba(255, 205, 205, 0.26);
+  position: relative;
+  opacity: 0;
+  -webkit-animation: toLeft 1s .5s forwards;
+          animation: toLeft 1s .5s forwards;
+}
+
+.second-div .content .image .image-back {
+  width: 300px;
+  height: 300px;
+  z-index: -2;
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 68% 32% 32% 68% / 39% 30% 70% 61%;
+  background: linear-gradient(15deg, rgba(255, 248, 145, 0.39), rgba(255, 182, 188, 0.959), #c9c8ff, rgba(142, 247, 255, 0.637));
+  -webkit-animation: rotateClock 60s linear infinite alternate;
+          animation: rotateClock 60s linear infinite alternate;
+  -webkit-box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.685), 0px 0px 20px rgba(255, 255, 255, 0.26), 0px 0px 30px rgba(255, 255, 255, 0.26);
+          box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.685), 0px 0px 20px rgba(255, 255, 255, 0.26), 0px 0px 30px rgba(255, 255, 255, 0.26);
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  opacity: 0.3;
+}
+
+.second-div .content .image img {
+  width: 300px;
+  border-radius: 50%;
+  -webkit-transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
+  cursor: none;
+}
+
+.second-div .content .image img:hover ~ .image-back {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+.copyright {
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  color: #db949d;
+  -webkit-transition: all .3s ease .5s;
+  transition: all .3s ease .5s;
+}
+
+.copyright p {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.copyright p a {
+  color: #77a5fc;
+}
+
+.copyright.active {
+  z-index: 10;
+  position: absolute;
+  bottom: 30px;
+  opacity: 0;
+  -webkit-animation: toUp .5s forwards linear;
+          animation: toUp .5s forwards linear;
+}
+
+.effects #effect8 {
+  position: fixed;
+  height: 20px;
+  width: 20px;
+  top: -50px;
+  z-index: -1;
+  left: 900px;
+  -webkit-transition: all linear 100ms;
+  transition: all linear 100ms;
+  border-radius: 50%;
+  background: #db949d;
+  mix-blend-mode: multiply;
+  -webkit-animation: rotateClock 30s linear infinite alternate;
+          animation: rotateClock 30s linear infinite alternate;
+  -webkit-box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.685), 0px 0px 20px rgba(255, 255, 255, 0.26), 0px 0px 30px rgba(255, 255, 255, 0.26);
+          box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.685), 0px 0px 20px rgba(255, 255, 255, 0.26), 0px 0px 30px rgba(255, 255, 255, 0.26);
+}
+
+.setting {
+  background-color: transparent;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px;
+  z-index: 8;
+}
+
+.setting i {
+  z-index: 11;
+  background: linear-gradient(15deg, rgba(155, 148, 63, 0.39), rgba(102, 186, 255, 0.959), #7c9c61, rgba(142, 247, 255, 0.637));
+  color: transparent;
+  -webkit-background-clip: text;
+  border-radius: 3px;
+  font-size: 20px;
+  border: 2px solid rgba(246, 246, 246, 0.76);
+  -webkit-text-stroke: 2px rgba(51, 49, 49, 0.616);
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+  padding: 5px;
+  -webkit-box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.685), 0px 0px 20px rgba(255, 255, 255, 0.26), 0px 0px 30px rgba(255, 255, 255, 0.26);
+          box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.685), 0px 0px 20px rgba(255, 255, 255, 0.26), 0px 0px 30px rgba(255, 255, 255, 0.26);
+}
+
+.setting :hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-color: #d4f5ff;
+}
+
+.setting .items::after {
+  content: "";
+  background-color: transparent;
+  position: fixed;
+  bottom: -50px;
+  right: -50px;
+  font-size: 25px;
+  width: 100px;
+  border-radius: 50%;
+  height: 100px;
+  z-index: -1;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.685), 0px 0px 20px rgba(255, 255, 255, 0.26), 0px 0px 30px rgba(255, 255, 255, 0.26);
+          box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.685), 0px 0px 20px rgba(255, 255, 255, 0.26), 0px 0px 30px rgba(255, 255, 255, 0.26);
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  background: linear-gradient(15deg, rgba(255, 248, 145, 0.39), rgba(255, 182, 188, 0.959), #c9c8ff, rgba(142, 247, 255, 0.637));
+}
+
+.setting .items.active::after {
+  -webkit-transform: scale(3.3);
+          transform: scale(3.3);
+}
+
+@media (max-width: 900px) {
+  .content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    margin-top: -20px;
+  }
+  .image {
+    width: 230px !important;
+  }
+  .image .image-back {
+    width: 230px !important;
+    height: 230px !important;
+  }
+  .image .image-back.active {
+    position: fixed !important;
+    height: 1000px !important;
+    width: 1000px !important;
+    top: -10vh !important;
+    overflow: hidden !important;
+    right: -30vh !important;
+    z-index: 10 !important;
+    opacity: 1 !important;
+    -webkit-animation-play-state: paused !important;
+            animation-play-state: paused !important;
+  }
+  .image img {
+    width: 230px !important;
+  }
+}
+/*# sourceMappingURL=about.css.map */
