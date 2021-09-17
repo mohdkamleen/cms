@@ -172,14 +172,17 @@
         display: block !important;
     }
 
-    nav.active{
+    nav.active{ 
 
         .logo{ 
             animation: bouncUpDown .3s .5s ease-in-out forwards;
         }
 
         .nav{
-        right: 0; 
+        right: 0;  
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
  
 
         li:nth-child(1){
