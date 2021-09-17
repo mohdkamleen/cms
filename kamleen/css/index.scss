@@ -93,6 +93,8 @@
 
     .accupation{ 
         padding: 5px; 
+        opacity: 0;
+        animation: toRight 1s .5s forwards;
 
         .hey{
             font-size: 20px;
@@ -199,6 +201,8 @@
         width: 300px;
         border-bottom: 25px solid rgba(255, 205, 205, 0.26);   
         position: relative;
+        opacity: 0;
+        animation: toLeft 1s .5s forwards;
 
         .image-back{ 
             width: 300px;
@@ -399,6 +403,8 @@ this is part of services of css
         color: rgb(102, 102, 102);
         text-transform: capitalize;
         -webkit-text-stroke: 1px rgb(75, 75, 75);
+        transform: scale(0);
+        animation: popUp 1s .7s forwards;
     }
     
     .card-div{ 
@@ -423,7 +429,7 @@ this is part of services of css
             border-radius: 3px; 
             width: 350px;
             margin: 20px;
-            // transform: scale(0);
+            transform: scale(0);
             box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.685),0px 0px 20px rgba(255, 255, 255, 0.26),0px 0px 30px rgba(255, 255, 255, 0.26); 
 
             .card-icon{ 
@@ -450,10 +456,12 @@ this is part of services of css
         }
 
         :hover{
-            // box-shadow: none;
+            box-shadow: none;
         }
 
-      
+        .active{
+
+        }
 
 
         :nth-child(1) .card-header{ 
@@ -472,13 +480,35 @@ this is part of services of css
             color: rgb(68, 123, 126) ;
             -webkit-text-stroke: 1px rgb(71, 123, 126) ;
         }
+        :nth-child(5) .card-header{ 
+            color: rgb(129, 128, 165) ;
+            -webkit-text-stroke: 1px rgb(116, 115, 151);
+        }:nth-child(6) .card-header{ 
+            color: rgb(209, 124, 129) ;
+            -webkit-text-stroke: 1px rgb(182, 121, 125) ; ;
+        }
 
 
     }
-        .card-div.active .card{ 
-            animation: popUp 1s infinite ;
-        }
 
+    .active .card:nth-child(1){
+        animation: popUp 1s forwards ;
+    }
+    .active .card:nth-child(2){
+        animation: popUp 1s .2s forwards ;
+    }
+    .active .card:nth-child(3){
+        animation: popUp 1s .3s forwards ;
+    }
+    .active .card:nth-child(4){
+        animation: popUp 1s .4s forwards ;
+    }
+    .active .card:nth-child(5){
+        animation: popUp 1s .5s forwards ;
+    }
+    .active .card:nth-child(6){
+        animation: popUp 1s .6s forwards ;
+    } 
 
 }
 

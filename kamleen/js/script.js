@@ -36,32 +36,30 @@ window.onresize = (e) => {
 
 //---------------------- window load -------------------------//
 
-window.onload = () => {
+window.onload = (e) => {
     loaderMode.style.opacity = "0";
     loaderMode.style.visibility = "hidden";
 }
 
 
 //---------------------- window click -------------------------//
+ 
+// window.onclick = () => { 
 
-window.onclick = () => { 
-    
-}
+// }
+ 
+
 
 
 //---------------------- window scroll --------------------------//
 
 window.onscroll = () => {
-    // let windowPageYOffset = window.pageYOffset;    
-    alert("sdfasd");
+
+    var pageY = window.pageYOffset;
+    if(pageY > 200){
+        cardDiv.classList.add("active");
+    }  
     
-    // if(windowPageYOffset > 500){
-    //     alert("sdf");  
-    //     cardDiv.classList.add("active");
-    // }  else {
-    //     cardDiv.classList.remove("active");
-    // }
-       
 }
  
 
@@ -119,6 +117,7 @@ hamburger.addEventListener("click", () =>{
 
 
 //--------------------- setting for style function --------------------//
+
 settingMain.addEventListener("click", () =>{
     settingMainChild.classList.toggle("active");  
 

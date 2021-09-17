@@ -127,6 +127,9 @@
 
 .second-div .content .accupation {
   padding: 5px;
+  opacity: 0;
+  -webkit-animation: toRight 1s .5s forwards;
+          animation: toRight 1s .5s forwards;
 }
 
 .second-div .content .accupation .hey {
@@ -235,6 +238,9 @@
   width: 300px;
   border-bottom: 25px solid rgba(255, 205, 205, 0.26);
   position: relative;
+  opacity: 0;
+  -webkit-animation: toLeft 1s .5s forwards;
+          animation: toLeft 1s .5s forwards;
 }
 
 .second-div .content .image .image-back {
@@ -435,6 +441,10 @@ this is part of services of css
   color: #666666;
   text-transform: capitalize;
   -webkit-text-stroke: 1px #4b4b4b;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-animation: popUp 1s .7s forwards;
+          animation: popUp 1s .7s forwards;
 }
 
 .services .card-div {
@@ -478,6 +488,8 @@ this is part of services of css
   border-radius: 3px;
   width: 350px;
   margin: 20px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
   -webkit-box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.685), 0px 0px 20px rgba(255, 255, 255, 0.26), 0px 0px 30px rgba(255, 255, 255, 0.26);
           box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.685), 0px 0px 20px rgba(255, 255, 255, 0.26), 0px 0px 30px rgba(255, 255, 255, 0.26);
 }
@@ -504,6 +516,11 @@ this is part of services of css
   font-size: 18px;
 }
 
+.services .card-div :hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
 .services .card-div :nth-child(1) .card-header {
   color: #a39f63;
   -webkit-text-stroke: 1px #928e58;
@@ -524,9 +541,44 @@ this is part of services of css
   -webkit-text-stroke: 1px #477b7e;
 }
 
-.services .card-div.active .card {
-  -webkit-animation: popUp 1s infinite;
-          animation: popUp 1s infinite;
+.services .card-div :nth-child(5) .card-header {
+  color: #8180a5;
+  -webkit-text-stroke: 1px #747397;
+}
+
+.services .card-div :nth-child(6) .card-header {
+  color: #d17c81;
+  -webkit-text-stroke: 1px #b6797d;
+}
+
+.services .active .card:nth-child(1) {
+  -webkit-animation: popUp 1s forwards;
+          animation: popUp 1s forwards;
+}
+
+.services .active .card:nth-child(2) {
+  -webkit-animation: popUp 1s .2s forwards;
+          animation: popUp 1s .2s forwards;
+}
+
+.services .active .card:nth-child(3) {
+  -webkit-animation: popUp 1s .3s forwards;
+          animation: popUp 1s .3s forwards;
+}
+
+.services .active .card:nth-child(4) {
+  -webkit-animation: popUp 1s .4s forwards;
+          animation: popUp 1s .4s forwards;
+}
+
+.services .active .card:nth-child(5) {
+  -webkit-animation: popUp 1s .5s forwards;
+          animation: popUp 1s .5s forwards;
+}
+
+.services .active .card:nth-child(6) {
+  -webkit-animation: popUp 1s .6s forwards;
+          animation: popUp 1s .6s forwards;
 }
 
 @media (max-width: 900px) {
