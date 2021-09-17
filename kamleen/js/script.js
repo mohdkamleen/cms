@@ -20,6 +20,7 @@ var settingMain = document.getElementById("settingMain");
 var myImage = document.getElementById("myImage"); 
 var effect8 = document.getElementById("effect8");  
 var customCss = document.getElementById("customCss");  
+var customCssAll = document.getElementById("customCssAll");  
 
 
 //---------------------- window resize -------------------------//
@@ -38,9 +39,11 @@ window.onresize = (e) => {
 //---------------------- window load -------------------------//
 
 window.onload = (e) => {
+    var css = localStorage.getItem("cssMode");
     loaderMode.style.opacity = "0";
     loaderMode.style.visibility = "hidden";
-    customCss.setAttribute("href", localStorage.getItem("cssMode"));
+    customCss.setAttribute("href", css);
+    // customCssAll.setAttribute("href", "../"+css);
 }
 
 
@@ -117,11 +120,13 @@ hamburger.addEventListener("click", () =>{
     }
 })
 
+
 //-------------------- change css file ----------------------//
 
 function changeCssFile(e){
     localStorage.setItem("cssMode", e);
     customCss.setAttribute("href",e);
+    // customCssAll.setAttribute("href", "../"+e); 
 }
 
 
