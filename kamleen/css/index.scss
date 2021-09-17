@@ -89,12 +89,12 @@
     max-width: 1400px;
     min-height: 750px; 
     height: 100vh;  
-    overflow: hidden;
 
     .accupation{ 
         padding: 5px; 
         opacity: 0;
         animation: toRight 1s .5s forwards;
+        margin-bottom: 60px;
 
         .hey{
             font-size: 20px;

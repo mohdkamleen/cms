@@ -122,7 +122,6 @@
   max-width: 1400px;
   min-height: 750px;
   height: 100vh;
-  overflow: hidden;
 }
 
 .second-div .content .accupation {
@@ -130,6 +129,7 @@
   opacity: 0;
   -webkit-animation: toRight 1s .5s forwards;
           animation: toRight 1s .5s forwards;
+  margin-bottom: 60px;
 }
 
 .second-div .content .accupation .hey {
