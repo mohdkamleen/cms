@@ -259,8 +259,6 @@
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
   opacity: 0.3;
-  background: rgba(255, 255, 255, 0.781);
-  border: 2px solid rgba(179, 179, 179, 0.705);
 }
 
 .second-div .content .image img {
