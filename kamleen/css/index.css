@@ -604,9 +604,9 @@ this is part of services of css
     position: fixed !important;
     height: 1000px !important;
     width: 1000px !important;
-    top: -30% !important;
-    right: -70% !important;
-    z-index: 9 !important;
+    top: -10vh !important;
+    right: -30vh !important;
+    z-index: 10 !important;
     opacity: 1 !important;
     -webkit-animation-play-state: paused !important;
             animation-play-state: paused !important;

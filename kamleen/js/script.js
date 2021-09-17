@@ -162,8 +162,8 @@ services = [
 
     },
     {
-        "icon": "fa-wordpress",
-        "title": "Wordpress",
+        "icon": "fa-microchip",
+        "title": "Hardware",
         "descrition": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, aliquam?"
 
     },
