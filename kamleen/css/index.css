@@ -435,10 +435,6 @@
 /*****************************************
 this is part of services of css
 *****************************************/
-.services {
-  z-index: -2 !important;
-}
-
 .services h2 {
   text-align: center;
   padding: 25px 0px;
@@ -491,7 +487,9 @@ this is part of services of css
   transition: all .3s;
   border-radius: 3px;
   width: 350px;
+  position: relative;
   margin: 20px;
+  overflow: hidden;
   -webkit-transform: scale(0);
           transform: scale(0);
   -webkit-box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.685), 0px 0px 20px rgba(255, 255, 255, 0.26), 0px 0px 30px rgba(255, 255, 255, 0.26);
@@ -520,9 +518,28 @@ this is part of services of css
   font-size: 18px;
 }
 
-.services .card-div :hover {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+.services .card-div .card::before {
+  content: "";
+  position: absolute;
+  height: 700px;
+  width: 700px;
+  background-color: rgba(248, 247, 247, 0.178);
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  overflow: hidden;
+  border-radius: 50%;
+  -webkit-transition: all .7s;
+  transition: all .7s;
+}
+
+.services .card-div :hover::before {
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
 }
 
 .services .card-div :nth-child(1) .card-header {
@@ -605,6 +622,7 @@ this is part of services of css
     height: 1000px !important;
     width: 1000px !important;
     top: -10vh !important;
+    overflow: hidden !important;
     right: -30vh !important;
     z-index: 10 !important;
     opacity: 1 !important;
