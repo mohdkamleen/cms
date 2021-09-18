@@ -88,8 +88,8 @@
   -webkit-transition: all .3s .3s linear;
   transition: all .3s .3s linear;
   overflow: hidden;
-  -webkit-box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.685), 0px 0px 20px rgba(255, 255, 255, 0.26), 0px 0px 30px rgba(255, 255, 255, 0.26);
-          box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.685), 0px 0px 20px rgba(255, 255, 255, 0.26), 0px 0px 30px rgba(255, 255, 255, 0.26);
+  -webkit-box-shadow: var(--box-shadow);
+          box-shadow: var(--box-shadow);
 }
 
 .second-div .content .accupation .buttons button a {
@@ -131,8 +131,6 @@
 }
 
 .second-div .content .accupation .buttons :hover {
-  -webkit-box-shadow: none;
-          box-shadow: none;
   color: #a39f63 !important;
 }
 
@@ -154,11 +152,11 @@
   top: 0;
   right: 0;
   border-radius: 68% 32% 32% 68% / 39% 30% 70% 61%;
-  background: linear-gradient(15deg, rgba(255, 248, 145, 0.39), rgba(255, 182, 188, 0.959), #c9c8ff, rgba(142, 247, 255, 0.637));
+  background: var(--linear-gradient);
   -webkit-animation: rotateClock 60s linear infinite alternate;
           animation: rotateClock 60s linear infinite alternate;
-  -webkit-box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.685), 0px 0px 20px rgba(255, 255, 255, 0.26), 0px 0px 30px rgba(255, 255, 255, 0.26);
-          box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.685), 0px 0px 20px rgba(255, 255, 255, 0.26), 0px 0px 30px rgba(255, 255, 255, 0.26);
+  -webkit-box-shadow: var(--box-shadow);
+          box-shadow: var(--box-shadow);
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
   opacity: 0.3;
@@ -216,12 +214,12 @@
   -webkit-transition: all linear 100ms;
   transition: all linear 100ms;
   border-radius: 50%;
-  background: #db949d;
+  background: var(--linear-gradient);
   mix-blend-mode: multiply;
   -webkit-animation: rotateClock 30s linear infinite alternate;
           animation: rotateClock 30s linear infinite alternate;
-  -webkit-box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.685), 0px 0px 20px rgba(255, 255, 255, 0.26), 0px 0px 30px rgba(255, 255, 255, 0.26);
-          box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.685), 0px 0px 20px rgba(255, 255, 255, 0.26), 0px 0px 30px rgba(255, 255, 255, 0.26);
+  -webkit-box-shadow: var(--box-shadow);
+          box-shadow: var(--box-shadow);
 }
 
 .setting {
@@ -254,8 +252,8 @@
   -webkit-transition: all .3s linear;
   transition: all .3s linear;
   padding: 5px;
-  -webkit-box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.685), 0px 0px 20px rgba(255, 255, 255, 0.26), 0px 0px 30px rgba(255, 255, 255, 0.26);
-          box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.685), 0px 0px 20px rgba(255, 255, 255, 0.26), 0px 0px 30px rgba(255, 255, 255, 0.26);
+  -webkit-box-shadow: var(--box-shadow);
+          box-shadow: var(--box-shadow);
 }
 
 .setting :hover {
@@ -322,11 +320,11 @@
   z-index: -1;
   -webkit-transform: scale(0);
           transform: scale(0);
-  -webkit-box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.685), 0px 0px 20px rgba(255, 255, 255, 0.26), 0px 0px 30px rgba(255, 255, 255, 0.26);
-          box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.685), 0px 0px 20px rgba(255, 255, 255, 0.26), 0px 0px 30px rgba(255, 255, 255, 0.26);
   -webkit-transition: all .3s ease;
   transition: all .3s ease;
-  background: linear-gradient(15deg, rgba(255, 248, 145, 0.39), rgba(255, 182, 188, 0.959), #c9c8ff, rgba(142, 247, 255, 0.637));
+  background: var(--linear-gradient);
+  -webkit-box-shadow: var(--box-shadow);
+          box-shadow: var(--box-shadow);
 }
 
 .setting .items.active::after {
@@ -394,8 +392,8 @@ this is part of services of css
   overflow: hidden;
   -webkit-transform: scale(0);
           transform: scale(0);
-  -webkit-box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.685), 0px 0px 20px rgba(255, 255, 255, 0.26), 0px 0px 30px rgba(255, 255, 255, 0.26);
-          box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.685), 0px 0px 20px rgba(255, 255, 255, 0.26), 0px 0px 30px rgba(255, 255, 255, 0.26);
+  -webkit-box-shadow: var(--box-shadow);
+          box-shadow: var(--box-shadow);
 }
 
 .services .card-div .card .card-icon {
@@ -425,7 +423,7 @@ this is part of services of css
   position: absolute;
   height: 700px;
   width: 700px;
-  background-color: rgba(248, 247, 247, 0.178);
+  background: rgba(248, 247, 247, 0.178);
   -webkit-filter: blur(5px);
           filter: blur(5px);
   z-index: -1;
@@ -435,8 +433,8 @@ this is part of services of css
           transform: translate(-50%, -50%);
   overflow: hidden;
   border-radius: 50%;
-  -webkit-transition: all .7s;
-  transition: all .7s;
+  -webkit-transition: all 1s;
+  transition: all 1s;
 }
 
 .services .card-div :hover::before {

@@ -1,4 +1,45 @@
 body {
-  background: black;
+  background: #000000;
 }
-/*# sourceMappingURL=dark.css.map */
+
+*{
+  border: none !important;
+}
+
+:root{  
+  --box-shadow : 0px -15px 15px rgba(255, 255, 255, 0.05),
+                 inset 0px -15px 15px rgba(124, 124, 124, 0.5), 
+                 0px 15px 15px rgba(0, 0, 0, 0.3),
+                 inset 0px 15px 15px rgba(0, 0, 0, 0.3); 
+            
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.card::before{ 
+  height: 100px !important;
+  width: 100px !important;  
+  top: -10% !important;
+  left: -10% !important;  
+  transition: all .7s !important;
+}
+
+:hover::before{
+  transform: scale(13) !important;
+} 
+
+ 

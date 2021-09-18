@@ -49,9 +49,9 @@
             top: 0;
             right: 0;  
             border-radius: 68% 32% 32% 68% / 39% 30% 70% 61% ;
-            background: linear-gradient(15deg, rgba(255, 248, 145, 0.39),rgba(255, 182, 188, 0.959),rgb(201, 200, 255),rgba(142, 247, 255, 0.637));  
+            background: var(--linear-gradient);  
             animation: rotateClock 60s linear infinite alternate;
-            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.685),0px 0px 20px rgba(255, 255, 255, 0.26),0px 0px 30px rgba(255, 255, 255, 0.26); 
+            box-shadow: var(--box-shadow); 
             transition: all .3s ease-in-out;
             opacity: 0.3;   
 
@@ -115,10 +115,10 @@
          left: 900px;
          transition: all linear 100ms;
          border-radius: 50% ;
-         background: rgb(219, 148, 157);  
+         background: var(--linear-gradient);  
          mix-blend-mode: multiply;  
          animation: rotateClock 30s linear infinite alternate;
-         box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.685),0px 0px 20px rgba(255, 255, 255, 0.26),0px 0px 30px rgba(255, 255, 255, 0.26); 
+         box-shadow: var(--box-shadow); 
          }
      
  
@@ -146,7 +146,7 @@
         -webkit-text-stroke: 2px rgba(51, 49, 49, 0.616);
         transition: all .3s linear;  
         padding: 5px; 
-        box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.685),0px 0px 20px rgba(255, 255, 255, 0.26),0px 0px 30px rgba(255, 255, 255, 0.26); 
+        box-shadow: var(--box-shadow); 
 
 
        }
@@ -169,9 +169,9 @@
     height: 100px;
     z-index: -1; 
     transform: scale(0);
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.685),0px 0px 20px rgba(255, 255, 255, 0.26),0px 0px 30px rgba(255, 255, 255, 0.26); 
+    box-shadow: var(--box-shadow); 
     transition: all .3s ease; 
-    background: linear-gradient(15deg, rgba(255, 248, 145, 0.39),rgba(255, 182, 188, 0.959),rgb(201, 200, 255),rgba(142, 247, 255, 0.637));  
+    background: var(--linear-gradient);  
            
 }
 

@@ -1,11 +1,10 @@
- 
 .second-div{
     display: flex;
     justify-content: space-around;
     align-items: center;
 
  
-.content{
+.content{ 
     position: relative;
     top: 0;left: 0;
     width: 100%;  
@@ -71,7 +70,7 @@
                 position: relative;
                 transition: all .3s .3s linear;
                 overflow: hidden;
-                box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.685),0px 0px 20px rgba(255, 255, 255, 0.26),0px 0px 30px rgba(255, 255, 255, 0.26); 
+                box-shadow: var(--box-shadow); 
                 
 
                 a{
@@ -112,8 +111,7 @@
                 transform: scale(3.5);
             }
     
-            :hover{
-                box-shadow: none;
+            :hover{ 
                 color: rgb(163, 159, 99) !important;
             } 
     
@@ -138,9 +136,9 @@
             top: 0;
             right: 0;  
             border-radius: 68% 32% 32% 68% / 39% 30% 70% 61% ;
-            background: linear-gradient(15deg, rgba(255, 248, 145, 0.39),rgba(255, 182, 188, 0.959),rgb(201, 200, 255),rgba(142, 247, 255, 0.637));  
+            background: var(--linear-gradient);
             animation: rotateClock 60s linear infinite alternate;
-            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.685),0px 0px 20px rgba(255, 255, 255, 0.26),0px 0px 30px rgba(255, 255, 255, 0.26); 
+            box-shadow: var(--box-shadow); 
             transition: all .3s ease-in-out;
             opacity: 0.3;   
 
@@ -204,10 +202,10 @@
          left: 900px;
          transition: all linear 100ms;
          border-radius: 50% ;
-         background: rgb(219, 148, 157);  
+         background: var(--linear-gradient);  
          mix-blend-mode: multiply;  
          animation: rotateClock 30s linear infinite alternate;
-         box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.685),0px 0px 20px rgba(255, 255, 255, 0.26),0px 0px 30px rgba(255, 255, 255, 0.26); 
+         box-shadow: var(--box-shadow); 
          }
      
  
@@ -235,7 +233,7 @@
         -webkit-text-stroke: 2px rgba(51, 49, 49, 0.616);
         transition: all .3s linear;  
         padding: 5px; 
-        box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.685),0px 0px 20px rgba(255, 255, 255, 0.26),0px 0px 30px rgba(255, 255, 255, 0.26); 
+        box-shadow: var(--box-shadow); 
 
 
        }
@@ -304,10 +302,10 @@
     border-radius: 50%; 
     height: 100px;
     z-index: -1; 
-    transform: scale(0);
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.685),0px 0px 20px rgba(255, 255, 255, 0.26),0px 0px 30px rgba(255, 255, 255, 0.26); 
+    transform: scale(0); 
     transition: all .3s ease; 
-    background: linear-gradient(15deg, rgba(255, 248, 145, 0.39),rgba(255, 182, 188, 0.959),rgb(201, 200, 255),rgba(142, 247, 255, 0.637));  
+    background: var(--linear-gradient);
+    box-shadow: var(--box-shadow);
            
 }
 
@@ -359,7 +357,7 @@ this is part of services of css
             margin: 20px;
             overflow: hidden;
             transform: scale(0);
-            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.685),0px 0px 20px rgba(255, 255, 255, 0.26),0px 0px 30px rgba(255, 255, 255, 0.26); 
+            box-shadow: var(--box-shadow); 
 
             .card-icon{ 
                 font-size: 30px; 
@@ -389,15 +387,15 @@ this is part of services of css
             position: absolute;
             height: 700px;
             width: 700px;
-            background-color: rgba(248, 247, 247, 0.178); 
+            background: rgba(248, 247, 247, 0.178); 
             filter: blur(5px);
             z-index: -1;
             top: 50%;
             left: 50%;
             transform: translate(-50%,-50%);
             overflow: hidden;
-            border-radius: 50%;
-            transition: all .7s;
+            border-radius: 50%; 
+            transition: all 1s;
         }
 
         :hover::before{

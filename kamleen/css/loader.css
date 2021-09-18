@@ -11,7 +11,7 @@
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
   background-color: red;
-  background: linear-gradient(15deg, rgba(255, 248, 145, 0.76), #ffb6bc, #c9c8ff, rgba(142, 247, 255, 0.959));
+  background: var(--linear-gradient);
 }
 
 .loaderMode .loader {
@@ -61,11 +61,11 @@
   border-radius: 68% 32% 32% 68% / 39% 40% 70% 61%;
   z-index: -1;
   border: #ff8585 solid 2px;
-  background: linear-gradient(15deg, rgba(255, 248, 145, 0.39), rgba(255, 182, 188, 0.959), #c9c8ff, rgba(142, 247, 255, 0.637));
+  background: var(--linear-gradient);
   -webkit-animation: rotateClock 12s linear infinite alternate;
   animation: rotateClock 12s linear infinite alternate;
-  -webkit-box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.685), 0px 0px 20px rgba(255, 255, 255, 0.26), 0px 0px 30px rgba(255, 255, 255, 0.26);
-  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.685), 0px 0px 20px rgba(255, 255, 255, 0.26), 0px 0px 30px rgba(255, 255, 255, 0.26);
+  -webkit-box-shadow: var(--box-shadow);
+  box-shadow: var(--box-shadow);
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
   opacity: 0.3;
