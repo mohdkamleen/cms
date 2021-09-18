@@ -5,8 +5,33 @@
 
 @keyframes logoAnimate { 
     100%{
+        opacity: 1 !important;
         width: 100%; 
         -webkit-text-stroke: 1px rgb(133, 158, 192);
+    }
+} 
+
+@keyframes width95 { 
+    100%{ 
+        width: 95%;  
+    }
+} 
+
+@keyframes width90 { 
+    100%{ 
+        width: 90%;  
+    }
+} 
+
+@keyframes width80 { 
+    100%{ 
+        width: 80%;  
+    }
+} 
+
+@keyframes width70 { 
+    100%{ 
+        width: 70%;  
     }
 } 
 

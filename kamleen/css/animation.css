@@ -1,5 +1,6 @@
 @-webkit-keyframes logoAnimate {
   100% {
+    opacity: 1 !important;
     width: 100%;
     -webkit-text-stroke: 1px #859ec0;
   }
@@ -7,8 +8,57 @@
 
 @keyframes logoAnimate {
   100% {
+    opacity: 1 !important;
     width: 100%;
     -webkit-text-stroke: 1px #859ec0;
+  }
+}
+
+@-webkit-keyframes width95 {
+  100% {
+    width: 95%;
+  }
+}
+
+@keyframes width95 {
+  100% {
+    width: 95%;
+  }
+}
+
+@-webkit-keyframes width90 {
+  100% {
+    width: 90%;
+  }
+}
+
+@keyframes width90 {
+  100% {
+    width: 90%;
+  }
+}
+
+@-webkit-keyframes width80 {
+  100% {
+    width: 80%;
+  }
+}
+
+@keyframes width80 {
+  100% {
+    width: 80%;
+  }
+}
+
+@-webkit-keyframes width70 {
+  100% {
+    width: 70%;
+  }
+}
+
+@keyframes width70 {
+  100% {
+    width: 70%;
   }
 }
 

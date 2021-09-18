@@ -195,6 +195,223 @@
           transform: scale(3.3);
 }
 
+/*****************************************
+this is part of skill of css
+*****************************************/
+.skills h2 {
+  text-align: center;
+  padding: 25px 0px;
+  color: #666666;
+  text-transform: capitalize;
+  -webkit-text-stroke: 1px #4b4b4b;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-animation: popUp 1s 1s forwards;
+          animation: popUp 1s 1s forwards;
+}
+
+.skills .skills-div {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  padding-bottom: 100px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 1000px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.skills .skills-div .skill {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 400px;
+  height: 50px;
+  -webkit-box-shadow: var(--box-shadow);
+          box-shadow: var(--box-shadow);
+  margin: 10px 20px;
+  padding: 0px 20px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.skills .skills-div .skill .skill-title {
+  color: gray;
+  width: 100px;
+  font-weight: bold;
+  font-size: 18px;
+  text-transform: capitalize;
+}
+
+.skills .skills-div .skill .skill-position {
+  border: 2px solid rgba(128, 128, 128, 0.527) !important;
+  height: 20px;
+  border-radius: 50px;
+  width: 100%;
+  position: relative;
+}
+
+.skills .skills-div :nth-child(1) .skill-title {
+  color: #a39f63;
+  -webkit-text-stroke: 1px #928e58;
+}
+
+.skills .skills-div :nth-child(2) .skill-title {
+  color: #8180a5;
+  -webkit-text-stroke: 1px #747397;
+}
+
+.skills .skills-div :nth-child(3) .skill-title {
+  color: #d17c81;
+  -webkit-text-stroke: 1px #b6797d;
+}
+
+.skills .skills-div :nth-child(4) .skill-title {
+  color: #447b7e;
+  -webkit-text-stroke: 1px #477b7e;
+}
+
+.skills .skills-div :nth-child(5) .skill-title {
+  color: #8180a5;
+  -webkit-text-stroke: 1px #747397;
+}
+
+.skills .skills-div :nth-child(6) .skill-title {
+  color: #d17c81;
+  -webkit-text-stroke: 1px #b6797d;
+}
+
+.skills .skills-div :nth-child(7) .skill-title {
+  color: #858585;
+  -webkit-text-stroke: 1px #4d4d4d;
+}
+
+.skills .skills-div :nth-child(8) .skill-title {
+  color: #a39f63;
+  -webkit-text-stroke: 1px #928e58;
+}
+
+.skills .active .skill:nth-child(1) {
+  -webkit-animation: popUp 1s forwards;
+          animation: popUp 1s forwards;
+}
+
+.skills .active .skill:nth-child(2) {
+  -webkit-animation: popUp 1s .2s forwards;
+          animation: popUp 1s .2s forwards;
+}
+
+.skills .active .skill:nth-child(3) {
+  -webkit-animation: popUp 1s .3s forwards;
+          animation: popUp 1s .3s forwards;
+}
+
+.skills .active .skill:nth-child(4) {
+  -webkit-animation: popUp 1s .4s forwards;
+          animation: popUp 1s .4s forwards;
+}
+
+.skills .active .skill:nth-child(5) {
+  -webkit-animation: popUp 1s .5s forwards;
+          animation: popUp 1s .5s forwards;
+}
+
+.skills .active .skill:nth-child(6) {
+  -webkit-animation: popUp 1s .6s forwards;
+          animation: popUp 1s .6s forwards;
+}
+
+.skills .active .skill:nth-child(7) {
+  -webkit-animation: popUp 1s .7s forwards;
+          animation: popUp 1s .7s forwards;
+}
+
+.skills .active .skill:nth-child(8) {
+  -webkit-animation: popUp 1s .8s forwards;
+          animation: popUp 1s .8s forwards;
+}
+
+.skills .skill-position::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: attr(data-persent);
+  border-radius: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #4b4b4b;
+  font-size: 10px;
+  overflow: hidden;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  height: 100%;
+  border-right: 2px solid gray;
+  width: 0px;
+  background: var(--linear-gradient);
+}
+
+.skills .active .skill:nth-child(1) .skill-position::before {
+  -webkit-animation: width90 .5s .5s forwards;
+          animation: width90 .5s .5s forwards;
+}
+
+.skills .active .skill:nth-child(2) .skill-position::before {
+  -webkit-animation: width80 .5s 1s forwards;
+          animation: width80 .5s 1s forwards;
+}
+
+.skills .active .skill:nth-child(3) .skill-position::before {
+  -webkit-animation: width80 .5s 1.5s forwards;
+          animation: width80 .5s 1.5s forwards;
+}
+
+.skills .active .skill:nth-child(4) .skill-position::before {
+  -webkit-animation: width90 .5s 2s forwards;
+          animation: width90 .5s 2s forwards;
+}
+
+.skills .active .skill:nth-child(5) .skill-position::before {
+  -webkit-animation: width80 .5s 2.5s forwards;
+          animation: width80 .5s 2.5s forwards;
+}
+
+.skills .active .skill:nth-child(6) .skill-position::before {
+  -webkit-animation: width80 .5s 3s forwards;
+          animation: width80 .5s 3s forwards;
+}
+
+.skills .active .skill:nth-child(7) .skill-position::before {
+  -webkit-animation: width95 .5s 3.5s forwards;
+          animation: width95 .5s 3.5s forwards;
+}
+
+.skills .active .skill:nth-child(8) .skill-position::before {
+  -webkit-animation: width70 .5s 4s forwards;
+          animation: width70 .5s 4s forwards;
+}
+
 @media (max-width: 900px) {
   .content {
     -webkit-box-orient: vertical;
@@ -224,6 +441,21 @@
   }
   .image img {
     width: 230px !important;
+  }
+  .skills .skills-div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .skills .skills-div .skill {
+    width: 80%;
+  }
+}
+
+@media (max-width: 700px) {
+  .skill {
+    width: 90% !important;
   }
 }
 /*# sourceMappingURL=about.css.map */

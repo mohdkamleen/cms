@@ -182,8 +182,171 @@
  
 
 
+/*****************************************
+this is part of skill of css
+*****************************************/
 
-  
+.skills{  
+    
+    h2{
+        text-align: center;
+        padding: 25px 0px;
+        color: rgb(102, 102, 102);
+        text-transform: capitalize;
+        -webkit-text-stroke: 1px rgb(75, 75, 75);
+        transform: scale(0);
+        animation: popUp 1s 1s forwards;
+    }
+    
+    .skills-div{ 
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;   
+        margin: auto;
+        padding-bottom: 100px ;
+        flex-wrap: wrap; 
+        max-width: 1000px; 
+        transition: all .3s ;
+
+        .skill{
+            display: flex;
+            justify-content: center;
+            align-items: center;   
+            width: 400px;
+            height: 50px; 
+            box-shadow: var(--box-shadow);
+            margin: 10px 20px;
+            padding: 0px 20px;
+            transform: scale(0);
+
+            .skill-title{
+                color: gray ;  
+                width: 100px; 
+                font-weight: bold;
+                font-size: 18px;
+                text-transform: capitalize;
+            }
+
+            .skill-position{ 
+                border: 2px solid rgba(128, 128, 128, 0.527) !important;
+                height: 20px;
+                border-radius: 50px;
+                width: 100%;
+                position: relative;
+            }
+
+        }
+        
+            
+
+        :nth-child(1) .skill-title{ 
+            color: rgb(163, 159, 99) ;
+            -webkit-text-stroke: 1px rgb(146, 142, 88) ;
+        }
+        :nth-child(2) .skill-title{ 
+            color: rgb(129, 128, 165) ;
+            -webkit-text-stroke: 1px rgb(116, 115, 151);
+        }
+        :nth-child(3) .skill-title{ 
+            color: rgb(209, 124, 129) ;
+            -webkit-text-stroke: 1px rgb(182, 121, 125) ; 
+        }
+        :nth-child(4) .skill-title{ 
+            color: rgb(68, 123, 126) ;
+            -webkit-text-stroke: 1px rgb(71, 123, 126) ;
+        }
+        :nth-child(5) .skill-title{ 
+            color: rgb(129, 128, 165) ;
+            -webkit-text-stroke: 1px rgb(116, 115, 151);
+        }
+        :nth-child(6) .skill-title{ 
+            color: rgb(209, 124, 129) ;
+            -webkit-text-stroke: 1px rgb(182, 121, 125) ; 
+        }
+        :nth-child(7) .skill-title{ 
+            color: rgb(133, 133, 133) ;
+            -webkit-text-stroke: 1px rgb(77, 77, 77) ; 
+        }
+        :nth-child(8) .skill-title{ 
+            color: rgb(163, 159, 99) ;
+            -webkit-text-stroke: 1px rgb(146, 142, 88) ;
+        }
+    }
+         
+        
+    .active .skill:nth-child(1){
+        animation: popUp 1s forwards ; 
+    }
+    .active .skill:nth-child(2){
+        animation: popUp 1s .2s forwards ;
+    }
+    .active .skill:nth-child(3){
+        animation: popUp 1s .3s forwards ;
+    }
+    .active .skill:nth-child(4){
+        animation: popUp 1s .4s forwards ;
+    }
+    .active .skill:nth-child(5){
+        animation: popUp 1s .5s forwards ;
+    }
+    .active .skill:nth-child(6){
+        animation: popUp 1s .6s forwards ;
+    } 
+    .active .skill:nth-child(7){
+        animation: popUp 1s .7s forwards ;
+    } 
+    .active .skill:nth-child(8){
+        animation: popUp 1s .8s forwards ;
+    } 
+
+    .skill-position::before{
+        position: absolute;
+        top: 0;left: 0;
+        content: attr(data-persent); 
+        border-radius: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;   
+        color: rgb(75, 75, 75);
+        font-size: 10px;
+        overflow: hidden;
+        transition: all .3s;
+        height: 100%;
+        border-right: 2px solid gray;  
+        width: 0px; 
+        background: var(--linear-gradient);
+    }
+    
+    
+     
+
+.active .skill:nth-child(1) .skill-position::before{   
+    animation: width90 .5s .5s forwards;
+}
+.active .skill:nth-child(2) .skill-position::before{  
+    animation: width80 .5s 1s forwards;
+}
+.active .skill:nth-child(3) .skill-position::before{  
+    animation: width80 .5s 1.5s forwards;
+}
+.active .skill:nth-child(4) .skill-position::before{  
+    animation: width90 .5s 2s forwards;
+}
+.active .skill:nth-child(5) .skill-position::before{  
+    animation: width80 .5s 2.5s forwards;
+}
+.active .skill:nth-child(6) .skill-position::before{  
+    animation: width80 .5s 3s forwards;
+}
+.active .skill:nth-child(7) .skill-position::before{  
+    animation: width95 .5s 3.5s forwards;
+}
+.active .skill:nth-child(8) .skill-position::before{ 
+    animation: width70 .5s 4s forwards; 
+}
+
+}
 
 @media (max-width:900px){
     .content{
@@ -219,8 +382,27 @@
     }
 
  
+.skills{
+    .skills-div{  
+        flex-direction: column; 
+
+        .skill{  
+            width: 80%;
+        }
+    }
+}
+
 
 }
 
 
  
+
+@media (max-width:700px){ 
+    .skill{  
+        width: 90% !important;
+    }
+
+
+}
+  

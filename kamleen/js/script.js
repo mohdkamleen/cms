@@ -7,6 +7,7 @@ var goToBottom = document.getElementsByClassName("go-to-down")[0];
 var loaderMode = document.getElementsByClassName("loaderMode")[0]; 
 var accupation = document.getElementsByClassName("accupation")[0];  
 var cardDiv = document.getElementsByClassName("card-div")[0];  
+var skillsDiv = document.getElementsByClassName("skills-div")[0];  
 var logo = document.getElementsByClassName("logo")[0]; 
 
 var nav = document.getElementsByTagName("nav")[0];
@@ -59,7 +60,8 @@ window.onscroll = () => {
 
     var pageY = window.pageYOffset;
     if(pageY > 200 ){
-        cardDiv.classList.add("active");
+        // cardDiv.classList.add("active");
+        skillsDiv.classList.add("active");
     }  
     
 }
