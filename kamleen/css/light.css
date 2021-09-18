@@ -1,11 +1,7 @@
 body {
   background: #fff;
 }
-
-*{
-  border: none !important;
-}
-
+ 
 :root{ 
   --box-shadow : -4px -4px 10px rgba(255, 255, 255, 1), inset -4px 4px 10px rgba(0, 0, 0, 0.116), inset -4px -4px 10px rgba(255, 255, 255, 1), 4px 4px 10px rgba(0, 0, 0, 0.5); 
   --linear-gradient : linear-gradient(15deg, rgba(202, 202, 202, 0.39),rgba(252, 252, 252, 0.959),rgba(255, 255, 255, 0.918),rgba(252, 252, 252, 0.767));  

@@ -69,6 +69,7 @@
                 margin: 10px 5px;
                 position: relative;
                 transition: all .3s .3s linear;
+                border: none;
                 overflow: hidden;
                 box-shadow: var(--box-shadow); 
                 
@@ -81,13 +82,11 @@
 
             
             :nth-child(1){
-                color: rgb(119, 165, 252);
-                border: 2px solid rgb(238, 128, 142); 
+                color: rgb(119, 165, 252); 
             }
 
             :nth-child(2){
-                color: rgb(238, 128, 142);
-                border: 2px solid rgb(119, 165, 252);
+                color: rgb(238, 128, 142); 
             }
 
             ::after{

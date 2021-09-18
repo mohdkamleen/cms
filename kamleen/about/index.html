@@ -8,7 +8,7 @@
     <title>Mohd Kamleen | About</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/about.css">
-    <link rel="stylesheet" id="customCssAll">
+    <link rel="stylesheet" id="customCss">
     <link rel="shortcut icon" href="../image/kamleen.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -65,17 +65,29 @@
             </div>
 
 
-            <div class="setting">
-                <i class="fa fa-cogs" id="settingMain"></i>
+            <div class="chat">
+                <i class="fa fa-comments" id="chatIcon"></i>
+                <div class="chatBack">
+                   <div class="msg-chat">
+                        <h3>Chat with mohd kamleen</h3>
+                        <div id="fetch-msg">
+                            <!-- <div class="sender">sender</div>  -->
+                            <div class="reciver">Hey I'm Mohd Kamleen how can I help you !!!!</div> 
+                        </div>
+                        <div class="inputs">
+                            <input type="text" id="message" autofocus placeholder="Type a message" autocomplete="off">
+                            <button class="fa fa-send" id="sendMsg"></button>
+                        </div>
+                   </div>
+                </div>
             </div>
 
-            <div class="skills">
 
+
+            <div class="skills"> 
                 <h2>Our Skills</h2>
-                <div class="skills-div">
-                    
-                    <!-- fetch data from skillsApi  -->
-
+                <div class="skills-div"> 
+                    <!-- fetch data from skillsApi  --> 
                 </div>
             </div>
 
@@ -93,8 +105,9 @@
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="../js/skillsApi.js"></script>
-    <script src="../js/script.js"
-        onload="document.getElementById('customCssAll').href='../'+localStorage.getItem('cssMode')"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
+    <script src="../js/about.js"></script> 
 </body>
 
 </html>

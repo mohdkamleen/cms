@@ -1,10 +1,6 @@
 body {
   background: #000000;
-}
-
-*{
-  border: none !important;
-}
+} 
 
 :root{  
   --box-shadow : 0px -15px 15px rgba(255, 255, 255, 0.05),
@@ -14,19 +10,8 @@ body {
             
 } 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 
+ 
 
 
 
@@ -38,7 +23,7 @@ body {
   transition: all .7s !important;
 }
 
-:hover::before{
+.card:hover::before{
   transform: scale(13) !important;
 } 
 
