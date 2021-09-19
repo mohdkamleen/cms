@@ -503,9 +503,7 @@ this is part of skill of css
         padding: 25px 0px;
         color: rgb(102, 102, 102);
         text-transform: capitalize;
-        -webkit-text-stroke: 1px rgb(75, 75, 75);
-        // transform: scale(0);
-        // animation: popUp 1s 1s forwards;
+        -webkit-text-stroke: 1px rgb(75, 75, 75);  
     }
 
         
@@ -542,6 +540,12 @@ this is part of skill of css
                 code{
                     color: rgb(209, 124, 129) ;
                     -webkit-text-stroke: 1px rgb(182, 121, 125) ; 
+                    box-shadow: var(--box-shadow);
+                    padding: 5px;
+                    border-radius: 4px;
+                    margin-left: -5px;
+                    transition: all .3s .5s ;
+                    animation: leftRight infinite 1s alternate linear; 
                 }
 
                 h4{
@@ -586,6 +590,11 @@ this is part of skill of css
  
             div:hover{   
                 box-shadow: var(--box-shadow);
+            }
+
+            div:hover code{   
+                box-shadow: none;
+                animation-play-state: paused;
             }
  
         } 

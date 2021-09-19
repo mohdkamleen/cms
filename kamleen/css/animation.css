@@ -74,6 +74,18 @@
   }
 }
 
+@-webkit-keyframes leftRight {
+  100% {
+    margin-left: -10px;
+  }
+}
+
+@keyframes leftRight {
+  100% {
+    margin-left: -10px;
+  }
+}
+
 @-webkit-keyframes toLeft {
   0% {
     -webkit-transform: translateX(100px);

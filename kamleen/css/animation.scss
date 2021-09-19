@@ -42,6 +42,13 @@
 } 
 
 
+@keyframes leftRight{ 
+    100%{
+        margin-left: -10px;
+    }
+}
+    
+
 @keyframes toLeft{
     0%{
        transform: translateX(100px);

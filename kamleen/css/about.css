@@ -646,6 +646,15 @@ this is part of skill of css
 .education .education-div .course div code {
   color: #d17c81;
   -webkit-text-stroke: 1px #b6797d;
+  -webkit-box-shadow: var(--box-shadow);
+          box-shadow: var(--box-shadow);
+  padding: 5px;
+  border-radius: 4px;
+  margin-left: -5px;
+  -webkit-transition: all .3s .5s;
+  transition: all .3s .5s;
+  -webkit-animation: leftRight infinite 1s alternate linear;
+          animation: leftRight infinite 1s alternate linear;
 }
 
 .education .education-div .course div h4 {
@@ -699,6 +708,13 @@ this is part of skill of css
 .education .education-div .course div:hover {
   -webkit-box-shadow: var(--box-shadow);
           box-shadow: var(--box-shadow);
+}
+
+.education .education-div .course div:hover code {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
 }
 
 .education .active .course:nth-child(1) div {
