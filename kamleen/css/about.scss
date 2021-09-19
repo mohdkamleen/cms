@@ -39,6 +39,7 @@
         position: relative;
         opacity: 0;
         animation: toLeft 1s .5s forwards; 
+        border-bottom: 25px solid rgba(255, 205, 205, 0.26);   
 
         .image-back{ 
             width: 300px;
@@ -491,6 +492,129 @@ this is part of skill of css
     z-index: -1 !important;
 }
 
+
+.education{
+    position: relative; 
+    width: 100%; 
+
+
+    h2{
+        text-align: center;
+        padding: 25px 0px;
+        color: rgb(102, 102, 102);
+        text-transform: capitalize;
+        -webkit-text-stroke: 1px rgb(75, 75, 75);
+        // transform: scale(0);
+        // animation: popUp 1s 1s forwards;
+    }
+
+        
+    .education-div{ 
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: center;   
+        margin: auto;
+        padding-bottom: 100px ;
+        flex-direction: column;
+        max-width: 1000px; 
+        transition: all .3s ; 
+        position: relative;
+
+        .course{ 
+            width: 100%;
+            max-width: 600px; 
+            border-left: 2px solid gray;   
+            transition: .3s; 
+            overflow: hidden;
+
+            div{
+                width: 100%;
+                height: 100%; 
+                border: none; 
+                padding: 0px 30px;
+                padding-bottom: 40px;
+                position: relative;
+                transition: all .3s .5s ;
+                left: -100%;
+                overflow: hidden; 
+
+                code{
+                    color: rgb(209, 124, 129) ;
+                    -webkit-text-stroke: 1px rgb(182, 121, 125) ; 
+                }
+
+                h4{
+                    color: rgb(163, 159, 99) ;
+                    -webkit-text-stroke: 1px rgb(146, 142, 88) ;
+                }
+                p{
+                    color: #696969;
+                    padding: 5px 0px;
+                }
+            }
+
+            div::before{
+                content: "";
+                top: 0;left: -8px;
+                position: absolute;
+                height: 10px;
+                width: 10px;
+                background: var(--linear-gradient);
+                border: 2px solid gray;
+                border-radius: 50%; 
+                transition: all 1s ;   
+            }
+            div::after{
+                content: "";
+                top: -100%;
+                left: -50%;
+                position: absolute;
+                height: 500px;
+                transform: scale(.03);
+                width:500px;
+                transform-origin: top left;
+                background: var(--linear-gradient); 
+                border-radius: 50%;
+                transition: all 1s linear;  
+                z-index: -1;
+                border: 1px solid gray;
+            }
+            div:hover::after{  
+                transform: scale(3);
+            }
+ 
+            div:hover{   
+                box-shadow: var(--box-shadow);
+            }
+ 
+        } 
+        
+    } 
+    .active .course:nth-child(1) div{   
+        animation: left0 forwards .5s linear;
+        h4,code{ 
+        color: rgb(133, 133, 133) ;
+        -webkit-text-stroke: 1px rgb(77, 77, 77) ; 
+        }
+    }
+    .active .course:nth-child(2) div{   
+        animation: left0 forwards .5s .5s linear;
+        h4,code{ 
+            color: rgb(163, 159, 99) ;
+            -webkit-text-stroke: 1px rgb(146, 142, 88) ;
+        }
+    }
+    .active .course:nth-child(3) div{   
+        animation: left0 forwards .5s 1s linear;
+        h4,code{ 
+            color: rgb(209, 124, 129) ;
+            -webkit-text-stroke: 1px rgb(182, 121, 125) ; 
+        }
+    }
+    
+}
+
 @media (max-width:900px){
     .content{
         flex-direction: column-reverse;
@@ -520,7 +644,7 @@ this is part of skill of css
 
      
         img{
-            width: 250px !important;  
+            width: 230px !important;  
         } 
     }
 

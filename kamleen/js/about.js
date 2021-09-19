@@ -9,6 +9,7 @@ var copyright = document.getElementsByClassName("copyright")[0];
 var imageBack = document.getElementsByClassName("image-back")[0];  
 var loaderMode = document.getElementsByClassName("loaderMode")[0];  
 var skillsDiv = document.getElementsByClassName("skills-div")[0];  
+var educationDiv = document.getElementsByClassName("education-div")[0];  
 var logo = document.getElementsByClassName("logo")[0]; 
 
 var nav = document.getElementsByTagName("nav")[0];
@@ -33,9 +34,12 @@ var uid = "";
 window.onscroll = () => {
 
     var pageY = window.pageYOffset;
-    if(pageY > 200 ){ 
+    if(pageY > 180 ){ 
         skillsDiv.classList.add("active");
     }  
+    if(pageY > 700){ 
+        educationDiv.classList.add("active");
+    }
     
 }
 

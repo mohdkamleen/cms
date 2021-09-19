@@ -49,6 +49,7 @@
   opacity: 0;
   -webkit-animation: toLeft 1s .5s forwards;
           animation: toLeft 1s .5s forwards;
+  border-bottom: 25px solid rgba(255, 205, 205, 0.26);
 }
 
 .second-div .content .image .image-back {
@@ -584,6 +585,152 @@ this is part of skill of css
   z-index: -1 !important;
 }
 
+.education {
+  position: relative;
+  width: 100%;
+}
+
+.education h2 {
+  text-align: center;
+  padding: 25px 0px;
+  color: #666666;
+  text-transform: capitalize;
+  -webkit-text-stroke: 1px #4b4b4b;
+}
+
+.education .education-div {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  padding-bottom: 100px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 1000px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  position: relative;
+}
+
+.education .education-div .course {
+  width: 100%;
+  max-width: 600px;
+  border-left: 2px solid gray;
+  -webkit-transition: .3s;
+  transition: .3s;
+  overflow: hidden;
+}
+
+.education .education-div .course div {
+  width: 100%;
+  height: 100%;
+  border: none;
+  padding: 0px 30px;
+  padding-bottom: 40px;
+  position: relative;
+  -webkit-transition: all .3s .5s;
+  transition: all .3s .5s;
+  left: -100%;
+  overflow: hidden;
+}
+
+.education .education-div .course div code {
+  color: #d17c81;
+  -webkit-text-stroke: 1px #b6797d;
+}
+
+.education .education-div .course div h4 {
+  color: #a39f63;
+  -webkit-text-stroke: 1px #928e58;
+}
+
+.education .education-div .course div p {
+  color: #696969;
+  padding: 5px 0px;
+}
+
+.education .education-div .course div::before {
+  content: "";
+  top: 0;
+  left: -8px;
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  background: var(--linear-gradient);
+  border: 2px solid gray;
+  border-radius: 50%;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+}
+
+.education .education-div .course div::after {
+  content: "";
+  top: -100%;
+  left: -50%;
+  position: absolute;
+  height: 500px;
+  -webkit-transform: scale(0.03);
+          transform: scale(0.03);
+  width: 500px;
+  -webkit-transform-origin: top left;
+          transform-origin: top left;
+  background: var(--linear-gradient);
+  border-radius: 50%;
+  -webkit-transition: all 1s linear;
+  transition: all 1s linear;
+  z-index: -1;
+  border: 1px solid gray;
+}
+
+.education .education-div .course div:hover::after {
+  -webkit-transform: scale(3);
+          transform: scale(3);
+}
+
+.education .education-div .course div:hover {
+  -webkit-box-shadow: var(--box-shadow);
+          box-shadow: var(--box-shadow);
+}
+
+.education .active .course:nth-child(1) div {
+  -webkit-animation: left0 forwards .5s linear;
+          animation: left0 forwards .5s linear;
+}
+
+.education .active .course:nth-child(1) div h4, .education .active .course:nth-child(1) div code {
+  color: #858585;
+  -webkit-text-stroke: 1px #4d4d4d;
+}
+
+.education .active .course:nth-child(2) div {
+  -webkit-animation: left0 forwards .5s .5s linear;
+          animation: left0 forwards .5s .5s linear;
+}
+
+.education .active .course:nth-child(2) div h4, .education .active .course:nth-child(2) div code {
+  color: #a39f63;
+  -webkit-text-stroke: 1px #928e58;
+}
+
+.education .active .course:nth-child(3) div {
+  -webkit-animation: left0 forwards .5s 1s linear;
+          animation: left0 forwards .5s 1s linear;
+}
+
+.education .active .course:nth-child(3) div h4, .education .active .course:nth-child(3) div code {
+  color: #d17c81;
+  -webkit-text-stroke: 1px #b6797d;
+}
+
 @media (max-width: 900px) {
   .content {
     -webkit-box-orient: vertical;
@@ -612,7 +759,7 @@ this is part of skill of css
             animation-play-state: paused !important;
   }
   .image img {
-    width: 250px !important;
+    width: 230px !important;
   }
   .skills .skills-div {
     -webkit-box-orient: vertical;
