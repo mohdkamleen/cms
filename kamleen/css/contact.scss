@@ -201,6 +201,12 @@
                        color: rgb(167, 34, 34); 
                        border-right: 2px solid rgb(161, 29, 29);
                        border-radius: 5px;
+
+                       
+                       span{
+                        color: gray ;
+                        font-size: 15px;
+                       }
                    }
 
                    .reciver{  
@@ -209,6 +215,12 @@
                        color: rgb(34, 76, 167); 
                        border-left: 2px solid rgb(29, 71, 161);
                        border-radius: 5px;
+
+                       
+                       span{
+                        color: gray ;
+                        font-size: 15px;
+                       }
                    }
                }
 

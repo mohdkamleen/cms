@@ -45,7 +45,6 @@
 .second-div .content .image {
   border-radius: 50%;
   width: 300px;
-  border-bottom: 25px solid rgba(255, 205, 205, 0.26);
   position: relative;
   opacity: 0;
   -webkit-animation: toLeft 1s .5s forwards;
@@ -76,6 +75,7 @@
   -webkit-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
   cursor: none;
+  mix-blend-mode: color;
 }
 
 .second-div .content .image img:hover ~ .image-back {
@@ -231,12 +231,22 @@
   border-radius: 5px;
 }
 
+.chat .chatBack .msg-chat #fetch-msg .sender span {
+  color: gray;
+  font-size: 15px;
+}
+
 .chat .chatBack .msg-chat #fetch-msg .reciver {
   padding: 5px;
   text-align: left;
   color: #224ca7;
   border-left: 2px solid #1d47a1;
   border-radius: 5px;
+}
+
+.chat .chatBack .msg-chat #fetch-msg .reciver span {
+  color: gray;
+  font-size: 15px;
 }
 
 .chat .chatBack .msg-chat ::-webkit-scrollbar {
@@ -602,7 +612,7 @@ this is part of skill of css
             animation-play-state: paused !important;
   }
   .image img {
-    width: 230px !important;
+    width: 250px !important;
   }
   .skills .skills-div {
     -webkit-box-orient: vertical;

@@ -23,6 +23,7 @@ var message = document.getElementById("message");
 var myImage = document.getElementById("myImage"); 
 var effect8 = document.getElementById("effect8");  
 var customCss = document.getElementById("customCss");   
+var time = document.getElementById("datetime"); 
 
 var uid = "";
 
@@ -70,7 +71,7 @@ window.onresize = (e) => {
 
 //---------------------- window load -------------------------//
 
-window.onload = (e) => { 
+window.onload = (e) => {  
     loaderMode.style.opacity = "0";
     loaderMode.style.visibility = "hidden";
     customCss.href = "../"+localStorage.getItem("cssMode"); 
@@ -102,10 +103,10 @@ window.onload = (e) => {
     uid = user.uid;
     firebase.database().ref("webChat").child(uid).on("child_added", function (snapshot) {  
         
-        if (snapshot.val().uid == uid) { 
-            document.getElementById("fetch-msg").innerHTML += `<div class="sender">${snapshot.val().msg}</div>`;  
+        if (snapshot.val().uid === uid) { 
+            document.getElementById("fetch-msg").innerHTML += `<div class="sender">${snapshot.val().msg}<br><span>${snapshot.val().datetime}</span></div>`;  
         } else {
-            document.getElementById("fetch-msg").innerHTML += `<div class="reciver">${snapshot.val().msg}</div>`;  
+            document.getElementById("fetch-msg").innerHTML += `<div class="reciver">${snapshot.val().msg}<br><span>${snapshot.val().datetime}</span></div>`;  
         };                   
         document.getElementById("fetch-msg").scrollTop = document.getElementById("fetch-msg").scrollHeight;
     }) 
@@ -130,7 +131,8 @@ sendMsg.addEventListener("click", () => {
         var db = firebase.database().ref("webChat").child(uid);
         db.push({
             "msg": message.value,
-            "uid": uid
+            "uid": uid,
+            "datetime": time.value
         });
         message.value = "";
         message.focus();

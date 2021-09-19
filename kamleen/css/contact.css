@@ -231,12 +231,22 @@
   border-radius: 5px;
 }
 
+.chat .chatBack .msg-chat #fetch-msg .sender span {
+  color: gray;
+  font-size: 15px;
+}
+
 .chat .chatBack .msg-chat #fetch-msg .reciver {
   padding: 5px;
   text-align: left;
   color: #224ca7;
   border-left: 2px solid #1d47a1;
   border-radius: 5px;
+}
+
+.chat .chatBack .msg-chat #fetch-msg .reciver span {
+  color: gray;
+  font-size: 15px;
 }
 
 .chat .chatBack .msg-chat ::-webkit-scrollbar {

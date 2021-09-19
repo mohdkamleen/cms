@@ -27,6 +27,7 @@
             color: rgb(119, 165, 252);
             text-transform: capitalize;
             padding: 0px 10px;
+            -webkit-text-stroke: 1px rgb(106, 145, 218);
         }
 
         h1{
@@ -35,6 +36,13 @@
             padding: 10px; 
             font-weight: 500;
             -webkit-text-stroke: 1px #888448;
+
+            span{
+                font-size: 23px;
+                font-weight: 700;
+                color: rgb(119, 165, 252);
+                -webkit-text-stroke: 1px rgb(106, 145, 218);
+            }
              
         }
 
@@ -43,6 +51,7 @@
             font-size: 20px;  
             font-weight: bold;
             color: rgb(119, 165, 252);
+            -webkit-text-stroke: 1px rgb(106, 145, 218);
 
             .type_text{
                 font-size: 25px;
@@ -365,6 +374,7 @@ this is part of services of css
                 color: transparent;
                 -webkit-background-clip: text;
                 -webkit-text-stroke: 1px rgba(150, 51, 51, 0.616);
+                transition: all .2s .7s;
             }
 
             .card-header{ 
@@ -400,6 +410,30 @@ this is part of services of css
         :hover::before{
             transform: scale(.5);
         } 
+        :hover:nth-child(1) .card-icon{ 
+            color: rgb(163, 159, 99) ;
+            -webkit-text-stroke: 1px rgb(146, 142, 88) ;
+        } 
+        :hover:nth-child(2) .card-icon{ 
+            color: rgb(129, 128, 165) ;
+            -webkit-text-stroke: 1px rgb(116, 115, 151);
+        } 
+        :hover:nth-child(3) .card-icon{ 
+            color: rgb(209, 124, 129) ;
+            -webkit-text-stroke: 1px rgb(182, 121, 125) ; 
+        } 
+        :hover:nth-child(4) .card-icon{ 
+            color: rgb(68, 123, 126) ;
+            -webkit-text-stroke: 1px rgb(71, 123, 126) ;
+        } 
+        :hover:nth-child(5) .card-icon{ 
+            color: rgb(129, 128, 165) ;
+            -webkit-text-stroke: 1px rgb(116, 115, 151);
+        } 
+        :hover:nth-child(6) .card-icon{ 
+            color: rgb(209, 124, 129) ;
+            -webkit-text-stroke: 1px rgb(182, 121, 125) ; 
+        } 
 
 
         :nth-child(1) .card-header{ 
@@ -412,7 +446,7 @@ this is part of services of css
         }
         :nth-child(3) .card-header{ 
             color: rgb(209, 124, 129) ;
-            -webkit-text-stroke: 1px rgb(182, 121, 125) ; ;
+            -webkit-text-stroke: 1px rgb(182, 121, 125) ; 
         }
         :nth-child(4) .card-header{ 
             color: rgb(68, 123, 126) ;
@@ -421,9 +455,10 @@ this is part of services of css
         :nth-child(5) .card-header{ 
             color: rgb(129, 128, 165) ;
             -webkit-text-stroke: 1px rgb(116, 115, 151);
-        }:nth-child(6) .card-header{ 
+        }
+        :nth-child(6) .card-header{ 
             color: rgb(209, 124, 129) ;
-            -webkit-text-stroke: 1px rgb(182, 121, 125) ; ;
+            -webkit-text-stroke: 1px rgb(182, 121, 125) ; 
         }
 
 

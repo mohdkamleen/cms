@@ -35,11 +35,10 @@
 
     .image{ 
         border-radius: 50%;  
-        width: 300px;
-        border-bottom: 25px solid rgba(255, 205, 205, 0.26);   
+        width: 300px; 
         position: relative;
         opacity: 0;
-        animation: toLeft 1s .5s forwards;
+        animation: toLeft 1s .5s forwards; 
 
         .image-back{ 
             width: 300px;
@@ -53,17 +52,18 @@
             animation: rotateClock 60s linear infinite alternate;
             box-shadow: var(--box-shadow); 
             transition: all .3s ease-in-out;
-            opacity: 0.3;   
+            opacity: 0.3;    
 
         
         }
  
 
         img{
-            width: 300px; 
+            width: 300px;  
             border-radius: 50%; 
             transition: all .3s ease-in-out;
             cursor: none;
+            mix-blend-mode: color; 
         } 
     }
 
@@ -201,6 +201,11 @@
                        color: rgb(167, 34, 34); 
                        border-right: 2px solid rgb(161, 29, 29);
                        border-radius: 5px;
+
+                       span{
+                           color: gray ;
+                           font-size: 15px;
+                       }
                    }
 
                    .reciver{  
@@ -209,6 +214,12 @@
                        color: rgb(34, 76, 167); 
                        border-left: 2px solid rgb(29, 71, 161);
                        border-radius: 5px;
+
+                       span{
+                        color: gray ;
+                        font-size: 15px;
+                    }
+                    
                    }
                }
 
@@ -509,7 +520,7 @@ this is part of skill of css
 
      
         img{
-            width: 230px !important;  
+            width: 250px !important;  
         } 
     }
 

@@ -53,7 +53,7 @@
                     </div>
 
                     <div class="image">
-                        <img src="../image/kamleen.png" alt="kamleen" id="myImage">
+                        <img src="../image/kamleen2.png" alt="kamleen" id="myImage">
                         <div class="image-back ">
                         </div>
                     </div>
@@ -72,9 +72,10 @@
                         <h3>Chat with mohd kamleen</h3>
                         <div id="fetch-msg">
                             <!-- <div class="sender">sender</div>  -->
-                            <div class="reciver">Hey I'm Mohd Kamleen how can I help you !!!!</div> 
+                            <div class="reciver">Hey I'm Mohd Kamleen how can I help you !!!! <br> <span id="datetime"></span></div> 
                         </div>
                         <div class="inputs">
+                            <input id="datetime" type="hidden">
                             <input type="text" id="message" autofocus placeholder="Type a message" autocomplete="off">
                             <button class="fa fa-send" id="sendMsg"></button>
                         </div>
@@ -88,6 +89,13 @@
                 <h2>Our Skills</h2>
                 <div class="skills-div"> 
                     <!-- fetch data from skillsApi  --> 
+                </div>
+            </div>
+
+            <div class="education"> 
+                <h2>Our Education</h2>
+                <div class="education-div"> 
+                    
                 </div>
             </div>
 
@@ -107,6 +115,7 @@
     <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
     <script src="../js/about.js"></script> 
+    <script src="../js/time.js"></script> 
 </body>
 
 </html>

@@ -41,6 +41,7 @@
   color: #77a5fc;
   text-transform: capitalize;
   padding: 0px 10px;
+  -webkit-text-stroke: 1px #6a91da;
 }
 
 .second-div .content .accupation h1 {
@@ -51,11 +52,19 @@
   -webkit-text-stroke: 1px #888448;
 }
 
+.second-div .content .accupation h1 span {
+  font-size: 23px;
+  font-weight: 700;
+  color: #77a5fc;
+  -webkit-text-stroke: 1px #6a91da;
+}
+
 .second-div .content .accupation .we-are {
   padding: 0px 10px;
   font-size: 20px;
   font-weight: bold;
   color: #77a5fc;
+  -webkit-text-stroke: 1px #6a91da;
 }
 
 .second-div .content .accupation .we-are .type_text {
@@ -402,6 +411,8 @@ this is part of services of css
   color: transparent;
   -webkit-background-clip: text;
   -webkit-text-stroke: 1px rgba(150, 51, 51, 0.616);
+  -webkit-transition: all .2s .7s;
+  transition: all .2s .7s;
 }
 
 .services .card-div .card .card-header {
@@ -439,6 +450,36 @@ this is part of services of css
 .services .card-div :hover::before {
   -webkit-transform: scale(0.5);
           transform: scale(0.5);
+}
+
+.services .card-div :hover:nth-child(1) .card-icon {
+  color: #a39f63;
+  -webkit-text-stroke: 1px #928e58;
+}
+
+.services .card-div :hover:nth-child(2) .card-icon {
+  color: #8180a5;
+  -webkit-text-stroke: 1px #747397;
+}
+
+.services .card-div :hover:nth-child(3) .card-icon {
+  color: #d17c81;
+  -webkit-text-stroke: 1px #b6797d;
+}
+
+.services .card-div :hover:nth-child(4) .card-icon {
+  color: #447b7e;
+  -webkit-text-stroke: 1px #477b7e;
+}
+
+.services .card-div :hover:nth-child(5) .card-icon {
+  color: #8180a5;
+  -webkit-text-stroke: 1px #747397;
+}
+
+.services .card-div :hover:nth-child(6) .card-icon {
+  color: #d17c81;
+  -webkit-text-stroke: 1px #b6797d;
 }
 
 .services .card-div :nth-child(1) .card-header {
