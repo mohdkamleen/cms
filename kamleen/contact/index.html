@@ -34,7 +34,7 @@
                     </div>
                     <div class="nav">
                         <li onclick="location='/'">home</li>
-                        <li onclick="location='/about'" >about</li>
+                        <li onclick="location='/about'">about</li>
                         <li class="active">contact</li>
                         <li onclick="location='/project'">project</li>
                     </div>
@@ -45,8 +45,9 @@
             <div class="second-div">
                 <div class="content">
                     <div class="accupation">
-                        <h1>  
-                            Hey, my name is Mohd Kamleen and I am full stack developer also. I'm living in Ambedkar Nagar UP India. I am a fan of
+                        <h1>
+                            Hey, my name is Mohd Kamleen and I am full stack developer also. I'm living in Ambedkar
+                            Nagar UP India. I am a fan of
                             technology, programming, and design. I’m also interested in web development. You can hire me
                             with a click on the button above.
                         </h1>
@@ -68,27 +69,36 @@
             <div class="chat">
                 <i class="fa fa-comments" id="chatIcon"></i>
                 <div class="chatBack">
-                   <div class="msg-chat">
-                        <h3>Chat with mohd kamleen</h3>
+                    <div class="msg-chat">
+                        <div class="admin">
+                            <div>
+                                <img src="../image/kamleen.png" alt=""><span> mohd kamleen</span>
+                            </div>
+                            <div>
+                                <i class="fa fa-phone" onclick="location='tel:+919838706427'"></i>
+                                <i class="fa fa-ellipsis-v"></i>
+                                <p>close window</p>
+                            </div>
+                        </div> 
                         <div id="fetch-msg">
                             <!-- <div class="sender">sender</div>  -->
-                            <div class="reciver">Hey I'm Mohd Kamleen how can I help you !!!!</div> 
+                            <div class="reciver">Hey I'm Mohd Kamleen <br><span>how can I help you !!!!</span></div>
                         </div>
                         <div class="inputs">
                             <input type="hidden" id="datetime">
                             <input type="text" id="message" autofocus placeholder="Type a message" autocomplete="off">
                             <button class="fa fa-send" id="sendMsg"></button>
                         </div>
-                   </div>
+                    </div>
                 </div>
             </div>
 
 
 
-            <div class="skills"> 
+            <div class="skills">
                 <h2>Our Skills</h2>
-                <div class="skills-div"> 
-                    <!-- fetch data from skillsApi  --> 
+                <div class="skills-div">
+                    <!-- fetch data from skillsApi  -->
                 </div>
             </div>
 
@@ -102,12 +112,12 @@
 
         </div>
     </div>
- 
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script> 
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
-    <script src="../js/about.js"></script> 
-    <script src="../js/time.js"></script> 
+    <script src="../js/about.js"></script>
+    <script src="../js/time.js"></script>
 </body>
 
 </html>

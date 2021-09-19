@@ -8,7 +8,7 @@ var hamburger = document.getElementsByClassName("hamburger")[0];
 var copyright = document.getElementsByClassName("copyright")[0];
 var imageBack = document.getElementsByClassName("image-back")[0];  
 var loaderMode = document.getElementsByClassName("loaderMode")[0];  
-var skillsDiv = document.getElementsByClassName("skills-div")[0];  
+var skillsDiv = document.getElementsByClassName("skills-div")[0];   
 var logo = document.getElementsByClassName("logo")[0]; 
 
 var nav = document.getElementsByTagName("nav")[0];
@@ -18,7 +18,7 @@ var li3 = document.getElementsByTagName("li")[2];
 var li4 = document.getElementsByTagName("li")[3];
 
 
-var sendMsg = document.getElementById("sendMsg"); 
+var sendMsg = document.getElementById("sendMsg");  
 var message = document.getElementById("message"); 
 var myImage = document.getElementById("myImage"); 
 var effect8 = document.getElementById("effect8");  
@@ -27,6 +27,9 @@ var customCss = document.getElementById("customCss");
 var uid = "";
 
 
+
+ 
+
 //---------------------- window scroll --------------------------//
 
 window.onscroll = () => {
@@ -34,9 +37,10 @@ window.onscroll = () => {
     var pageY = window.pageYOffset;
     if(pageY > 200 ){ 
         skillsDiv.classList.add("active");
-    }  
-    
+    }   
 }
+
+
 
 //--------------------- chat section js ------------------------//
  
@@ -54,6 +58,8 @@ chatIcon.addEventListener("click", () =>{
         chatIcon.style.boxShadow = 'var(--box-shadow)';
     }
 }) 
+
+
 
 
 //---------------------- window resize -------------------------//
@@ -191,4 +197,3 @@ hamburger.addEventListener("click", () =>{
         hamburger.classList.replace("fa-times","fa-bars");
     }
 })
-
