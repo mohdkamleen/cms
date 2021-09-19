@@ -21,7 +21,7 @@ skills = [
     }, 
     {
         "language": "mysql",
-        "persent": "90%" 
+        "persent": "70%" 
 
     }, 
     {
@@ -41,9 +41,19 @@ skills = [
     }, 
     {
         "language": "wordpress",
-        "persent": "70%" 
+        "persent": "80%" 
 
     }, 
+    // {
+    //     "language": "Firebase",
+    //     "persent": "95%" 
+
+    // }, 
+    // {
+    //     "language": "Firebase",
+    //     "persent": "95%" 
+
+    // }, 
 ];
 
 

@@ -4,38 +4,38 @@ services = [
     {
         "icon": "fa-html5",
         "title": "Web Developer",
-        "descrition": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, aliquam?"
+        "descrition": "Development website to fit your business, blog, portfolio, or online store."
 
     },
     {
         "icon": "fa-code",
         "title": "Web Design",
-        "descrition": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, aliquam?"
+        "descrition": "We provide design of any website for your business, blog, portfolio or anything."
 
     },
     {
         "icon": "fa-paint-brush",
         "title": "Graphic Design",
-        "descrition": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, aliquam?"
+        "descrition": "To solve problems and communicate ideas through typography, imagery, color and form"
     },
     {
         "icon": "fa-mobile",
         "title": "Responsive Design",
-        "descrition": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, aliquam?"
+        "descrition": "Mix of flexible grids and layouts, images and an intelligent use of CSS media queries"
 
     },
     {
         "icon": "fa-wordpress",
         "title": "Wordpress",
-        "descrition": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, aliquam?"
+        "descrition": "Provide any website to fit your business, blog, portfolio, or online store."
 
     },
     {
         "icon": "fa-microchip",
         "title": "Hardware",
-        "descrition": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, aliquam?"
+        "descrition": " I can take input from sensors, understand the data and do assigned tasks."
 
-    },
+    }, 
 ];
 
 
