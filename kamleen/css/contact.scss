@@ -13,33 +13,210 @@
     justify-content: space-around;
     align-items: center;
     max-width: 1400px;
-    min-height: 700px;    
+    min-height: 700px;     
+    margin: 10px;
 
     .accupation{  
         opacity: 0;
-        animation: toRight 1s .5s forwards; 
-        padding: 20px;
-        max-width: 500px;
- 
-        h1{
-            color: #b4b4b4 ;
-            font-size: 22px; 
-            padding: 10px;  
-            font-weight: 400;
-            -webkit-text-stroke: 1px #666666;
-             
+        animation: toRight 1s .5s forwards;  
+        padding: 20px; 
+        width: 100%;
+        margin: 0px 5% ; 
+
+        h2{
+            text-align: center;
+            padding: 25px 0px;
+            color: rgb(102, 102, 102);
+            text-transform: capitalize;
+            -webkit-text-stroke: 1px rgb(75, 75, 75);
+            transform: scale(0);
+            animation: popUp 1s 1s forwards;
+        }
+
+        .contact-form{ 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100% ; 
+            position: relative;
+            padding: 40px 20px; 
+
+            .input-feilds{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column; 
+                width: 100% !important;  
+                border: none;   
+                margin: 0px 10px;
+
+                label{ 
+                    width: 100%;
+    
+
+                input{ 
+                    padding: 6px; 
+                    top: 0;left: 0;
+                    text-indent: 5px;
+                    font-size: 18px;
+                    border: none;
+                    width: 100%;
+                    background: transparent;
+                    box-shadow: var(--box-shadow);
+                    margin: 10px 0px;
+                    border-radius: 3px;
+                }
+            }
+
+                textarea{
+                    max-width: 100%; 
+                    width: 100%; 
+                    flex: 4;
+                    border-radius: 3px;
+                    margin: 10px 0px;
+                    border: none;
+                    background: transparent;
+                    box-shadow: var(--box-shadow);
+                    padding: 6px;
+                    text-indent: 5px;
+                    height: 135px;
+                    max-height: 135px;
+                    font-size: 18px;
+                }
+            }
+        }
+
+        .contact-form::after{
+            position: absolute;
+            content: "";
+            top: 0;left: 0;
+            opacity: 0.5;
+            height: 100%;
+            width: 100%;
+            background: var(--linear-gradient);
+            filter: blur(5px);
+            z-index: -1;
         }
   
     }
    
 
-    .image{ 
-        border-radius: 50%;  
-        width: 300px;
-        border-bottom: 25px solid rgba(255, 205, 205, 0.26);   
-        position: relative;
-        opacity: 0;
-        animation: toLeft 1s .5s forwards;
+    .image{     
+        margin:0px 5%;  
+
+       
+    .contact-div{     
+        display: flex;
+        justify-content: center;
+        align-items: center;  
+        flex-direction: column;
+        width: 100%;
+        flex-wrap: wrap;
+
+        .contact{   
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; 
+            transition: all .3s ;
+            border-radius: 3px;  
+            position: relative; 
+            position: relative;
+            overflow: hidden;
+            transform: scale(0);
+            padding: 15px;
+            margin: 10px;
+            box-shadow: var(--box-shadow);  
+            width: 100%; 
+            max-width: 400px; 
+
+            .contact-icon{ 
+                font-size: 20px; 
+                font-weight: bold;
+                background : linear-gradient(15deg, rgba(255, 248, 145, 0.39),rgba(255, 182, 188, 0.959),rgb(201, 200, 255),rgba(142, 247, 255, 0.637));
+                color: transparent;
+                -webkit-background-clip: text;
+                -webkit-text-stroke: 1px rgba(150, 51, 51, 0.616);
+                transition: all .2s .7s;
+            }
+
+            .contact-header{ 
+                font-size: 20px;
+                padding: 5px;
+                text-transform: capitalize;
+                color: rgb(163, 159, 99) ;
+                -webkit-text-stroke: 1px rgb(146, 142, 88) ;
+            }
+
+            .contact-body{
+                text-align: center;  
+                color: #6e6e6e ;
+                font-size: 18px;
+            }
+        } 
+
+        .contact::before{
+            content: "";
+            position: absolute;
+            height: 700px;
+            width: 700px;
+            background: rgba(248, 247, 247, 0.178); 
+            filter: blur(5px);
+            z-index: -1;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            overflow: hidden;
+            border-radius: 50%; 
+            transition: all 1s;
+        }
+
+        :hover::before{
+            transform: scale(.5);
+        } 
+
+        :nth-child(1) .contact-header{ 
+            color: rgb(163, 159, 99) ;
+            -webkit-text-stroke: 1px rgb(146, 142, 88) ;
+        }
+        :nth-child(2) .contact-header{ 
+            color: rgb(129, 128, 165) ;
+            -webkit-text-stroke: 1px rgb(116, 115, 151);
+        }
+        :nth-child(3) .contact-header{ 
+            color: rgb(209, 124, 129) ;
+            -webkit-text-stroke: 1px rgb(182, 121, 125) ; 
+        }
+
+        :hover:nth-child(1) .contact-icon{ 
+            color: rgb(163, 159, 99) ;
+            -webkit-text-stroke: 1px rgb(146, 142, 88) ;
+        } 
+        :hover:nth-child(2) .contact-icon{ 
+            color: rgb(129, 128, 165) ;
+            -webkit-text-stroke: 1px rgb(116, 115, 151);
+        } 
+        :hover:nth-child(3) .contact-icon{ 
+            color: rgb(209, 124, 129) ;
+            -webkit-text-stroke: 1px rgb(182, 121, 125) ; 
+        } 
+
+        .contact:nth-child(1){
+            animation: popUp 1s forwards ;
+        }
+        .contact:nth-child(2){
+            animation: popUp 1s .3s forwards ;
+        }
+        .contact:nth-child(3){
+            animation: popUp 1s .6s forwards ;
+        }
+
+
+
+    }
+    
+
+
 
         .image-back{ 
             width: 300px;
@@ -56,15 +233,8 @@
             opacity: 0.3;   
 
         
-        }
- 
-
-        img{
-            width: 300px; 
-            border-radius: 50%; 
-            transition: all .3s ease-in-out;
-            cursor: none;
         } 
+    
     }
 
     .image img:hover ~ .image-back{
@@ -343,207 +513,22 @@ transform: scale(25) !important;
 .chatBack.active{ 
     transform: scale(1) !important;
 }  
- 
-
-
-/*****************************************
-this is part of skill of css
-*****************************************/
-
-.skills{  
-    
-    h2{
-        text-align: center;
-        padding: 25px 0px;
-        color: rgb(102, 102, 102);
-        text-transform: capitalize;
-        -webkit-text-stroke: 1px rgb(75, 75, 75);
-        transform: scale(0);
-        animation: popUp 1s 1s forwards;
-    }
-    
-    .skills-div{ 
-        width: 90%;
-        display: flex;
-        justify-content: center;
-        align-items: center;   
-        margin: auto;
-        padding-bottom: 100px ;
-        flex-wrap: wrap; 
-        max-width: 1000px; 
-        transition: all .3s ;
-
-        .skill{
-            display: flex;
-            justify-content: center;
-            align-items: center;   
-            width: 400px;
-            height: 50px; 
-            box-shadow: var(--box-shadow);
-            margin: 10px 20px;
-            padding: 0px 20px;
-            transform: scale(0);
-
-            .skill-title{
-                color: gray ;  
-                width: 100px; 
-                font-weight: bold;
-                font-size: 18px;
-                text-transform: capitalize;
-            }
-
-            .skill-position{ 
-                border: 2px solid rgba(128, 128, 128, 0.527) !important;
-                height: 20px;
-                border-radius: 50px;
-                width: 100%;
-                position: relative;
-            }
-
-        }
-        
-            
-
-        :nth-child(1) .skill-title{ 
-            color: rgb(163, 159, 99) ;
-            -webkit-text-stroke: 1px rgb(146, 142, 88) ;
-        }
-        :nth-child(2) .skill-title{ 
-            color: rgb(129, 128, 165) ;
-            -webkit-text-stroke: 1px rgb(116, 115, 151);
-        }
-        :nth-child(3) .skill-title{ 
-            color: rgb(209, 124, 129) ;
-            -webkit-text-stroke: 1px rgb(182, 121, 125) ; 
-        }
-        :nth-child(4) .skill-title{ 
-            color: rgb(133, 133, 133) ;
-            -webkit-text-stroke: 1px rgb(77, 77, 77) ;
-        }
-        :nth-child(5) .skill-title{ 
-            color: rgb(129, 128, 165) ;
-            -webkit-text-stroke: 1px rgb(116, 115, 151);
-        }
-        :nth-child(6) .skill-title{ 
-            color: rgb(209, 124, 129) ;
-            -webkit-text-stroke: 1px rgb(182, 121, 125) ; 
-        }
-        :nth-child(7) .skill-title{ 
-            color: rgb(133, 133, 133) ;
-            -webkit-text-stroke: 1px rgb(77, 77, 77) ; 
-        }
-        :nth-child(8) .skill-title{ 
-            color: rgb(163, 159, 99) ;
-            -webkit-text-stroke: 1px rgb(146, 142, 88) ;
-        }
-        :nth-child(9) .skill-title{ 
-            color: rgb(68, 123, 126) ;
-            -webkit-text-stroke: 1px rgb(71, 123, 126) ;
-        }
-        :nth-child(10) .skill-title{ 
-            color: rgb(129, 128, 165) ;
-            -webkit-text-stroke: 1px rgb(116, 115, 151);
-        }
-    }
-         
-        
-    .active .skill:nth-child(1){
-        animation: popUp 1s forwards ; 
-    }
-    .active .skill:nth-child(2){
-        animation: popUp 1s .2s forwards ;
-    }
-    .active .skill:nth-child(3){
-        animation: popUp 1s .3s forwards ;
-    }
-    .active .skill:nth-child(4){
-        animation: popUp 1s .4s forwards ;
-    }
-    .active .skill:nth-child(5){
-        animation: popUp 1s .5s forwards ;
-    }
-    .active .skill:nth-child(6){
-        animation: popUp 1s .6s forwards ;
-    } 
-    .active .skill:nth-child(7){
-        animation: popUp 1s .7s forwards ;
-    } 
-    .active .skill:nth-child(8){
-        animation: popUp 1s .8s forwards ;
-    } 
-    .active .skill:nth-child(9){
-        animation: popUp 1s .9s forwards ;
-    } 
-    .active .skill:nth-child(10){
-        animation: popUp 1s 1s forwards ;
-    } 
-
-    .skill-position::before{
-        position: absolute;
-        top: 0;left: 0;
-        content: attr(data-persent); 
-        border-radius: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;   
-        color: rgb(75, 75, 75);
-        font-size: 10px;
-        overflow: hidden;
-        transition: all .3s;
-        height: 100%;
-        border-right: 2px solid gray;  
-        width: 0px; 
-        background: var(--linear-gradient);
-    }
-    
-    
-     
-
-.active .skill:nth-child(1) .skill-position::before{   
-    animation: width90 .5s .5s forwards;
-}
-.active .skill:nth-child(2) .skill-position::before{  
-    animation: width80 .5s 1s forwards;
-}
-.active .skill:nth-child(3) .skill-position::before{  
-    animation: width80 .5s 1.5s forwards;
-}
-.active .skill:nth-child(4) .skill-position::before{  
-    animation: width70 .5s 2s forwards;
-}
-.active .skill:nth-child(5) .skill-position::before{  
-    animation: width80 .5s 2.5s forwards;
-}
-.active .skill:nth-child(6) .skill-position::before{  
-    animation: width80 .5s 3s forwards;
-}
-.active .skill:nth-child(7) .skill-position::before{  
-    animation: width95 .5s 3.5s forwards;
-}
-.active .skill:nth-child(8) .skill-position::before{ 
-    animation: width80 .5s 4s forwards; 
-}
-.active .skill:nth-child(9) .skill-position::before{ 
-    animation: width95 .5s 4.5s forwards; 
-}
-.active .skill:nth-child(10) .skill-position::before{ 
-    animation: width95 .5s 5s forwards; 
-}
-
-} 
-
+  
 .navigation.hide{
     z-index: -1 !important;
 }
 
-@media (max-width:900px){
+@media screen and (max-width:900px){
     .content{
-        flex-direction: column-reverse;
-        margin-top: -20px;
+        flex-direction: column-reverse; 
     }
 
-    .image{  
-        width: 230px !important; 
+    .image{    
+
+        
+        .contact-div{
+            flex-direction: row !important;
+        }
 
         .image-back{ 
             width: 230px !important;
@@ -562,24 +547,9 @@ this is part of skill of css
             opacity: 1 !important;
             animation-play-state: paused !important;
         }
-
-     
-        img{
-            width: 230px !important;  
-        } 
-    }
-
  
-.skills{
-    .skills-div{  
-        flex-direction: column; 
-
-        .skill{  
-            width: 80%;
-        }
     }
-}
-
+ 
 .chatBack{
     height: 100vh !important;
     width: 100% !important; 
@@ -592,11 +562,27 @@ this is part of skill of css
 
  
 
-@media (max-width:700px){ 
-    .skill{  
-        width: 90% !important;
-    }
+@media (max-width:700px){  
 
+    .contact-form{
+        flex-direction: column;  
+        
+        .input-feilds{
+
+            input{ 
+            width: 100% !important;
+        }
+    }
+}
+
+}
+  
+ 
+
+@media (max-width:1050px) and (min-width:900px) {  
+    .contact-form{
+        flex-direction: column;   
+}
 
 }
   

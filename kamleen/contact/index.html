@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohd Kamleen | About</title>
+    <title>Mohd Kamleen | Contact</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/contact.css">
     <link rel="stylesheet" id="customCss">
@@ -45,16 +45,76 @@
             <div class="second-div">
                 <div class="content">
                     <div class="accupation">
-                        <h1>
-                            Hey, my name is Mohd Kamleen and I am full stack developer also. I'm living in Ambedkar
-                            Nagar UP India. I am a fan of
-                            technology, programming, and design. I’m also interested in web development. You can hire me
-                            with a click on the button above.
-                        </h1>
+                        <h2>Get in touch</h2>
+                        <div class="contact-form">
+                            <div class="input-feilds">
+                                <label>
+                                    <input type="text" placeholder="Username">
+                                </label>
+                                <label>
+                                    <input type="text" placeholder="Email or phone">
+                                </label>
+                                <label>
+                                    <input placeholder="Subject" list="subjectMenu">
+                                    <datalist id="subjectMenu">
+                                        <option value="Need help with a one-off project"></option>
+                                        <option value="looking a partnership"></option>
+                                        <option value="want to hire me "></option>
+                                        <option value="want to say hi!!"></option>
+                                    </datalist>
+                                </label>
+                            </div>
+                            <div class="input-feilds">
+                                <label>
+                                    <textarea placeholder="Type a message"></textarea>
+                                </label>
+                            </div>
+                        </div>
                     </div>
 
-                    <div class="image">
-                        <img src="../image/kamleen.png" alt="kamleen" id="myImage">
+                    <div class="image"> 
+
+                            <div class="contact-div">
+                                
+                                <div class="contact" onclick="location='mailto:kamleenmohd@gmail.com'">
+                                    <div class="contact-icon">
+                                        <i class="fa fa-envelope"></i>
+                                    </div>
+                                    <div class="contact-header">
+                                        <h4>email</h4>
+                                    </div>
+                                    <div class="contact-body">
+                                        kamleenmohd@gmail.com
+                                    </div>
+                                </div>
+
+                                <div class="contact" onclick="location='tel:919838706427'">
+                                    <div class="contact-icon">
+                                        <i class="fa fa-phone"></i>
+                                    </div>
+                                    <div class="contact-header">
+                                        <h4>phone</h4>
+                                    </div>
+                                    <div class="contact-body">
+                                        +91 9838706427
+                                    </div>
+                                </div>
+
+                                <div class="contact" onclick="location='https://www.google.com/maps/d/u/0/edit?mid=1DDX4uU_9vmjfZw0AdUuxWNeTYIVMyMiK&usp=sharing'">
+                                    <div class="contact-icon">
+                                        <i class="fa fa-map-marker"></i>
+                                    </div>
+                                    <div class="contact-header">
+                                        <h4>location</h4>
+                                    </div>
+                                    <div class="contact-body">
+                                        Sakrawal west Tanda Ambedkar Nagar 224190 UP India.
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
                         <div class="image-back ">
                         </div>
                     </div>
@@ -76,10 +136,11 @@
                             </div>
                             <div>
                                 <i class="fa fa-phone" onclick="location='tel:+919838706427'"></i>
-                                <i class="fa fa-ellipsis-v"></i>
+                                <i class="fa fa-ellipsis-v"
+                                    onclick="document.getElementsByClassName('chatBack')[0].classList.remove('active')"></i>
                                 <p>close window</p>
                             </div>
-                        </div> 
+                        </div>
                         <div id="fetch-msg">
                             <!-- <div class="sender">sender</div>  -->
                             <div class="reciver">Hey I'm Mohd Kamleen <br><span>how can I help you !!!!</span></div>
@@ -90,15 +151,6 @@
                             <button class="fa fa-send" id="sendMsg"></button>
                         </div>
                     </div>
-                </div>
-            </div>
-
-
-
-            <div class="skills">
-                <h2>Our Skills</h2>
-                <div class="skills-div">
-                    <!-- fetch data from skillsApi  -->
                 </div>
             </div>
 
