@@ -220,10 +220,13 @@
 
  }
 
+
+ 
+
  .setting{
     background-color: transparent;
     position: fixed;
-    bottom: 0;right: 0; 
+    bottom: 0;left: 0; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -257,7 +260,7 @@
             position: fixed; 
             bottom: 20px;
             opacity: 0;
-            right: 90px;
+            left: 90px;
             background: linear-gradient(15deg,#fff, rgb(255, 238, 0),rgb(255, 6, 26),rgb(8, 4, 245),rgb(0, 238, 255));  
             color: transparent; 
             -webkit-background-clip: text;
@@ -269,13 +272,13 @@
             background : linear-gradient(15deg, rgba(255, 254, 251, 0.883),#000,rgba(173, 173, 173, 0.959),rgb(61, 61, 61),rgb(248, 246, 246));
             color: transparent;
             -webkit-background-clip: text;
-            right: 70px;
+            left: 70px;
         }
         :nth-child(3){
             position: fixed; 
             opacity: 0;
             bottom: 90px;
-            right: 20px; 
+            left: 20px; 
             background : linear-gradient(15deg,#fff, rgba(0, 0, 0, 0.39),rgba(255, 255, 255, 0.959),rgb(246, 246, 246),rgb(161, 161, 161),rgba(95, 95, 95, 0.637));
             color: transparent;
             -webkit-background-clip: text;
@@ -286,7 +289,7 @@
 .items.active{  
 
     :nth-child(1){
-        animation: toLeft .3s linear forwards;  
+        animation: toRight .3s linear forwards;  
     }
     :nth-child(2){
         animation: toUpLeft .3s .1s  linear forwards;
@@ -304,7 +307,7 @@
     background-color: transparent; 
     position: fixed;
     bottom: -50px; 
-    right: -50px;
+    left: -50px;
     font-size: 25px; 
     width: 100px;
     border-radius: 50%; 
@@ -323,6 +326,251 @@
  }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+ .chat{ 
+    position: fixed;
+    bottom: 0;right: 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    z-index: 8;
+    
+
+    i{
+        z-index: 11; 
+        background : linear-gradient(15deg, rgba(155, 148, 63, 0.39),rgba(102, 186, 255, 0.959),rgb(124, 156, 97),rgba(142, 247, 255, 0.637));
+        color: transparent;
+        -webkit-background-clip: text;
+        border-radius: 3px;
+        font-size: 20px;
+        border: 2px solid rgba(246, 246, 246, 0.76); 
+        -webkit-text-stroke: 2px rgba(51, 49, 49, 0.616);
+        transition: all .3s linear;  
+        padding: 5px; 
+        box-shadow: var(--box-shadow); 
+
+
+       }
+
+       .chatBack{
+           position: fixed;
+           bottom: 0;right: 0;
+           width: 450px;
+           height: 600px; 
+           border-top-left-radius: 5px;  
+           transform: scale(0);  
+           transform-origin: right bottom;
+           overflow: hidden !important; 
+           z-index: 9 ;
+           transition: all .5s;   
+
+           .msg-chat{
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               flex-direction: column;
+
+               .admin{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 50px;
+                width: 100%;
+                background: var(--linear-gradient);
+                padding: 10px 20px;
+
+                div{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    img{
+                        width: 30px;
+                        border-radius: 100px;
+                    }
+                    span{
+                        font-size: 20px;
+                        font-weight: 500;
+                        text-transform: capitalize;
+                        padding-left: 15px;
+                    }
+
+                    i{
+                        font-size: 17px;
+                        box-shadow: none;
+                        border: none;
+                        margin: 0px 5px;
+                    }
+
+                    .fa-ellipsis-v:hover ~ p{
+                        opacity: 1;
+                        visibility: visible;
+                    }
+
+                    p{
+                        color: #666666;
+                        position: absolute;
+                        top: 50px; 
+                        z-index: 12;
+                        right: 0;
+                        transition: all .3s linear;
+                        text-align: center;
+                        font-size: 20px;
+                        opacity: 0;
+                        visibility: hidden;
+                        padding: 5px 10px; 
+                        background-color: rgb(243, 243, 243);
+                    }
+ 
+                }
+            }
+
+            
+               #fetch-msg{  
+                   width: 100%;
+                   overflow-y: auto !important;
+                   position: absolute;
+                   left: 0;
+                   right: 0;
+                   top: 50px;
+                   bottom: 50px; 
+                   padding: 10px 5%;  
+                   font-size: 18px;
+                   font-weight: 500;
+
+                  
+
+                   .sender{  
+                       padding: 5px;
+                       text-align: right; 
+                       color: rgb(167, 34, 34); 
+                       border-right: 2px solid rgb(161, 29, 29);
+                       border-radius: 5px;
+
+                       
+                       span{
+                        color: gray ;
+                        font-size: 15px;
+                       }
+                   }
+
+                   .reciver{  
+                       padding: 5px;
+                       text-align: left;
+                       color: rgb(34, 76, 167); 
+                       border-left: 2px solid rgb(29, 71, 161);
+                       border-radius: 5px;
+
+                       
+                       span{
+                        color: gray ;
+                        font-size: 15px;
+                       }
+                   }
+               }
+
+               ::-webkit-scrollbar{
+                width: 0;
+            }
+
+               .inputs{
+                   width: 100%; 
+                   height: 50px;
+                   position: absolute;
+                   bottom: 0;left: 0;right: 0; 
+                   display: flex;
+                   justify-content: center;
+                   align-items: flex-start; 
+
+                   input{ 
+                    width: 70%;
+                    font-size: 18px;
+                    font-weight: 500;
+                    padding: 6px;
+                    text-indent: 5px; 
+                    color: #666666;
+                    border: none;
+                    box-shadow: var(--box-shadow); 
+                    border-top-left-radius: 4px;
+                    border-bottom-left-radius: 4px;  
+                }
+
+                   button{ 
+                       padding: 6px;
+                       font-size: 20px;
+                       border-top-right-radius: 4px;
+                       border-bottom-right-radius: 4px;
+                       border: none;
+                       background : linear-gradient(15deg, rgba(155, 148, 63, 0.39),rgba(102, 186, 255, 0.959),rgb(124, 156, 97),rgba(142, 247, 255, 0.637));
+                       color: transparent;
+                       -webkit-background-clip: text;  
+                       box-shadow: var(--box-shadow);
+                       -webkit-text-stroke: 2px rgba(51, 49, 49, 0.616);
+                   }
+               }
+           }
+       }
+ 
+       :hover{ 
+        box-shadow: none;
+        border-color: rgb(212, 245, 255);
+    } 
+
+} 
+
+.chatBack::after{
+content: "";
+background-color: transparent; 
+position: absolute;
+bottom: -50px; 
+right: -50px;
+font-size: 25px; 
+width: 100px;
+border-radius: 50%; 
+height: 100px;
+transform: scale(0);
+z-index: -1;   
+transition: all 1s ease; 
+background: var(--linear-gradient);  
+       
+}
+
+.chatBack.active::after{ 
+transform: scale(25) !important;
+}  
+ 
+.chatBack.active{ 
+    transform: scale(1) !important;
+}  
+
+
+
+
+ 
+.navigation.hide{
+    z-index: -1 !important;
+}
 
 /*****************************************
 this is part of services of css
@@ -522,6 +770,18 @@ this is part of services of css
             width: 230px !important;  
         } 
     }
+
+
+    .chatBack{
+        height: 100vh !important;
+        width: 100% !important; 
+    }
+     
+     
+#settingMain.hide{
+    opacity: 0;
+    visibility: hidden;
+}
 
 
     

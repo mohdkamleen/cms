@@ -69,6 +69,39 @@
             </div>
 
 
+            
+
+        <div class="chat">
+            <i class="fa fa-comments" id="chatIcon"></i>
+            <div class="chatBack">
+                <div class="msg-chat">
+                    <div class="admin">
+                        <div>
+                            <img src="../image/kamleen.png" alt=""><span> mohd kamleen</span>
+                        </div>
+                        <div>
+                            <i class="fa fa-phone" onclick="location='tel:+919838706427'"></i>
+                            <i class="fa fa-ellipsis-v" onclick="location='/other/cv.pdf'"></i>
+                            <p>Show Details</p>
+                        </div>
+                    </div>
+                    <div id="fetch-msg">
+                        <!-- <div class="sender">sender</div>  -->
+                        <div class="reciver">Hey I'm Mohd Kamleen <br><span>how can I help you !!!!</span></div>
+                    </div>
+                    <div class="inputs">
+                        <input type="hidden" id="datetime">
+                        <input type="text" id="message" autofocus placeholder="Type a message" autocomplete="off">
+                        <button class="fa fa-send" id="sendMsg"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        
+
+
             <div class="setting">
                 <i class="fa fa-cogs" id="settingMain"></i>
                 <div class="items" id="settingMainChild">
@@ -103,6 +136,9 @@
 
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script> 
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
+    <script src="js/time.js"></script>
     <script src="js/index.js"></script>
     <script src="js/servicesApi.js"></script> 
 </body>

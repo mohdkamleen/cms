@@ -347,11 +347,10 @@
          mix-blend-mode: multiply;  
          animation: rotateClock 30s linear infinite alternate;
          box-shadow: var(--box-shadow); 
-         }
-     
- 
-
+         } 
  }
+
+ 
 
  .chat{ 
     position: fixed;
@@ -756,9 +755,8 @@ transform: scale(25) !important;
  }
 
 
- 
 
-  
+ 
 .navigation.hide{
     z-index: -1 !important;
 }

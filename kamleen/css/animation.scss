@@ -133,7 +133,7 @@
 
 @keyframes toUpLeft{
     0%{
-       transform: translateY(50px) translateX(50px); 
+       transform: translate(-50px,50px); 
        opacity: 0;  
     } 
     100%{

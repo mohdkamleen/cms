@@ -81,8 +81,9 @@ window.onload = () => {
     loaderMode.style.visibility = "hidden";
     customCss.href = "../"+localStorage.getItem("cssMode"); 
 
-//--------------------- firebase code ---------------------//
 
+    
+//--------------------- firebase code ---------------------// 
     var fconfig = {
         apiKey: "AIzaSyCNNYKBE58pZQtAbBFQh98zg2yKtlgKWXU",
         authDomain: "mohd-e4f8e.firebaseapp.com",

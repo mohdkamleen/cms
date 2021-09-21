@@ -260,8 +260,8 @@
 
 @-webkit-keyframes toUpLeft {
   0% {
-    -webkit-transform: translateY(50px) translateX(50px);
-            transform: translateY(50px) translateX(50px);
+    -webkit-transform: translate(-50px, 50px);
+            transform: translate(-50px, 50px);
     opacity: 0;
   }
   100% {
@@ -273,8 +273,8 @@
 
 @keyframes toUpLeft {
   0% {
-    -webkit-transform: translateY(50px) translateX(50px);
-            transform: translateY(50px) translateX(50px);
+    -webkit-transform: translate(-50px, 50px);
+            transform: translate(-50px, 50px);
     opacity: 0;
   }
   100% {
