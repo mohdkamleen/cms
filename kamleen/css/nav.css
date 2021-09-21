@@ -118,6 +118,27 @@
   overflow: hidden;
   -webkit-box-shadow: var(--box-shadow);
           box-shadow: var(--box-shadow);
+  opacity: 0;
+}
+
+.navigation nav .nav li:nth-child(1) {
+  -webkit-animation: toLeft .5s .3s ease forwards !important;
+          animation: toLeft .5s .3s ease forwards !important;
+}
+
+.navigation nav .nav li:nth-child(2) {
+  -webkit-animation: toLeft .5s .5s ease forwards !important;
+          animation: toLeft .5s .5s ease forwards !important;
+}
+
+.navigation nav .nav li:nth-child(3) {
+  -webkit-animation: toLeft .5s .7s ease forwards !important;
+          animation: toLeft .5s .7s ease forwards !important;
+}
+
+.navigation nav .nav li:nth-child(4) {
+  -webkit-animation: toLeft .5s .9s ease forwards !important;
+          animation: toLeft .5s .9s ease forwards !important;
 }
 
 .navigation nav .nav .active {
