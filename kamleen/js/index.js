@@ -10,6 +10,7 @@ var settingMainChild = document.getElementById("settingMainChild");
 var settingMain = document.getElementById("settingMain");   
  
 var hamburger = document.getElementsByClassName("hamburger")[0];
+var setting = document.getElementsByClassName("setting")[0];
 var copyright = document.getElementsByClassName("copyright")[0];
 var imageBack = document.getElementsByClassName("image-back")[0];  
 var loaderMode = document.getElementsByClassName("loaderMode")[0]; 
@@ -37,7 +38,7 @@ var uid = "";
 chatIcon.addEventListener("click", () =>{
     chatBack.classList.toggle("active");  
     navigation.classList.toggle("hide");  
-    settingMain.classList.toggle("hide");  
+    setting.classList.toggle("hide");  
     document.getElementById("fetch-msg").scrollTop = document.getElementById("fetch-msg").scrollHeight;
 
     if(chatIcon.className === "fa fa-comments"){
@@ -97,11 +98,24 @@ window.onscroll = () => {
 settingMain.addEventListener("click", () => {
     settingMainChild.classList.toggle("active");  
 
+    settingMainChild.addEventListener("click", () => {
+        settingMainChild.classList.toggle("active");   
+
     if(settingMain.className === "fa fa-cogs"){
         settingMain.classList.replace("fa-cogs","fa-times"); 
     } else {
         settingMain.classList.replace("fa-times","fa-cogs");
     }
+
+})
+
+if(settingMain.className === "fa fa-cogs"){
+    settingMain.classList.replace("fa-cogs","fa-times"); 
+} else {
+    settingMain.classList.replace("fa-times","fa-cogs");
+}
+
+
 })
 
 
@@ -155,9 +169,9 @@ uid = user.uid;
 firebase.database().ref("webChat").child(uid).on("child_added", function (snapshot) {  
     
     if (snapshot.val().uid === uid) { 
-        document.getElementById("fetch-msg").innerHTML += `<div class="sender">${snapshot.val().msg}<br><span>${snapshot.val().datetime}</span></div>`;  
+        document.getElementById("fetch-msg").innerHTML += `<div class="sender"><span>${snapshot.val().msg}</span><br><b>${snapshot.val().datetime}</b></div>`;  
     } else {
-        document.getElementById("fetch-msg").innerHTML += `<div class="reciver">${snapshot.val().msg}<br><span>${snapshot.val().datetime}</span></div>`;  
+        document.getElementById("fetch-msg").innerHTML += `<div class="reciver"><span>${snapshot.val().msg}</span><br><b>${snapshot.val().datetime}</b></div>`;  
     };                   
     document.getElementById("fetch-msg").scrollTop = document.getElementById("fetch-msg").scrollHeight;
 }) 
@@ -236,6 +250,7 @@ hamburger.onmousemove  = (event) => {
 
 hamburger.addEventListener("click", () =>{
     nav.classList.toggle("active"); 
+    setting.classList.toggle("hide");   
     imageBack.classList.toggle("active"); 
     copyright.classList.toggle("active"); 
 

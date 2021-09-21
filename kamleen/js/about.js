@@ -108,9 +108,9 @@ window.onload = (e) => {
     firebase.database().ref("webChat").child(uid).on("child_added", function (snapshot) {  
         
         if (snapshot.val().uid === uid) { 
-            document.getElementById("fetch-msg").innerHTML += `<div class="sender">${snapshot.val().msg}<br><span>${snapshot.val().datetime}</span></div>`;  
+            document.getElementById("fetch-msg").innerHTML += `<div class="sender"><span>${snapshot.val().msg}</span><br><b>${snapshot.val().datetime}</b></div>`;  
         } else {
-            document.getElementById("fetch-msg").innerHTML += `<div class="reciver">${snapshot.val().msg}<br><span>${snapshot.val().datetime}</span></div>`;  
+            document.getElementById("fetch-msg").innerHTML += `<div class="reciver"><span>${snapshot.val().msg}</span><br><b>${snapshot.val().datetime}</b></div>`;  
         };                   
         document.getElementById("fetch-msg").scrollTop = document.getElementById("fetch-msg").scrollHeight;
     }) 
