@@ -199,13 +199,13 @@
         width: 100%;
         left: 0;   
         top: -100%;  
-        content: "";
-        opacity: .8;
+        content: ""; 
         font-size: 25px; 
         color: transparent; 
         background: var(--linear-gradient);
         -webkit-text-stroke: 1px gray; 
         transition: all .3s linear; 
+        filter: blur(20px);
     }
 
     .project::before{

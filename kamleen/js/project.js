@@ -3,8 +3,7 @@
 var chatIcon = document.getElementById("chatIcon");
 var chatBack = document.getElementsByClassName("chatBack")[0];
 var navigation = document.getElementsByClassName("navigation")[0]; 
-
-var projects = document.getElementsByClassName("projects")[0];
+ 
 var hamburger = document.getElementsByClassName("hamburger")[0];
 var copyright = document.getElementsByClassName("copyright")[0];
 var imageBack = document.getElementsByClassName("image-back")[0];  
@@ -187,9 +186,9 @@ hamburger.onmousemove  = (event) => {
 //---------------------- hamburger function ------------------//
 
 hamburger.addEventListener("click", () =>{
-    nav.classList.toggle("active"); 
-    projects.classList.toggle("hide"); 
+    document.getElementsByClassName("projects")[0].classList.toggle("hide"); 
     imageBack.classList.toggle("active"); 
+    nav.classList.toggle("active"); 
     copyright.classList.toggle("active"); 
 
     if(hamburger.className === "hamburger fa fa-bars"){

@@ -240,13 +240,14 @@
   left: 0;
   top: -100%;
   content: "";
-  opacity: .8;
   font-size: 25px;
   color: transparent;
   background: var(--linear-gradient);
   -webkit-text-stroke: 1px gray;
   -webkit-transition: all .3s linear;
   transition: all .3s linear;
+  -webkit-filter: blur(20px);
+          filter: blur(20px);
 }
 
 .projects #project-div .project::before {
