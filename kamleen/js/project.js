@@ -4,11 +4,11 @@ var chatIcon = document.getElementById("chatIcon");
 var chatBack = document.getElementsByClassName("chatBack")[0];
 var navigation = document.getElementsByClassName("navigation")[0]; 
 
+var projects = document.getElementsByClassName("projects")[0];
 var hamburger = document.getElementsByClassName("hamburger")[0];
 var copyright = document.getElementsByClassName("copyright")[0];
 var imageBack = document.getElementsByClassName("image-back")[0];  
-var loaderMode = document.getElementsByClassName("loaderMode")[0];  
-var socialDiv = document.getElementsByClassName("social-div")[0];   
+var loaderMode = document.getElementsByClassName("loaderMode")[0];    
 var logo = document.getElementsByClassName("logo")[0]; 
 
 var nav = document.getElementsByTagName("nav")[0];
@@ -19,11 +19,9 @@ var li4 = document.getElementsByTagName("li")[3];
 
 var sendMsg = document.getElementById("sendMsg");  
 var time = document.getElementById("datetime"); 
-var message = document.getElementById("message"); 
-var myImage = document.getElementById("myImage"); 
+var message = document.getElementById("message");  
 var effect8 = document.getElementById("effect8");  
-var customCss = document.getElementById("customCss");    
-var sendContact = document.getElementById("sendContact");  
+var customCss = document.getElementById("customCss");     
 
 var uid = "";
 
@@ -32,13 +30,13 @@ var uid = "";
 
 //---------------------- window scroll --------------------------//
 
-window.onscroll = () => {
+// window.onscroll = () => {
 
-    var pageY = window.pageYOffset; 
-    if(pageY > 200 ){  
-        socialDiv.classList.add("active");
-    }   
-} 
+//     var pageY = window.pageYOffset; 
+//     if(pageY > 200 ){  
+//         socialDiv.classList.add("active");
+//     }   
+// } 
 
 
 
@@ -185,12 +183,12 @@ hamburger.onmousemove  = (event) => {
     effect8.style.top = event.clientY + 'px';   
   }
 
- 
-
+   
 //---------------------- hamburger function ------------------//
 
 hamburger.addEventListener("click", () =>{
     nav.classList.toggle("active"); 
+    projects.classList.toggle("hide"); 
     imageBack.classList.toggle("active"); 
     copyright.classList.toggle("active"); 
 
@@ -201,58 +199,4 @@ hamburger.addEventListener("click", () =>{
     }
 })
 
-  
-
-//---------------- send conctact msg function------------------//
-userName = document.getElementById("user-name");
-userContact = document.getElementById("user-contact");
-userSubject = document.getElementById("user-subject");
-userMessage = document.getElementById("user-message");
-processing = document.getElementsByClassName("processing")[0];
-
-sendContact.addEventListener("click", () => {
-
-
-    if (userName.value == "") {
-        userName.setAttribute("placeholder", "Please type username");
-        userName.focus();
-    } else if (userContact.value == ""){
-        userContact.setAttribute("placeholder", "Please type contact");
-        userContact.focus();
-    } else if (userSubject.value == ""){
-        userSubject.setAttribute("placeholder", "Please type subject");
-        userSubject.focus(); 
-    } else if (userMessage.value == ""){
-        userMessage.setAttribute("placeholder", "Please type message");
-        userMessage.focus();
-    } else {
-        
-    processing.style.opacity = '1';
-    processing.style.visibility = 'visible';
-
-        var db = firebase.database().ref("webContact");
-        db.push({
-            "user": userName.value,
-            "subject": userSubject.value,
-            "contact": userContact.value,
-            "msg": userMessage.value,
-            "datetime": time.value,
-            "uid": uid
-        }).then(() => {
-            userName.value = "";
-            userSubject.value = "";
-            userMessage.value = "";
-            userContact.value = ""; 
-
-            processing.style.opacity = '0';
-            processing.style.visibility = 'hidden';
-
-        });
-        
-        userMessage.setAttribute("placeholder", "Type a message");
-        userSubject.setAttribute("placeholder", "Subject");
-        userContact.setAttribute("placeholder", "Email or phone");
-        userName.setAttribute("placeholder", "Username");
-    }
-        
-})
+   

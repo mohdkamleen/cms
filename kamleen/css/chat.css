@@ -164,47 +164,69 @@
 .chat .chatBack .msg-chat #fetch-msg .sender {
   text-align: right;
   padding: 7px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .chat .chatBack .msg-chat #fetch-msg .sender span {
   padding: 3px 10px;
   -webkit-box-shadow: var(--box-shadow);
           box-shadow: var(--box-shadow);
-  color: #aaaaaa;
+  color: #929292;
   background: transparent;
   -webkit-text-stroke: 1px #747474;
   border-radius: 4px;
   border-bottom-right-radius: 0px !important;
   border-radius: 5px;
+  max-width: 300px;
 }
 
-.chat .chatBack .msg-chat #fetch-msg .sender b {
-  color: #707070;
+.chat .chatBack .msg-chat #fetch-msg .sender span b {
+  color: #76bbff;
   font-size: 12px;
   font-weight: normal;
+  -webkit-text-stroke: 1px #999999;
 }
 
 .chat .chatBack .msg-chat #fetch-msg .reciver {
   text-align: left;
   padding: 7px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .chat .chatBack .msg-chat #fetch-msg .reciver span {
   padding: 3px 10px;
   -webkit-box-shadow: var(--box-shadow);
           box-shadow: var(--box-shadow);
-  color: #aaaaaa;
+  color: #929292;
   border-radius: 5px;
   background: transparent;
   -webkit-text-stroke: 1px #747474;
   border-radius: 4px;
   border-bottom-left-radius: 0px;
+  max-width: 300px;
 }
 
-.chat .chatBack .msg-chat #fetch-msg .reciver b {
-  color: gray;
+.chat .chatBack .msg-chat #fetch-msg .reciver span b {
+  color: #76bbff;
   font-size: 12px;
   font-weight: normal;
+  -webkit-text-stroke: 1px #999999;
 }
 
 .chat .chatBack .msg-chat ::-webkit-scrollbar {

@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mohd Kamleen</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/index.css">
+    <title>Mohd Kamleen | Project</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/project.css">
     <link rel="stylesheet" id="customCss">
-    <link rel="shortcut icon" href="image/kamleen.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../image/kamleen.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -20,9 +20,11 @@
             <div class="loader">
                 <h1>Loading</h1>
             </div>
-        </div> 
+        </div>
+
 
         <div class="container">
+
             <div class="navigation">
                 <nav>
                     <div class="logo">
@@ -32,36 +34,37 @@
                         <!-- <i class="fa fa-bars"></i> -->
                     </div>
                     <div class="nav">
-                        <li class="active">home</li>
-                        <li onclick="location='about'">about</li>
-                        <li onclick="location='contact'">contact</li>
-                        <li onclick="location='project'">project</li>
+                        <li onclick="location='/'">home</li>
+                        <li onclick="location='/about'">about</li>
+                        <li onclick="location='/contact'">contact</li>
+                        <li class="active">project</li>
                     </div>
                 </nav>
             </div>
 
 
             <div class="second-div">
-                <div class="content">
-                    <div class="accupation">
-                        <p class="hey">hey&nbsp;________________</p>
-                        <h1><span>I'm</span> Mohd Kamleen</h1>
-                        <p class="we-are">& &nbsp; <span class="type_text"></span></p>
-                        <div class="buttons">
-                            <button data-text="Download CV"><a href="other/cv.pdf" download="Mohd Kamleen">Download
-                                    CV</a></button>
-                            <button data-text="hire me"
-                                onclick="window.location.href='mailto:kamleenmohd@gmail.com'">Hire Me</button>
-                        </div>
-                    </div>
-
+                <div class="content"> 
                     <div class="image">
-                        <img src="image/kamleen.png" alt="kamleen" id="myImage">
-                        <div class="image-back ">
-                        </div>
-                    </div>
+                        <div class="image-back "></div>
+                    </div> 
                 </div>
             </div>
+
+
+            <div class="projects">
+
+                <div class="search-bar">
+                    <input type="text" autofocus autocomplete="off" placeholder="Search here">
+                    <button >search</button>
+                </div>
+
+                <div id="project-div">  
+                    <!-- fetch data from project api  -->
+                </div>
+                
+            </div>
+
 
             <div class="effects">
                 <div id="effect8"></div>
@@ -94,26 +97,8 @@
                         </div>
                     </div>
                 </div>
-            </div>  
-
-
-            <div class="setting">
-                <i class="fa fa-cogs" id="settingMain"></i>
-                <div class="items" id="settingMainChild">
-                    <i class="fa fa-paint-brush" onclick="changeCssFile('css/style.css')"></i>
-                    <i class="fa fa-star" onclick="changeCssFile('css/dark.css')"></i>
-                    <i class="fa fa-certificate" onclick="changeCssFile('css/light.css')"></i>
-                </div>
             </div>
 
-
-            <div class="services">
-                <h2>What i do</h2>
-                <div class="card-div">
-                    <!-- fetch from api from script.js  -->
-                </div>
-            </div>
- 
 
             <div class="copyright">
                 <p>Copyright &copy; <a href="#">kamleen </a>
@@ -123,16 +108,14 @@
 
 
         </div>
-
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
-    <script src="js/time.js"></script>
-    <script src="js/index.js"></script>
-    <script src="js/servicesApi.js"></script>
+    <script src="../js/project.js"></script>
+    <script src="../js/projectApi.js"></script>
+    <script src="../js/time.js"></script>
 </body>
 
 </html>

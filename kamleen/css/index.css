@@ -30,8 +30,6 @@
 .second-div .content .accupation {
   padding: 5px;
   opacity: 0;
-  -webkit-animation: toRight 1s .5s forwards;
-          animation: toRight 1s .5s forwards;
   margin-bottom: 60px;
 }
 
@@ -148,8 +146,6 @@
   border-bottom: 25px solid rgba(255, 205, 205, 0.26);
   position: relative;
   opacity: 0;
-  -webkit-animation: toLeft 1s .5s forwards;
-          animation: toLeft 1s .5s forwards;
 }
 
 .second-div .content .image .image-back {
@@ -181,6 +177,16 @@
 .second-div .content .image img:hover ~ .image-back {
   -webkit-animation-play-state: paused;
           animation-play-state: paused;
+}
+
+.second-div .content.active .accupation {
+  -webkit-animation: toRight 1s .5s forwards;
+          animation: toRight 1s .5s forwards;
+}
+
+.second-div .content.active .image {
+  -webkit-animation: toLeft 1s .5s forwards;
+          animation: toLeft 1s .5s forwards;
 }
 
 .copyright {

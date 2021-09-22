@@ -59,20 +59,7 @@
     }
  
     .nav{  
-        display: flex;   
-
-        :nth-child(1){
-            color: rgb(163, 159, 99) ;
-        }
-        :nth-child(2){
-            color: rgb(129, 128, 165) ;
-        }
-        :nth-child(3){
-            color: rgb(151, 123, 125) ;
-        }
-        :nth-child(4){
-            color: rgb(68, 123, 126) ;
-        }
+        display: flex;    
 
         li{
             list-style: none;
@@ -96,15 +83,19 @@
 
         li:nth-child(1){
             animation: toLeft .5s .3s ease forwards !important;
+            color: rgb(163, 159, 99) ;
         } 
     li:nth-child(2){
             animation: toLeft .5s .5s ease forwards !important;
+            color: rgb(129, 128, 165) ;
         } 
     li:nth-child(3){
             animation: toLeft .5s .7s ease forwards !important;
+            color: rgb(151, 123, 125) ;
         } 
     li:nth-child(4){
             animation: toLeft .5s .9s ease forwards !important;
+            color: rgb(68, 123, 126) ;
         } 
 
 

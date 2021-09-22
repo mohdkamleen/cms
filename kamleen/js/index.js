@@ -5,6 +5,7 @@
 var chatIcon = document.getElementById("chatIcon");
 var chatBack = document.getElementsByClassName("chatBack")[0];
 var navigation = document.getElementsByClassName("navigation")[0]; 
+var content = document.getElementsByClassName("content")[0]; 
 
 var settingMainChild = document.getElementById("settingMainChild");  
 var settingMain = document.getElementById("settingMain");   
@@ -139,7 +140,8 @@ window.onload = (e) => {
     var css = localStorage.getItem("cssMode");
     loaderMode.style.opacity = "0";
     loaderMode.style.visibility = "hidden";
-    customCss.href = css; 
+    customCss.href = css;  
+    content.classList.add("active");
 
     
 //--------------------- firebase code ---------------------// 
@@ -169,9 +171,9 @@ uid = user.uid;
 firebase.database().ref("webChat").child(uid).on("child_added", function (snapshot) {  
     
     if (snapshot.val().uid === uid) { 
-        document.getElementById("fetch-msg").innerHTML += `<div class="sender"><span>${snapshot.val().msg}</span><br><b>${snapshot.val().datetime}</b></div>`;  
+        document.getElementById("fetch-msg").innerHTML += `<div class="sender"><span>${snapshot.val().msg}<br><b>${snapshot.val().datetime}</b></span></div>`;  
     } else {
-        document.getElementById("fetch-msg").innerHTML += `<div class="reciver"><span>${snapshot.val().msg}</span><br><b>${snapshot.val().datetime}</b></div>`;  
+        document.getElementById("fetch-msg").innerHTML += `<div class="reciver"><span>${snapshot.val().msg}<br><b>${snapshot.val().datetime}</b></span></div>`;   
     };                   
     document.getElementById("fetch-msg").scrollTop = document.getElementById("fetch-msg").scrollHeight;
 }) 

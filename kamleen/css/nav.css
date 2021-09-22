@@ -84,22 +84,6 @@
   display: flex;
 }
 
-.navigation nav .nav :nth-child(1) {
-  color: #a39f63;
-}
-
-.navigation nav .nav :nth-child(2) {
-  color: #8180a5;
-}
-
-.navigation nav .nav :nth-child(3) {
-  color: #977b7d;
-}
-
-.navigation nav .nav :nth-child(4) {
-  color: #447b7e;
-}
-
 .navigation nav .nav li {
   list-style: none;
   width: 100px;
@@ -124,21 +108,25 @@
 .navigation nav .nav li:nth-child(1) {
   -webkit-animation: toLeft .5s .3s ease forwards !important;
           animation: toLeft .5s .3s ease forwards !important;
+  color: #a39f63;
 }
 
 .navigation nav .nav li:nth-child(2) {
   -webkit-animation: toLeft .5s .5s ease forwards !important;
           animation: toLeft .5s .5s ease forwards !important;
+  color: #8180a5;
 }
 
 .navigation nav .nav li:nth-child(3) {
   -webkit-animation: toLeft .5s .7s ease forwards !important;
           animation: toLeft .5s .7s ease forwards !important;
+  color: #977b7d;
 }
 
 .navigation nav .nav li:nth-child(4) {
   -webkit-animation: toLeft .5s .9s ease forwards !important;
           animation: toLeft .5s .9s ease forwards !important;
+  color: #447b7e;
 }
 
 .navigation nav .nav .active {
