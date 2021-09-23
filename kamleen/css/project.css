@@ -1,3 +1,8 @@
+.container {
+  min-height: 100vh;
+  overflow: hidden;
+}
+
 .second-div {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -14,7 +19,6 @@
   top: 0;
   left: 0;
   width: 100%;
-  background-color: red;
 }
 
 .second-div .content .image {
@@ -177,6 +181,7 @@
   -webkit-transition: all .3s;
   transition: all .3s;
   overflow: hidden;
+  min-height: 270px;
 }
 
 .projects #project-div .project .project-image {
@@ -241,6 +246,7 @@
   top: -100%;
   content: "";
   font-size: 25px;
+  opacity: 0.9;
   color: transparent;
   background: var(--linear-gradient);
   -webkit-text-stroke: 1px gray;
@@ -307,8 +313,11 @@
     -webkit-animation-play-state: paused !important;
             animation-play-state: paused !important;
   }
-  .project-image {
-    width: 90% !important;
+  .project {
+    min-height: auto !important;
+  }
+  .project .project-image {
+    width: 100% !important;
   }
 }
 /*# sourceMappingURL=project.css.map */
