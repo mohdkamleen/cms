@@ -44,16 +44,16 @@ skills = [
         "persent": "80%" 
 
     }, 
-    // {
-    //     "language": "Firebase",
-    //     "persent": "95%" 
+    {
+        "language": "Firebase",
+        "persent": "95%" 
 
-    // }, 
-    // {
-    //     "language": "Firebase",
-    //     "persent": "95%" 
+    }, 
+    {
+        "language": "Node.js",
+        "persent": "70%" 
 
-    // }, 
+    }, 
 ];
 
 

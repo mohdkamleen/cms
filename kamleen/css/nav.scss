@@ -1,4 +1,5 @@
- 
+@import url("https://fonts.googleapis.com/css?family=Short+Stack&display=swap");
+
 .navigation{
     width: 100%; 
     height: 60px ; 
@@ -21,25 +22,14 @@
         font-weight: 600;     
         position: relative;
         display: flex;      
+        font-family: 'Short Stack';
 
     :nth-child(1){
-        color: transparent; 
+        color: rgb(89, 102, 129); 
     }  
     :nth-child(2){
-        color: transparent; 
-    }  
-    ::before{
-        content: "kamleen";
-        position: absolute;
-        top: 0;left: 0; 
-        height: 100% ;
-        width: 0%;
-        overflow: hidden;
-        background : linear-gradient(15deg, rgba(109, 221, 255, 0.733),rgba(255, 163, 135, 0.959),rgb(159, 158, 255));
-        -webkit-background-clip: text;
-        color: transparent;
-        animation: logoAnimate forwards .5s linear;
-    } 
+        color: rgb(156, 145, 145); 
+    }   
 } 
 
 
@@ -59,7 +49,7 @@
     }
  
     .nav{  
-        display: flex;    
+        display: flex;     
 
         li{
             list-style: none;
@@ -76,27 +66,23 @@
             background: transparent;
             transition: all .2s .3s linear;  
             overflow: hidden;
-            box-shadow: var(--box-shadow); 
-            opacity: 0;
+            border: 1px solid gray;
+            box-shadow: var(--box-shadow);  
  
         } 
 
-        li:nth-child(1){
-            animation: toLeft .5s .3s ease forwards !important;
+        li:nth-child(1){ 
             color: rgb(163, 159, 99) ;
         } 
-    li:nth-child(2){
-            animation: toLeft .5s .5s ease forwards !important;
-            color: rgb(129, 128, 165) ;
-        } 
-    li:nth-child(3){
-            animation: toLeft .5s .7s ease forwards !important;
-            color: rgb(151, 123, 125) ;
-        } 
-    li:nth-child(4){
-            animation: toLeft .5s .9s ease forwards !important;
-            color: rgb(68, 123, 126) ;
-        } 
+        li:nth-child(2){ 
+                color: rgb(129, 128, 165) ;
+            } 
+        li:nth-child(3){ 
+                color: rgb(151, 123, 125) ;
+            } 
+        li:nth-child(4){ 
+                color: rgb(68, 123, 126) ;
+            } 
 
 
         .active{
@@ -148,21 +134,22 @@
     .nav{  
         position: absolute ; 
         top: 0; 
-        right: -100%;
+        right: 0%;
         width: 100%;
-        height: calc(100vh - 40px) ;  
-        display: none !important; 
+        height:  100vh ;   
+        display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        transform: rotateZ(90deg) ;
+        transform-origin: right top;
         z-index: 10;  
         transition: .5s ease-in-out;
+        background-color: rgb(255, 255, 255);
 
         li{
-            margin: 10px 20px !important; 
-            opacity: 0;
-            
-        }
+            margin: 10px 20px !important;     
+        } 
     } 
 
 
@@ -174,27 +161,12 @@
 
         .logo{ 
             animation: bouncUpDown .3s .5s ease-in-out forwards;
+            z-index: 16 !important;
         }
 
-        .nav{ 
-        right: 0;
-        height: 100vh;
-        width: 100%;
-        display: flex !important; 
- 
-
-        li:nth-child(1){
-                animation: toLeft .5s .3s ease forwards !important;
-            } 
-        li:nth-child(2){
-                animation: toRight .5s .5s ease forwards !important;
-            } 
-        li:nth-child(3){
-                animation: toLeft .5s .7s ease forwards !important;
-            } 
-        li:nth-child(4){
-                animation: toRight .5s .9s ease forwards !important;
-            } 
+        .nav{   
+        transform: rotateZ(0deg) perspective(900px);
+  
     }  
 }
 }

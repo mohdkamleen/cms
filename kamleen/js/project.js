@@ -22,21 +22,8 @@ var message = document.getElementById("message");
 var effect8 = document.getElementById("effect8");  
 var customCss = document.getElementById("customCss");     
 
-var uid = "";
-
-
+var uid = ""; 
  
-
-//---------------------- window scroll --------------------------//
-
-// window.onscroll = () => {
-
-//     var pageY = window.pageYOffset; 
-//     if(pageY > 200 ){  
-//         socialDiv.classList.add("active");
-//     }   
-// } 
-
 
 
 //--------------------- chat section js ------------------------//
@@ -74,20 +61,27 @@ window.onresize = (e) => {
 //---------------------- window load -------------------------//
 
 window.onload = () => {   
+    var project = document.getElementsByClassName("project");
     loaderMode.style.opacity = "0";
     loaderMode.style.visibility = "hidden";
     customCss.href = "../"+localStorage.getItem("cssMode"); 
+
+    for(var i = 0; i < project.length; i++){
+        project[i].classList.add("active");
+        project[i].style.animationDelay = i*.3+"s";
+    }
 
 
     
 //--------------------- firebase code ---------------------// 
     var fconfig = {
-        apiKey: "AIzaSyCNNYKBE58pZQtAbBFQh98zg2yKtlgKWXU",
-        authDomain: "mohd-e4f8e.firebaseapp.com",
-        databaseURL: "https://mohd-e4f8e-default-rtdb.firebaseio.com",
-        projectId: "mohd-e4f8e",
-        storageBucket: "mohd-e4f8e.appspot.com",
-        messagingSenderId: "1054922414390"
+        apiKey: "AIzaSyDh6YfUPvUUDDQf0ZRyDJ1ImlCAObv4nuo",
+        authDomain: "mohd-kamleen.firebaseapp.com",
+        projectId: "mohd-kamleen",
+        storageBucket: "mohd-kamleen.appspot.com",
+        messagingSenderId: "528612457742",
+        appId: "1:528612457742:web:1bdc2804303d5f20b52b5f",
+        measurementId: "G-8HHDKNW57V"
     }; 
     firebase.initializeApp(fconfig); 
  
@@ -107,7 +101,7 @@ window.onload = () => {
     firebase.database().ref("webChat").child(uid).on("child_added", function (snapshot) {  
         
         if (snapshot.val().uid === uid) { 
-            document.getElementById("fetch-msg").innerHTML += `<div class="sender"><span>${snapshot.val().msg}<br><b>${snapshot.val().datetime}</b></span></div>`;  
+            document.getElementById("fetch-msg").innerHTML += `<div class="sender"><span>${snapshot.val().msg}<br><b>${seenFun(snapshot.val().seen)}</b></span></div>`;  
         } else {
             document.getElementById("fetch-msg").innerHTML += `<div class="reciver"><span>${snapshot.val().msg}<br><b>${snapshot.val().datetime}</b></span></div>`;  
         };                   
@@ -121,6 +115,61 @@ window.onload = () => {
 
 }
 
+
+//-------------------------- seen time setting function ---------------------------//
+
+function seenFun(date) {
+
+    var seconds = Math.floor((new Date() - date) / 1000);
+  
+    var interval = seconds / 31536000;
+   
+    interval = seconds / 86400; 
+    if(interval > 1){
+        return datetime(date)
+    } 
+    interval = seconds / 3600;
+    if (interval > 1) {
+      return Math.floor(interval) + " hours ago";
+    }
+    interval = seconds / 60;
+    if (interval > 1) {
+      return Math.floor(interval) + " minutes ago";
+    }
+    return "just now"; 
+  } 
+  
+function datetime(e){
+let a = new Date(e);
+let d = a.getDate(); 
+let m = a.getMonth();
+let y = a.getUTCFullYear();
+let h = a.getHours();
+let mm = a.getMinutes(); 
+let x = "am";
+if(d < 10){
+    d = "0" + d;
+} 
+if(mm < 10){
+    mm = "0" + mm;
+} 
+if(h>12){
+    h = h - 12;
+    x = "pm";
+}
+if(h < 10){
+    h = "0" + h;
+} 
+
+if(h == 0){
+    h = 12;
+}
+day = ["Sunday", "Monday", "Tuesday", "Thursday", "Wednesday", "Friday", "Saturday"]
+month  = ["Jan","Fab","Mar","Apr","May","June","July","Aug","Sep","Oct","Nov","Dec"]
+
+return  d + month[m] + "," + y +" " + h + ":" + mm + x;
+
+}
 
 
 
@@ -136,7 +185,8 @@ sendMsg.addEventListener("click", () => {
         db.push({
             "msg": message.value,
             "uid": uid,
-            "datetime": time.value
+            "datetime": time.value,
+            "seen": new Date().getTime()
         });
         message.value = "";
         message.focus();

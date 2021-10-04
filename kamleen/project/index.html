@@ -44,10 +44,10 @@
 
 
             <div class="second-div">
-                <div class="content"> 
+                <div class="content">
                     <div class="image">
                         <div class="image-back "></div>
-                    </div> 
+                    </div>
                 </div>
             </div>
 
@@ -55,57 +55,65 @@
             <div class="projects">
 
                 <div class="search-bar">
-                    <input type="text" autofocus autocomplete="off" placeholder="Search here" onkeyup="filterProject(this);">
-                    <button >search</button>
+                    <input type="text" autofocus autocomplete="off" placeholder="Search here"
+                        onkeyup="filterProject(this);">
+                    <button>search</button>
                 </div>
 
-                <div id="project-div"></div>
-                
+                <div id="project-div">
+                    <!-- fetch data from project api  --> 
+                    <!-- <div class="slider">    
+                        <img src="../image/hardware.png" onclick="document.getElementsByClassName('project-image')[0].src=this.src"> 
+                    </div> -->
+
+                </div>
             </div>
 
-
-            <div class="effects">
-                <div id="effect8"></div>
-            </div>
+        </div>
 
 
-            <div class="chat">
-                <i class="fa fa-comments" id="chatIcon"></i>
-                <div class="chatBack">
-                    <div class="msg-chat">
-                        <div class="admin">
-                            <div>
-                                <img src="../image/kamleen.png" alt=""><span> mohd kamleen</span>
-                            </div>
-                            <div>
-                                <i class="fa fa-phone" onclick="location='tel:+919838706427'"></i>
-                                <i class="fa fa-ellipsis-v" onclick="location='/other/cv.pdf'"></i>
-                                <p>Show Details</p>
-                            </div>
+        <div class="effects">
+            <div id="effect8"></div>
+        </div>
+
+
+        <div class="chat">
+            <i class="fa fa-comments" id="chatIcon"></i>
+            <div class="chatBack">
+                <div class="msg-chat">
+                    <div class="admin">
+                        <div>
+                            <img src="../image/kamleen.png" alt=""><span> mohd kamleen</span>
                         </div>
-                        <div id="fetch-msg">
-                            <!-- <div class="sender">sender</div>  -->
-                            <div class="reciver"><span>Hey I'm Mohd Kamleen <br><b>how can I help you !!!!</b></span>
-                            </div>
+                        <div>
+                            <i class="fa fa-phone" onclick="location='tel:+919838706427'"></i>
+                            <i class="fa fa-ellipsis-v" onclick="location='/other/cv.pdf'"></i>
+                            <p>Show Details</p>
                         </div>
-                        <div class="inputs">
-                            <input type="hidden" id="datetime">
-                            <input type="text" id="message" autofocus placeholder="Type a message" autocomplete="off">
-                            <button class="fa fa-send" id="sendMsg"></button>
+                    </div>
+                    <div id="fetch-msg">
+                        <!-- <div class="sender">sender</div>  -->
+                        <div class="reciver"><span>Hey I'm Mohd Kamleen <br><b>how can I help you !!!!</b></span>
                         </div>
+                    </div>
+                    <div class="inputs">
+                        <input type="hidden" id="datetime">
+                        <input type="text" id="message" autofocus placeholder="Type a message" autocomplete="off">
+                        <button class="fa fa-send" id="sendMsg"></button>
                     </div>
                 </div>
             </div>
-
-
-            <div class="copyright">
-                <p>Copyright &copy; <a href="#">kamleen </a>
-                    <script>document.write(new Date().getFullYear())</script>
-                </p>
-            </div>
-
-
         </div>
+
+
+        <div class="copyright">
+            <p>Copyright &copy; <a href="https://mohdkamleen.blogspot.com/">kamleen </a>
+                <script>document.write(new Date().getFullYear())</script>
+            </p>
+        </div>
+
+
+    </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>

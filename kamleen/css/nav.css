@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Short+Stack&display=swap");
 .navigation {
   width: 100%;
   height: 60px;
@@ -37,29 +38,15 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  font-family: 'Short Stack';
 }
 
 .navigation nav .logo :nth-child(1) {
-  color: transparent;
+  color: #596681;
 }
 
 .navigation nav .logo :nth-child(2) {
-  color: transparent;
-}
-
-.navigation nav .logo ::before {
-  content: "kamleen";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 0%;
-  overflow: hidden;
-  background: linear-gradient(15deg, rgba(109, 221, 255, 0.733), rgba(255, 163, 135, 0.959), #9f9eff);
-  -webkit-background-clip: text;
-  color: transparent;
-  -webkit-animation: logoAnimate forwards .5s linear;
-          animation: logoAnimate forwards .5s linear;
+  color: #9c9191;
 }
 
 .navigation nav .hamburger {
@@ -100,32 +87,24 @@
   -webkit-transition: all .2s .3s linear;
   transition: all .2s .3s linear;
   overflow: hidden;
+  border: 1px solid gray;
   -webkit-box-shadow: var(--box-shadow);
           box-shadow: var(--box-shadow);
-  opacity: 0;
 }
 
 .navigation nav .nav li:nth-child(1) {
-  -webkit-animation: toLeft .5s .3s ease forwards !important;
-          animation: toLeft .5s .3s ease forwards !important;
   color: #a39f63;
 }
 
 .navigation nav .nav li:nth-child(2) {
-  -webkit-animation: toLeft .5s .5s ease forwards !important;
-          animation: toLeft .5s .5s ease forwards !important;
   color: #8180a5;
 }
 
 .navigation nav .nav li:nth-child(3) {
-  -webkit-animation: toLeft .5s .7s ease forwards !important;
-          animation: toLeft .5s .7s ease forwards !important;
   color: #977b7d;
 }
 
 .navigation nav .nav li:nth-child(4) {
-  -webkit-animation: toLeft .5s .9s ease forwards !important;
-          animation: toLeft .5s .9s ease forwards !important;
   color: #447b7e;
 }
 
@@ -165,10 +144,12 @@
   .nav {
     position: absolute;
     top: 0;
-    right: -100%;
+    right: 0%;
     width: 100%;
-    height: calc(100vh - 40px);
-    display: none !important;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -179,13 +160,17 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-transform: rotateZ(90deg);
+            transform: rotateZ(90deg);
+    -webkit-transform-origin: right top;
+            transform-origin: right top;
     z-index: 10;
     -webkit-transition: .5s ease-in-out;
     transition: .5s ease-in-out;
+    background-color: white;
   }
   .nav li {
     margin: 10px 20px !important;
-    opacity: 0;
   }
   .hamburger {
     display: block !important;
@@ -193,30 +178,11 @@
   nav.active .logo {
     -webkit-animation: bouncUpDown .3s .5s ease-in-out forwards;
             animation: bouncUpDown .3s .5s ease-in-out forwards;
+    z-index: 16 !important;
   }
   nav.active .nav {
-    right: 0;
-    height: 100vh;
-    width: 100%;
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
-  }
-  nav.active .nav li:nth-child(1) {
-    -webkit-animation: toLeft .5s .3s ease forwards !important;
-            animation: toLeft .5s .3s ease forwards !important;
-  }
-  nav.active .nav li:nth-child(2) {
-    -webkit-animation: toRight .5s .5s ease forwards !important;
-            animation: toRight .5s .5s ease forwards !important;
-  }
-  nav.active .nav li:nth-child(3) {
-    -webkit-animation: toLeft .5s .7s ease forwards !important;
-            animation: toLeft .5s .7s ease forwards !important;
-  }
-  nav.active .nav li:nth-child(4) {
-    -webkit-animation: toRight .5s .9s ease forwards !important;
-            animation: toRight .5s .9s ease forwards !important;
+    -webkit-transform: rotateZ(0deg) perspective(900px);
+            transform: rotateZ(0deg) perspective(900px);
   }
 }
 /*# sourceMappingURL=nav.css.map */

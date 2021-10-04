@@ -1,181 +1,4 @@
-.second-div{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
  
-.content{ 
-    position: relative;
-    top: 0;left: 0;
-    width: 100%;  
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    max-width: 1400px;
-    min-height: 750px; 
-    height: 100vh;  
-
-    .accupation{ 
-        padding: 5px; 
-        opacity: 0;
-        margin-bottom: 60px ;
-
-        .hey{
-            font-size: 20px;
-            font-weight: 700;
-            color: rgb(119, 165, 252);
-            text-transform: capitalize;
-            padding: 0px 10px;
-            -webkit-text-stroke: 1px rgb(106, 145, 218);
-        }
-
-        h1{
-            color: #a39f63 ;
-            font-size: 30px; 
-            padding: 10px; 
-            font-weight: 500;
-            -webkit-text-stroke: 1px #888448;
-
-            span{
-                font-size: 23px;
-                font-weight: 700;
-                color: rgb(119, 165, 252);
-                -webkit-text-stroke: 1px rgb(106, 145, 218);
-            }
-             
-        }
-
-        .we-are{
-            padding: 0px 10px;
-            font-size: 20px;  
-            font-weight: bold;
-            color: rgb(119, 165, 252);
-            -webkit-text-stroke: 1px rgb(106, 145, 218);
-
-            .type_text{
-                font-size: 25px;
-                font-weight: 400;
-                color:#e07f7f;
-                -webkit-text-stroke: 1px #ce5f5f;
-            }
-
-        }
-
-        .buttons{
-            padding: 10px; 
-            display: flex; 
-            align-items: center;   
-
-            button{
-                width: 200px;
-                font-size: 19px; 
-                background-color: transparent;
-                padding: 7px;
-                cursor: pointer;
-                border-radius: 3px;
-                font-weight: bold;
-                margin: 10px 5px;
-                position: relative;
-                transition: all .3s .3s linear;
-                border: none;
-                overflow: hidden;
-                box-shadow: var(--box-shadow); 
-                
-
-                a{
-                    border: none !important;
-                }
-
-            }
-
-            
-            :nth-child(1){
-                color: rgb(119, 165, 252); 
-            }
-
-            :nth-child(2){
-                color: rgb(238, 128, 142); 
-            }
-
-            ::after{
-                position: absolute;
-                content: "";
-                top: -250%;
-                right: 0%;
-                width: 150px;
-                transform: scale(0);
-                line-height: 30px;
-                text-transform: uppercase;
-                height: 150px; 
-                border: 2px solid rgba(246, 246, 246, 0.76); 
-                border-radius: 50%;
-                background-color: rgba(180, 234, 255, 0.404);
-                transition: all .5s linear;  
-                z-index: -1;
-            }
-    
-            :hover::after{
-                transform: scale(3.5);
-            }
-    
-            :hover{ 
-                color: rgb(163, 159, 99) !important;
-            } 
-    
-
-        }  
-  
-            }
-
-    .image{ 
-        border-radius: 50%;  
-        width: 300px;
-        border-bottom: 25px solid rgba(255, 205, 205, 0.26);   
-        position: relative;
-        opacity: 0;
-
-        .image-back{ 
-            width: 300px;
-            height: 300px;
-            z-index: -2;
-            position: absolute;
-            top: 0;
-            right: 0;  
-            border-radius: 68% 32% 32% 68% / 39% 30% 70% 61% ;
-            background: var(--linear-gradient);
-            animation: rotateClock 60s linear infinite alternate;
-            box-shadow: var(--box-shadow); 
-            transition: all .3s ease-in-out;
-            opacity: 0.3;   
-
-        
-        }
- 
-
-        img{
-            width: 300px; 
-            border-radius: 50%; 
-            transition: all .3s ease-in-out;
-            cursor: none; 
-        } 
-    }
-
-    .image img:hover ~ .image-back{
-        animation-play-state: paused; 
-    }
-
-}
-
-.content.active{
-    .accupation{
-        animation: toRight 1s .5s forwards;
-    }
-    .image{
-        animation: toLeft 1s .5s forwards;
-    }
-}
-}
-
 
 .copyright{
     position: relative;
@@ -205,134 +28,9 @@
     animation: toUp .5s forwards linear;
 }
 
-
- .effects{ 
-
-         #effect8{
-         position: fixed;
-         height: 20px;
-         width: 20px; 
-         top: -50px;
-         z-index: -1;
-         left: 900px;
-         transition: all linear 100ms;
-         border-radius: 50% ;
-         background: var(--linear-gradient);  
-         mix-blend-mode: multiply;  
-         animation: rotateClock 30s linear infinite alternate;
-         box-shadow: var(--box-shadow); 
-         }
-     
  
 
- }
-
-
- 
-
- .setting{
-    background-color: transparent;
-    position: fixed;
-    bottom: 0;left: 0; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
-    z-index: 8;
-
-    i{
-        z-index: 11; 
-        background : linear-gradient(15deg, rgba(155, 148, 63, 0.39),rgba(102, 186, 255, 0.959),rgb(124, 156, 97),rgba(142, 247, 255, 0.637));
-        color: transparent;
-        -webkit-background-clip: text;
-        border-radius: 3px;
-        font-size: 20px;
-        border: 2px solid rgba(246, 246, 246, 0.76); 
-        -webkit-text-stroke: 2px rgba(51, 49, 49, 0.616);
-        transition: all .3s linear;  
-        padding: 5px; 
-        box-shadow: var(--box-shadow); 
-
-
-       }
- 
-       :hover{ 
-        box-shadow: none;
-        border-color: rgb(212, 245, 255);
-    }
-
-    .items{    
-        
-        :nth-child(1){
-            position: fixed; 
-            bottom: 20px;
-            opacity: 0;
-            left: 90px;
-            background: linear-gradient(15deg,#fff, rgb(255, 238, 0),rgb(255, 6, 26),rgb(8, 4, 245),rgb(0, 238, 255));  
-            color: transparent; 
-            -webkit-background-clip: text;
-        }
-        :nth-child(2){
-            position: fixed; 
-            bottom: 70px;
-            opacity: 0 ;
-            background : linear-gradient(15deg, rgba(255, 254, 251, 0.883),#000,rgba(173, 173, 173, 0.959),rgb(61, 61, 61),rgb(248, 246, 246));
-            color: transparent;
-            -webkit-background-clip: text;
-            left: 70px;
-        }
-        :nth-child(3){
-            position: fixed; 
-            opacity: 0;
-            bottom: 90px;
-            left: 20px; 
-            background : linear-gradient(15deg,#fff, rgba(0, 0, 0, 0.39),rgba(255, 255, 255, 0.959),rgb(246, 246, 246),rgb(161, 161, 161),rgba(95, 95, 95, 0.637));
-            color: transparent;
-            -webkit-background-clip: text;
-        }
-    }
-
-    
-.items.active{  
-
-    :nth-child(1){
-        animation: toRight .3s linear forwards;  
-    }
-    :nth-child(2){
-        animation: toUpLeft .3s .1s  linear forwards;
-    }
-    :nth-child(3){
-        animation: toUp .3s .2s linear forwards;
-    }
- 
-} 
-
-
-    
-.items::after{
-    content: "";
-    background-color: transparent; 
-    position: fixed;
-    bottom: -50px; 
-    left: -50px;
-    font-size: 25px; 
-    width: 100px;
-    border-radius: 50%; 
-    height: 100px;
-    z-index: -1; 
-    transform: scale(0); 
-    transition: all .3s ease; 
-    background: var(--linear-gradient);
-    box-shadow: var(--box-shadow);
-           
-}
-
-.items.active::after{ 
-    transform: scale(3.3);
-}  
- }    
-
-
+  
  
 .navigation.hide{
     z-index: -1 !important;
@@ -349,9 +47,7 @@ this is part of services of css
         padding: 25px 0px;
         color: rgb(102, 102, 102);
         text-transform: capitalize;
-        -webkit-text-stroke: 1px rgb(75, 75, 75);
-        transform: scale(0);
-        animation: popUp 1s 1s forwards;
+        -webkit-text-stroke: 1px rgb(75, 75, 75);  
     }
     
     .card-div{ 
@@ -377,8 +73,7 @@ this is part of services of css
             width: 350px;
             position: relative;
             margin: 20px;
-            overflow: hidden;
-            transform: scale(0);
+            overflow: hidden; 
             box-shadow: var(--box-shadow); 
 
             .card-icon{ 
@@ -477,26 +172,7 @@ this is part of services of css
 
 
     }
-
-    .active .card:nth-child(1){
-        animation: popUp 1s forwards ;
-    }
-    .active .card:nth-child(2){
-        animation: popUp 1s .2s forwards ;
-    }
-    .active .card:nth-child(3){
-        animation: popUp 1s .3s forwards ;
-    }
-    .active .card:nth-child(4){
-        animation: popUp 1s .4s forwards ;
-    }
-    .active .card:nth-child(5){
-        animation: popUp 1s .5s forwards ;
-    }
-    .active .card:nth-child(6){
-        animation: popUp 1s .6s forwards ;
-    } 
-
+ 
 }
 
 

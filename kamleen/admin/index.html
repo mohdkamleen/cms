@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohd Kamleen | Admin</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" id="customCss">
+    <link rel="shortcut icon" href="../image/kamleen.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="main-div">
+
+
+        <div class="container"> 
+ 
+
+            <section>
+                <i class="fa fa-bars" id="hamburgerShow" onclick="showUser()"></i> 
+                <div id="fetchUser">
+                    <div id="users" style="background: var(--linear-gradient);">
+                        <img src="../image/user.jpg" alt="">
+                        <h4>Anonymous Users <br> <span id="countUser"> </span></h4> 
+                        <i class="fa fa-times" onclick="hideUser()" id="hamburger"></i> 
+                    </div> 
+                </div>
+                
+                <div class="chat-user">
+                    <div class="user-child">
+                        <div class="header" >
+                            <img src="../image/user.jpg" alt="">
+                            <h4>User Chat</h4>
+                        </div>  
+
+                        <div class="chat-msg">
+                            <ol id="fetch-msg">
+                                  
+                            </ol>
+                        </div>
+
+                        <div class="inputs">
+                            <input id="message" placeholder="Type a message">
+                            <input type="hidden" id="datetime" >
+                            <button id="sendMsg" class="fa fa-send"></button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+ 
+
+        </div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
+    <script src="../js/time.js"></script>
+    <script src="../js/admin.js"></script>
+</body>
+
+</html>

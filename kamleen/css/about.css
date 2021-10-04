@@ -374,8 +374,8 @@ this is part of skill of css
 }
 
 .skills .active .skill:nth-child(10) .skill-position::before {
-  -webkit-animation: width95 .5s 5s forwards;
-          animation: width95 .5s 5s forwards;
+  -webkit-animation: width70 .5s 5s forwards;
+          animation: width70 .5s 5s forwards;
 }
 
 .navigation.hide {

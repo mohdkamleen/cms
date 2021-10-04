@@ -17,26 +17,27 @@
 <body>
 
     <div class="container">
-        <div class="row d-flex justify-content-center"> 
-                <h3 class="text-success text-center p-3 mt-3">Todo List for Dict.</h3> 
+        <div class="row d-flex justify-content-center">
+            <h3 class="text-success text-center p-3 mt-3">Todo List for Dict.</h3>
 
-              <div class="row d-flex justify-content-center flex-direction-rows">
+            <div class="row d-flex justify-content-center flex-direction-rows">
                 <input id="title" placeholder="Enter Title" class="form-control">
                 <input id="datetime" class="d-none">
                 <input id="description" placeholder="Enter Description " class="form-control">
-            </div> 
-                <input id="datetime" class="d-none"> <button id="send-btn" class="btn btn-secondary m-auto d-block">Add</button> <br><br><br> 
-                
-                <table class="table table-bordered text-center" id="status_fetch">
-                    <tr class="bg-primary text-white">
-                        <th>Title</th>
-                        <th>Description</th>
-                        <th>Date</th>
-                        <th>Action</th>
-                    </tr>
-                    
-                </table> 
-            </div> 
+            </div>
+            <input id="datetime" class="d-none"> <button id="send-btn"
+                class="btn btn-secondary m-auto d-block">Add</button> <br><br><br>
+
+            <table class="table table-bordered text-center" id="status_fetch">
+                <tr class="bg-primary text-white">
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Date</th>
+                    <th contenteditable="true">Action</th>
+                </tr>
+
+            </table>
+        </div>
     </div>
 
 
@@ -59,10 +60,10 @@
             firebase.database().ref("status").on("child_added", function (snapshot) {
                 document.getElementById("status_fetch").innerHTML += ` 
                                         <tr> 
-                                            <td>${snapshot.val().title}</td>
-                                            <td>${snapshot.val().description}</td>
+                                            <td contenteditable="true" id="utitle">${snapshot.val().title}</td>
+                                            <td contenteditable="true" id="udescription">${snapshot.val().description}</td>
                                             <td>${snapshot.val().date}</td>
-                                            <td><button class="btn-danger btn btn-sm" id="${snapshot.key}" onclick="delTodo(this);">delet</button></td>
+                                            <td><button class="btn-primary btn btn-sm m-2" id="${snapshot.key}" onclick="updateMsg(this);">update</button><button class="m-2 btn-danger btn btn-sm" id="${snapshot.key}" onclick="delTodo(this);">delet</button></td>
                                         </tr>
                                         `;
             });
@@ -73,36 +74,47 @@
 
         document.getElementById("send-btn").addEventListener("click", function () {
 
-            if(document.getElementById("title").value == "" || document.getElementById("description").value == ""){
+            if (document.getElementById("title").value == "" || document.getElementById("description").value == "") {
 
-                document.getElementById("title").placeholder =  "Please Enter Title";
-                document.getElementById("description").placeholder =  "Please Enter Description";
+                document.getElementById("title").placeholder = "Please Enter Title";
+                document.getElementById("description").placeholder = "Please Enter Description";
             } else {
-            firebase.database().ref("status").push({
-                "title": document.getElementById("title").value,
-                "description": document.getElementById("description").value,
-                "date": document.getElementById("datetime").value 
-            }).then(() => { 
-                document.getElementById("title").value = "";
-                document.getElementById("description").value = ""; 
-            });
-        }
+                firebase.database().ref("status").push({
+                    "title": document.getElementById("title").value,
+                    "description": document.getElementById("description").value,
+                    "date": document.getElementById("datetime").value
+                }).then(() => {
+                    document.getElementById("title").value = "";
+                    document.getElementById("description").value = "";
+                });
+            }
 
 
         });
 
 
-        function delTodo(e){
-            firebase.database().ref("status").child(e.id).remove().then(function(){
+        function delTodo(e) {
+            firebase.database().ref("status").child(e.id).remove().then(function () {
                 e.innerHTML = "deleted";
             });
         }
 
+        function updateMsg(e) { 
+            firebase.database().ref("status").child(e.id).update({ 
+                "title": document.getElementById("utitle").innerHTML,
+                "description": document.getElementById("udescription").innerHTML,
+                "date": document.getElementById("datetime").value
+            }).then(() => {
+                e.innerHTML = "updated"
+            });
+        }
+
+
     </script>
 
 
- 
-    <script src="time.js"></script> 
+
+    <script src="time.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
 </body>

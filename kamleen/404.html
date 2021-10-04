@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page not found</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" id="customCss">
+    <link rel="shortcut icon" href="image/404.svg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .second-div {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-pack: distribute;
+            justify-content: space-around;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+        }
+
+        .second-div .content {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 90%;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-pack: distribute;
+            justify-content: space-around;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            max-width: 1400px;
+            min-height: 800px;
+        }
+
+        .second-div .content .accupation {
+            padding: 15px;
+        }
+
+        .second-div .content .accupation .hey {
+            font-size: 40px;
+            color: #77a5fc;
+            text-transform: capitalize;
+            padding: 0px 10px;
+            -webkit-text-stroke: 1px #5d7fbd;
+        }
+
+        .second-div .content .accupation h1 {
+            color: #a39f63;
+            font-size: 30px;
+            padding: 10px;
+            font-weight: 500;
+            -webkit-text-stroke: 1px #888448;
+        }
+
+        .second-div .content .accupation .we-are {
+            padding: 0px 10px;
+            font-size: 20px;
+            color: #77a5fcd8;
+            font-weight: normal;
+            -webkit-text-stroke: 1px #5b7dbd;
+        }
+
+        .second-div .content .accupation .buttons {
+            padding: 10px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+        }
+
+        .second-div .content .accupation .buttons button {
+            width: 200px;
+            font-size: 19px;
+            background-color: transparent;
+            padding: 7px;
+            cursor: pointer;
+            border-radius: 3px;
+            font-weight: bold;
+            margin: 10px 5px;
+            position: relative;
+            -webkit-transition: all .3s .3s linear;
+            transition: all .3s .3s linear;
+            border: none;
+            overflow: hidden;
+            -webkit-box-shadow: var(--box-shadow);
+            box-shadow: var(--box-shadow);
+        }
+
+        .second-div .content .accupation .buttons button a {
+            border: none !important;
+        }
+
+        .second-div .content .accupation .buttons :nth-child(1) {
+            color: #77a5fc;
+        }
+
+        .second-div .content .accupation .buttons :nth-child(2) {
+            color: #ee808e;
+        }
+
+        .second-div .content .accupation .buttons ::after {
+            position: absolute;
+            content: "";
+            top: -250%;
+            right: 0%;
+            width: 150px;
+            -webkit-transform: scale(0);
+            transform: scale(0);
+            line-height: 30px;
+            text-transform: uppercase;
+            height: 150px;
+            border: 2px solid rgba(246, 246, 246, 0.76);
+            border-radius: 50%;
+            background-color: rgba(180, 234, 255, 0.404);
+            -webkit-transition: all .5s linear;
+            transition: all .5s linear;
+            z-index: -1;
+        }
+
+        .second-div .content .accupation .buttons :hover::after {
+            -webkit-transform: scale(3.5);
+            transform: scale(3.5);
+        }
+
+        .second-div .content .accupation .buttons :hover {
+            color: #a39f63 !important;
+        }
+
+        .second-div .content .image {
+            border-radius: 50%;
+            width: 300px;
+            border-bottom: 25px solid rgba(255, 205, 205, 0.26);
+            position: relative;
+        }
+
+        .second-div .content .image .image-back {
+            width: 300px;
+            height: 300px;
+            z-index: -2;
+            position: absolute;
+            top: 0;
+            right: 0;
+            border-radius: 68% 32% 32% 68% / 39% 30% 70% 61%;
+            background: var(--linear-gradient);
+            -webkit-animation: rotateClock 60s linear infinite alternate;
+            animation: rotateClock 60s linear infinite alternate;
+            -webkit-box-shadow: var(--box-shadow);
+            box-shadow: var(--box-shadow);
+            -webkit-transition: all .3s ease-in-out;
+            transition: all .3s ease-in-out;
+            opacity: 0.3;
+        }
+
+        .second-div .content .image img {
+            width: 300px;
+            border-radius: 50%;
+            -webkit-transition: all .3s ease-in-out;
+            transition: all .3s ease-in-out;
+            cursor: none;
+        }
+
+        .second-div .content .image img:hover~.image-back {
+            -webkit-animation-play-state: paused;
+            animation-play-state: paused;
+        }
+
+
+        .copyright {
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            padding: 20px;
+            text-align: center;
+            color: #db949d;
+            -webkit-transition: all .3s ease .5s;
+            transition: all .3s ease .5s;
+        }
+
+        .copyright p {
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+        .copyright p a {
+            color: #77a5fc;
+        }
+
+
+        @media (max-width: 900px) {
+            .content {
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: reverse;
+                -ms-flex-direction: column-reverse;
+                flex-direction: column-reverse;
+                margin-top: -20px;
+            }
+        }
+
+        /*# sourceMappingURL=admin.css.map */
+    </style>
+</head>
+
+<body>
+    <div class="main-div">
+
+
+        <div class="container">
+            <div class="navigation">
+                <nav>
+                    <div class="logo">
+                        <span>kam</span><span>leen</span>
+                    </div>
+                    <div class="nav">
+                        <li onclick="location='/'">home</li>
+                        <li onclick="location='about'">about</li>
+                        <li onclick="location='contact'">contact</li>
+                        <li onclick="location='project'">project</li>
+                    </div>
+                </nav>
+            </div>
+
+
+            <div class="second-div">
+                <div class="content">
+                    <div class="accupation" style="padding:20px;">
+                        <p class="hey">404</p>
+                        <h1>Page Not Found</h1>
+                        <p class="we-are">The specified file was not found on this website. Please check the URL for
+                            mistakes and try again. <br>
+                            This page was generated by the <code>mohd-kamleen.web.app</code> Interface.
+                            To modify it, edit the <code>404.html</code> file in my project.
+                        </p>
+                        <div class="buttons">
+                            <button data-text="hire me" onclick="location.reload()">Refresh</button>
+                        </div>
+                    </div>
+
+                    <div class="image">
+                        <img style="border-radius: 0px;" src="image/404.svg" alt="kamleen" id="myImage">
+                        <div class="image-back ">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="effects">
+                <div id="effect8"></div>
+            </div>
+
+            <div class="copyright">
+                <p>Copyright &copy; <a href="https://mohdkamleen.blogspot.com/">kamleen </a>
+                    2020-<script>document.write(new Date().getFullYear())</script>
+                </p>
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+    <script>
+        var image = document.getElementsByClassName("image")[0];
+        var copyright = document.getElementsByClassName("hey")[0];
+        var buttons = document.getElementsByClassName("buttons")[0];
+        var accupation = document.getElementsByClassName("accupation")[0];
+        var logo = document.getElementsByClassName("logo")[0];
+        var css = document.getElementById("customCss")
+
+        //----------------- function mousesmove------------------------//
+
+        window.onmousemove = (event) => {
+            effect8.style.left = event.clientX + 'px';
+            effect8.style.top = event.clientY + 'px';
+
+            copyright.style.margin = event.clientY * 0.9 / 50 + 'px';
+
+
+            accupation.style.margin = event.clientY * 0.1 / 5 + 'px';
+            buttons.style.margin = -event.clientX * 0.1 / 15 + 'px';
+
+            logo.style.left = event.clientY * 0.1 / 10 + 'px';
+            logo.style.top = event.clientX * 0.1 / 10 + 'px';
+
+            image.style.left = -event.clientY * 0.1 / 5 + 'px';
+            image.style.top = -event.clientX * 0.1 / 5 + 'px';
+        }
+
+        window.onload = () => {
+            css.href = localStorage.getItem("cssMode");
+        }
+    </script>
+</body>
+
+</html>

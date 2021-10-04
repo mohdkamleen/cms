@@ -2,7 +2,7 @@
   100% {
     opacity: 1 !important;
     width: 100%;
-    -webkit-text-stroke: 1px #859ec0;
+    -webkit-text-stroke: 1px rgba(133, 158, 192, 0.582);
   }
 }
 
@@ -10,7 +10,7 @@
   100% {
     opacity: 1 !important;
     width: 100%;
-    -webkit-text-stroke: 1px #859ec0;
+    -webkit-text-stroke: 1px rgba(133, 158, 192, 0.582);
   }
 }
 
